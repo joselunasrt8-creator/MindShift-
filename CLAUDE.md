@@ -90,10 +90,15 @@ through the following stages.
 🏁 Meta-Lesson + Recommended Action
 ```
 
+Before a new analysis, run the **Closure Check**: verify the previous analysis's
+recommended action and fold its result into the current observation. The canonical
+specification of this method, including the Closure Check, lives in
+[`docs/grandmaster-mode.md`](docs/grandmaster-mode.md); this section is a summary.
+
 ## Core Invariant
 
 Every analysis should improve the quality of future thinking, not merely explain
-the present.
+the present — and should verify that the *last* analysis actually did so.
 
 ```text
 Observe → Model → Validate → Learn → Improve → Repeat

@@ -143,6 +143,7 @@ execution, validate legitimacy, or determine execution eligibility.
 | [`docs/grandmaster-mode.md`](docs/grandmaster-mode.md) | The four-stage analysis method |
 | [`docs/lineage.md`](docs/lineage.md) | Historical context and the recurring invariant |
 | [`docs/scope.md`](docs/scope.md) | Boundaries: what MindShift is and is not |
+| [`docs/roadmap.md`](docs/roadmap.md) | Future / optional work, filtered against the thesis |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to contribute |
 | [`LICENSE`](LICENSE) | MIT License |
 

@@ -136,6 +136,7 @@ execution, validate legitimacy, or determine execution eligibility.
 | --- | --- |
 | [`README.md`](README.md) | Project overview (this file) |
 | [`CLAUDE.md`](CLAUDE.md) | Repository-level operating guide and Grandmaster Mode |
+| [`docs/thesis.md`](docs/thesis.md) | The center: the invariant, canonical compression, and decision filter |
 | [`docs/core-runtime.md`](docs/core-runtime.md) | The Observe → Improve loop in depth |
 | [`docs/principles.md`](docs/principles.md) | Operating principles |
 | [`docs/frameworks.md`](docs/frameworks.md) | The framework lenses MindShift integrates |

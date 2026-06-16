@@ -1,11 +1,10 @@
-# MindShift-
 # MindShift
 
 ## Cognition Infrastructure for Learning, Adaptation, and Recursive Improvement
 
-MindShift is an open-source exploration of how systems learn, adapt, validate, and improve over time.
+MindShift is an independent, open-source exploration of how systems learn, adapt, validate, and improve over time.
 
-It began with a simple observation:
+It began with a single observation:
 
 > Learning becomes intelligence when it loops back on itself.
 
@@ -23,26 +22,30 @@ MindShift asks:
 
 ## Core Runtime
 
-text Observe → Model → Validate → Learn → Improve → Repeat 
+```text
+Observe → Model → Validate → Learn → Improve → Repeat
+```
 
 The goal is not information accumulation.
 
-The goal is continuous improvement of the learning process itself.
+The goal is continuous improvement of the process that produces understanding.
 
 ---
 
 ## Core Question
 
-text How do systems learn, adapt, validate, and improve over time? 
+```text
+How do systems learn, adapt, validate, and improve over time?
+```
 
 This question applies to:
 
 - Individuals
 - Teams
 - Organizations
-- AI Systems
-- Multi-Agent Systems
-- Learning Environments
+- AI systems
+- Multi-agent systems
+- Learning environments
 
 ---
 
@@ -52,21 +55,26 @@ This question applies to:
 
 All models remain subordinate to reality.
 
-text Assumption → Test → Validation → Revision 
+```text
+Assumption → Test → Validation → Revision
+```
 
 ### Feedback Creates Learning
 
 Without feedback, improvement stalls.
 
-text Action → Feedback → Adaptation 
+```text
+Action → Feedback → Adaptation
+```
 
 ### Pattern Recognition Matters
 
-Understanding emerges from recognizing relationships across observations.
+Understanding emerges from recognizing relationships across observations. Seek
+patterns, invariants, feedback loops, leverage points, and recurring structures.
 
 ### Learning About Learning
 
-The highest leverage improvements often come from improving the learning process itself.
+The highest-leverage improvements often come from improving the learning process itself.
 
 ### Recursive Improvement
 
@@ -79,6 +87,10 @@ Every cycle should improve future cycles.
 MindShift draws from and integrates concepts including:
 
 - First Principles Thinking
+- Pattern Recognition
+- Learning Systems
+- Meta-Learning
+- Reflexive Intelligence
 - Bateson Levels of Learning
 - Dilts Logical Levels
 - Cybernetics
@@ -86,15 +98,17 @@ MindShift draws from and integrates concepts including:
 - OODA Loops
 - Systems Thinking
 - Flow Theory
-- Pattern Recognition
-- Meta-Learning
-- Reflexive Intelligence
+- Feedback Systems
+- Cognitive Architecture
+- Recursive Improvement
+
+See [`docs/frameworks.md`](docs/frameworks.md) for how each lens is used.
 
 ---
 
 ## What MindShift Is
 
-- A cognitive infrastructure project
+- A cognition infrastructure project
 - A recursive learning framework
 - A collection of learning systems
 - An exploration of reflexive intelligence
@@ -102,11 +116,34 @@ MindShift draws from and integrates concepts including:
 
 ## What MindShift Is Not
 
+- A governance system
+- An execution platform
+- An agent framework
+- A legitimacy or eligibility protocol
 - A replacement for machine learning
 - A large language model
-- A productivity system
-- A certification framework
+- A productivity or certification system
 - A claim of scientific completeness
+
+MindShift focuses on **cognition**. It does not create authority, govern
+execution, validate legitimacy, or determine execution eligibility.
+
+---
+
+## Repository Map
+
+| Path | Purpose |
+| --- | --- |
+| [`README.md`](README.md) | Project overview (this file) |
+| [`CLAUDE.md`](CLAUDE.md) | Repository-level operating guide and Grandmaster Mode |
+| [`docs/core-runtime.md`](docs/core-runtime.md) | The Observe → Improve loop in depth |
+| [`docs/principles.md`](docs/principles.md) | Operating principles |
+| [`docs/frameworks.md`](docs/frameworks.md) | The framework lenses MindShift integrates |
+| [`docs/grandmaster-mode.md`](docs/grandmaster-mode.md) | The four-stage analysis method |
+| [`docs/lineage.md`](docs/lineage.md) | Historical context and the recurring invariant |
+| [`docs/scope.md`](docs/scope.md) | Boundaries: what MindShift is and is not |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to contribute |
+| [`LICENSE`](LICENSE) | MIT License |
 
 ---
 
@@ -120,7 +157,8 @@ The future advantage is not access to answers.
 
 It is the ability to learn, adapt, validate, and improve faster than the environment changes.
 
- Observe → Model → Validate → Learn → Improve → Repeat 
+```text
+Observe → Model → Validate → Learn → Improve → Repeat
+```
 
 Learning how to learn remains one of the most powerful recursive advantages available to any system.
-

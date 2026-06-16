@@ -24,6 +24,9 @@ loop are recorded in Tier 3 as guardrails, not tasks.
 - Reference the [thesis](thesis.md) decision filter directly in the PR template and
   [`CONTRIBUTING.md`](../CONTRIBUTING.md) as a required check.
 - *Why:* turns scope-defense into a standing feedback loop, not a one-time doc.
+- **Status:** done. The filter is a required check in
+  [`CONTRIBUTING.md`](../CONTRIBUTING.md) and a checkbox in the
+  [PR template](../.github/pull_request_template.md).
 
 ## Tier 2 — Maintenance / integrity (as needed)
 

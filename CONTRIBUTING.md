@@ -37,13 +37,27 @@ MindShift focuses on cognition. The following are out of scope (see
 - Execution platforms or eligibility determination
 - Agent frameworks
 
+## The Decision Filter
+
+Before proposing any change, run it through the
+[thesis](docs/thesis.md) decision filter:
+
+> Does this strengthen the loop that turns learning back on itself, or merely add
+> information (or authority, or tooling) beside it?
+
+If the change only adds something *beside* the loop, it does not belong here. This
+is a required check, not a suggestion — every pull request must state how it
+passes (the [PR template](.github/pull_request_template.md) prompts for it).
+
 ## How to Contribute
 
 1. Create a topic branch for your change.
 2. Keep changes focused and clearly described.
-3. Add or update documentation under [`docs/`](docs/), and update the Repository
+3. Confirm the change passes the decision filter above.
+4. Add or update documentation under [`docs/`](docs/), and update the Repository
    Map in [`README.md`](README.md) when you add a new document.
-4. Open a pull request explaining the change and the reasoning behind it.
+5. Open a pull request explaining the change, the reasoning behind it, and how it
+   passes the decision filter.
 
 ## Style
 

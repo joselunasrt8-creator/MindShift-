@@ -8,13 +8,17 @@ loop are recorded in Tier 3 as guardrails, not tasks.
 ## Tier 1 — Strengthens the loop (recommended)
 
 ### 1. Worked Grandmaster Mode examples
-- Add `docs/examples/` with two or three analyses that run a real problem through
+- Add [`docs/examples/`](examples/) with analyses that run a real problem through
   the four stages and end in a `🏁 Meta-Lesson`.
 - Each example must feed back: the meta-lesson should propose a refinement to
   [`grandmaster-mode.md`](grandmaster-mode.md) itself, closing the recursion — the
   practice improving the protocol.
 - *Why:* the distinctive value is the practice, not the theory. Demonstrations are
   higher-leverage than new concepts.
+- **Status:** started. First example —
+  [retrospectives that don't change behavior](examples/retrospectives-that-dont-change-behavior.md) —
+  produced the **Closure Check** refinement to the method. The pattern is
+  established; add further examples as new problems arise.
 
 ### 2. Make the decision filter operational in the contribution flow
 - Reference the [thesis](thesis.md) decision filter directly in the PR template and

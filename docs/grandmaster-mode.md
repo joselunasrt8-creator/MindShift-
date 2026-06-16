@@ -63,10 +63,24 @@ primary bottleneck.
 🏁 Meta-Lesson + Recommended Action
 ```
 
+## Closure Check
+
+Before Stage 1 of a *new* analysis, verify the *previous* analysis's recommended
+action: was it carried out, and what did it teach? Fold that result into the
+current Surface Observation.
+
+Without this check, the method produces insight without ever closing a cycle —
+the same open-loop failure it is built to diagnose. The Closure Check is what
+makes Grandmaster Mode enforce on itself the recursion it asks of everything else.
+
+> This refinement was produced by a worked example —
+> [retrospectives that don't change behavior](examples/retrospectives-that-dont-change-behavior.md) —
+> applying the method to itself. The practice improved the protocol.
+
 ## Core Invariant
 
 Every analysis should improve the quality of future thinking, not merely explain
-the present.
+the present — and should verify that the *last* analysis actually did so.
 
 ```text
 Observe → Model → Validate → Learn → Improve → Repeat

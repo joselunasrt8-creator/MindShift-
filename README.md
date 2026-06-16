@@ -141,6 +141,7 @@ execution, validate legitimacy, or determine execution eligibility.
 | [`docs/principles.md`](docs/principles.md) | Operating principles |
 | [`docs/frameworks.md`](docs/frameworks.md) | The framework lenses MindShift integrates |
 | [`docs/grandmaster-mode.md`](docs/grandmaster-mode.md) | The four-stage analysis method |
+| [`docs/examples/`](docs/examples/) | Worked Grandmaster Mode analyses that feed back into the method |
 | [`docs/lineage.md`](docs/lineage.md) | Historical context and the recurring invariant |
 | [`docs/scope.md`](docs/scope.md) | Boundaries: what MindShift is and is not |
 | [`docs/roadmap.md`](docs/roadmap.md) | Future / optional work, filtered against the thesis |

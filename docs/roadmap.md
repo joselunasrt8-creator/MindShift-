@@ -33,6 +33,9 @@ loop are recorded in Tier 3 as guardrails, not tasks.
 ### 3. Periodic compression review
 - On any substantive addition, re-run the test: *what remains if every framework
   is removed?* If the answer changed, the thesis drifted — revert or refactor.
+- Record each review under [`docs/reviews/`](reviews/). First review:
+  [2026-06-16](reviews/2026-06-16-compression-review.md) — verdict: no drift; fixed
+  a divergence between the method spec and its summary in `CLAUDE.md`.
 
 ### 4. License confirmation
 - **Decided: Apache-2.0** (see [`LICENSE`](../LICENSE) and [`NOTICE`](../NOTICE)).

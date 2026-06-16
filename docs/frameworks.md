@@ -4,6 +4,12 @@ MindShift integrates established lenses on learning, systems, and cognition. Non
 is treated as authoritative on its own; each is a tool applied where it has
 leverage. The value is in how they combine within the core runtime.
 
+> **These frameworks are instruments, not substance.** The substance is the
+> [thesis](thesis.md): a process that improves itself. Every lens below is
+> optional vocabulary for running or sharpening that loop — remove them all and
+> the thesis is unharmed. None may become load-bearing; promoting any one of them
+> to "essential" would contradict the very claim it is meant to serve.
+
 ## First Principles Thinking
 
 Decompose a problem to its fundamental truths and reason up from there, rather

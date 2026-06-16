@@ -146,7 +146,7 @@ execution, validate legitimacy, or determine execution eligibility.
 | [`docs/scope.md`](docs/scope.md) | Boundaries: what MindShift is and is not |
 | [`docs/roadmap.md`](docs/roadmap.md) | Future / optional work, filtered against the thesis |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to contribute |
-| [`LICENSE`](LICENSE) | MIT License |
+| [`LICENSE`](LICENSE) | Apache-2.0 License |
 
 ---
 

@@ -35,8 +35,9 @@ loop are recorded in Tier 3 as guardrails, not tasks.
   is removed?* If the answer changed, the thesis drifted — revert or refactor.
 
 ### 4. License confirmation
-- Currently MIT. Decide explicitly: MIT vs. Apache-2.0 vs. a Creative Commons
-  license (defensible for a docs-heavy project).
+- **Decided: Apache-2.0** (see [`LICENSE`](../LICENSE) and [`NOTICE`](../NOTICE)).
+  Chosen over MIT for its explicit patent grant and over Creative Commons because
+  the project may include code as well as prose.
 
 ## Tier 3 — Explicitly NOT to be built (guardrails, not tasks)
 

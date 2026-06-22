@@ -1,0 +1,28 @@
+name: MindShift Runtime Check
+
+on:
+  pull_request:
+  push:
+
+jobs:
+  file-presence:
+    name: File presence only
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify runtime files exist
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          required_files=(
+            "runtime/RUNTIME.md"
+            "runtime/execution-boundary/README.md"
+            "runtime/execution-boundary/example-boundary-checklist.md"
+          )
+
+          for file in "${required_files[@]}"; do
+            test -f "$file"
+          done

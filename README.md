@@ -30,6 +30,10 @@ The goal is not information accumulation.
 
 The goal is continuous improvement of the process that produces understanding.
 
+## MindShift Runtime
+
+Approved authority records can be reviewed through a non-operative execution-boundary checklist before any action is considered eligible.
+
 ---
 
 ## Core Question

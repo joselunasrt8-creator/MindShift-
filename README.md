@@ -30,6 +30,8 @@ The goal is not information accumulation.
 
 The goal is continuous improvement of the process that produces understanding.
 
+Learning logs record what changed after proof closure and feed future observations without creating authority or execution eligibility.
+
 ---
 
 ## Core Question

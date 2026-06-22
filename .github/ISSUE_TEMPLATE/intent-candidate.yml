@@ -1,0 +1,63 @@
+name: MindShift Intent Candidate
+description: Capture an observation, model, evidence, and proposed action for MindShift runtime review.
+title: "Intent Candidate: "
+labels:
+  - mindshift-runtime
+  - intent-candidate
+body:
+  - type: textarea
+    id: observation
+    attributes:
+      label: Observation
+      description: What was observed?
+    validations:
+      required: true
+  - type: textarea
+    id: model-summary
+    attributes:
+      label: Model Summary
+      description: What model or interpretation explains the observation?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: What evidence supports the observation and model?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-action
+    attributes:
+      label: Proposed Action
+      description: What candidate action is being proposed for review?
+    validations:
+      required: true
+  - type: textarea
+    id: requested-scope
+    attributes:
+      label: Requested Scope
+      description: What is the bounded scope of the proposed action?
+    validations:
+      required: true
+  - type: textarea
+    id: boundary-constraints
+    attributes:
+      label: Boundary / Constraints
+      description: What boundaries, constraints, or non-goals must be preserved?
+    validations:
+      required: true
+  - type: textarea
+    id: expected-proof
+    attributes:
+      label: Expected Proof
+      description: If scoped execution is later authorized, what proof would be expected afterward?
+    validations:
+      required: true
+  - type: textarea
+    id: learning-question
+    attributes:
+      label: Learning Question
+      description: What should MindShift learn or validate from this candidate?
+    validations:
+      required: true

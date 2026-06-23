@@ -1,0 +1,33 @@
+name: MindShift Runtime Check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  required-files:
+    name: Required file presence
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Check required MindShift runtime files
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          required_files=(
+            "README.md"
+            "runtime/RUNTIME.md"
+            ".github/ISSUE_TEMPLATE/intent-candidate.yml"
+            "runtime/intents/README.md"
+          )
+
+          for required_file in "${required_files[@]}"; do
+            if [[ ! -f "$required_file" ]]; then
+              echo "Missing required file: $required_file" >&2
+              exit 1
+            fi
+          done

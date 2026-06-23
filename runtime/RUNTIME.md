@@ -1,29 +1,46 @@
 # MindShift Runtime
 
 The MindShift runtime is a non-operative documentation model for preserving
-bounded intent, authority, boundary review, and evidence records without creating
-an execution platform.
+bounded intent, explicit authority, boundary review, proof closure, learning, and
+new observations without creating an execution platform.
 
 ```text
 Issue
 → Intent Candidate
-→ Manual Maintainer Approval
+→ Manual Approval
 → Authority Record
 → Execution Boundary Checklist
 → Eligible / NULL
-→ Proof Closure only after separately scoped action occurred
+→ Separately Scoped Action
+→ Proof Closure
+→ Learning Log
+→ New Observation
 ```
 
-## Proof Closure
+## Runtime Invariants
 
-Proof closure is the final record after scoped execution has occurred outside of
-this template. It must link back to the intent candidate, authority record, and
-execution boundary checklist that bounded the action.
+Intent candidates are not authority.
+Authority is not execution.
+Eligibility is not proof.
+Proof is not authority.
+Learning does not mutate authority.
+Learning does not mutate execution eligibility.
+No automatic external execution.
 
-Proof closure records evidence only. It records what happened, what authority
-allowed it, what evidence exists, and what remains unresolved.
+## Boundary Model
 
-Proof closure does not create authority. It does not convert eligibility into
-proof, and it does not make future actions eligible automatically.
+Issues may hold observations and candidate intent. Issues cannot authorize
+execution. Intent candidates remain proposals until explicit manual approval is
+recorded as an authority record.
 
-If no separately scoped action occurred, proof remains NULL / not created.
+Authority records bound the approved action, scope, constraints, and expiry.
+Authority records do not execute actions. The execution boundary checklist can
+return `Eligible` only when the bounded conditions are satisfied; otherwise it
+returns `NULL`.
+
+Eligibility is not proof. Proof closure can be recorded only after a separately
+scoped action has occurred outside this documentation template. Proof closure
+records evidence and unresolved gaps; it does not authorize future action.
+
+Learning logs interpret proof closure and produce a new observation. Learning is
+non-operative and does not mutate authority or execution eligibility.

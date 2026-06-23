@@ -19,6 +19,12 @@ Issue
 Each stage preserves a separate responsibility. No stage inherits authority from
 a later stage, and no stage automatically performs external execution.
 
+## Manual runbook
+
+Use the [manual runtime lifecycle runbook](manual-runbook.md) as the
+contributor-facing guide for using the lifecycle without creating authority,
+execution, eligibility, or proof automatically.
+
 ## Closure rule
 
 Learning closes the loop only by producing a new observation. Any future action

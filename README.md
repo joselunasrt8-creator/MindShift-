@@ -41,11 +41,17 @@ The runtime does not create authority, execute actions, create proof, determine 
 Runtime documentation:
 
 - [`runtime/RUNTIME.md`](runtime/RUNTIME.md)
+- [`runtime/lifecycle/README.md`](runtime/lifecycle/README.md)
+- [`runtime/lifecycle/manual-runbook.md`](runtime/lifecycle/manual-runbook.md)
 - [`runtime/intents/README.md`](runtime/intents/README.md)
 - [`runtime/authority/README.md`](runtime/authority/README.md)
 - [`runtime/execution-boundary/README.md`](runtime/execution-boundary/README.md)
 - [`runtime/proof/README.md`](runtime/proof/README.md)
 - [`runtime/learning/README.md`](runtime/learning/README.md)
+
+The manual runbook explains how to move through the non-operative lifecycle
+without confusing documentation artifacts with authority, execution,
+eligibility, or proof.
 
 ---
 
@@ -160,6 +166,8 @@ execution, validate legitimacy, or determine execution eligibility.
 | [`docs/grandmaster-mode.md`](docs/grandmaster-mode.md) | The four-stage analysis method |
 | [`docs/examples/`](docs/examples/) | Worked Grandmaster Mode analyses that feed back into the method |
 | [`runtime/RUNTIME.md`](runtime/RUNTIME.md) | Canonical non-operative runtime lifecycle and boundary invariants |
+| [`runtime/lifecycle/README.md`](runtime/lifecycle/README.md) | Runtime lifecycle index and closure rule |
+| [`runtime/lifecycle/manual-runbook.md`](runtime/lifecycle/manual-runbook.md) | Contributor-facing manual guide and boundary map for the non-operative runtime lifecycle |
 | [`runtime/intents/README.md`](runtime/intents/README.md) | Intent candidate documentation and handoff boundary |
 | [`runtime/authority/README.md`](runtime/authority/README.md) | Authority record documentation for bounded manual approval |
 | [`runtime/execution-boundary/README.md`](runtime/execution-boundary/README.md) | Execution-boundary checklist documentation for Eligible / NULL review |

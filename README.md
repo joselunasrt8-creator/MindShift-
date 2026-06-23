@@ -22,23 +22,30 @@ MindShift asks:
 
 ## MindShift Runtime
 
-MindShift includes a non-operative runtime documentation template for bounded intent, authority, boundary review, and evidence records. Proof closure templates record evidence after separately scoped actions; they do not authorize or execute actions.
+MindShift includes a non-operative runtime documentation model that reconciles the cognitive loop with an artifact lifecycle for bounded intent, authority, execution-boundary review, proof closure, and learning.
 
-## Core Runtime
+The cognitive loop remains:
 
 ```text
 Observe → Model → Validate → Learn → Improve → Repeat
 ```
 
-Intent candidates can be captured through the MindShift Intent Candidate issue template.
+The artifact lifecycle is:
 
-The goal is not information accumulation.
+```text
+Issue → Intent Candidate → Manual Approval → Authority Record → Execution Boundary Checklist → Eligible / NULL → Separately Scoped Action → Proof Closure → Learning Log → New Observation
+```
 
-The goal is continuous improvement of the process that produces understanding.
+The runtime does not create authority, execute actions, create proof, determine future eligibility automatically, perform releases, or operate external systems. Learning closes the loop only by producing a new observation for a future separately approved cycle.
 
-## MindShift Runtime
+Runtime documentation:
 
-Approved authority records can be reviewed through a non-operative execution-boundary checklist before any action is considered eligible.
+- [`runtime/RUNTIME.md`](runtime/RUNTIME.md)
+- [`runtime/intents/README.md`](runtime/intents/README.md)
+- [`runtime/authority/README.md`](runtime/authority/README.md)
+- [`runtime/execution-boundary/README.md`](runtime/execution-boundary/README.md)
+- [`runtime/proof/README.md`](runtime/proof/README.md)
+- [`runtime/learning/README.md`](runtime/learning/README.md)
 
 ---
 
@@ -152,8 +159,12 @@ execution, validate legitimacy, or determine execution eligibility.
 | [`docs/frameworks.md`](docs/frameworks.md) | The framework lenses MindShift integrates |
 | [`docs/grandmaster-mode.md`](docs/grandmaster-mode.md) | The four-stage analysis method |
 | [`docs/examples/`](docs/examples/) | Worked Grandmaster Mode analyses that feed back into the method |
-| [`runtime/RUNTIME.md`](runtime/RUNTIME.md) | Runtime boundary notes for structured observations and intent candidates |
-| [`runtime/intents/README.md`](runtime/intents/README.md) | Intent candidate handoff boundary between MindShift and ContinuityOS |
+| [`runtime/RUNTIME.md`](runtime/RUNTIME.md) | Canonical non-operative runtime lifecycle and boundary invariants |
+| [`runtime/intents/README.md`](runtime/intents/README.md) | Intent candidate documentation and handoff boundary |
+| [`runtime/authority/README.md`](runtime/authority/README.md) | Authority record documentation for bounded manual approval |
+| [`runtime/execution-boundary/README.md`](runtime/execution-boundary/README.md) | Execution-boundary checklist documentation for Eligible / NULL review |
+| [`runtime/proof/README.md`](runtime/proof/README.md) | Proof closure documentation after separately scoped action |
+| [`runtime/learning/README.md`](runtime/learning/README.md) | Learning log documentation for new observations |
 | [`docs/lineage.md`](docs/lineage.md) | Historical context and the recurring invariant |
 | [`docs/scope.md`](docs/scope.md) | Boundaries: what MindShift is and is not |
 | [`docs/roadmap.md`](docs/roadmap.md) | Future / optional work, filtered against the thesis |

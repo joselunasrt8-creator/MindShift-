@@ -1,14 +1,19 @@
 # MindShift
 
-## Cognition Infrastructure for Learning, Adaptation, and Recursive Improvement
+## System Abstraction Infrastructure
 
-MindShift is an independent, open-source exploration of how systems learn, adapt, validate, and improve over time.
+MindShift is an independent, open System Abstraction Infrastructure for identifying
+recurring patterns, abstractions, scarcity, and transferable primitives. It studies
+how systems learn, adapt, validate, and improve over time, but cognition is a
+mechanism rather than the project identity.
 
 It began with a single observation:
 
 > Learning becomes intelligence when it loops back on itself.
 
-The project explores recursive learning systems, feedback loops, pattern recognition, reflection, meta-learning, and cognitive architecture.
+The project uses recursive learning systems, feedback loops, pattern recognition,
+reflection, meta-learning, and cognitive architecture as instruments for moving
+from reality to transferable abstraction.
 
 Rather than asking:
 
@@ -16,7 +21,7 @@ Rather than asking:
 
 MindShift asks:
 
-> How does learning itself improve?
+> What reusable abstraction emerges, and where does it transfer?
 
 ---
 
@@ -131,11 +136,13 @@ See [`docs/frameworks.md`](docs/frameworks.md) for how each lens is used.
 
 ## What MindShift Is
 
-- A cognition infrastructure project
-- A recursive learning framework
-- A collection of learning systems
-- An exploration of reflexive intelligence
-- A research space for cognition and adaptation
+- An open System Abstraction Infrastructure
+- A non-operative way to move from observation to pattern, abstraction, primitive,
+  and transfer
+- A research space for recurring structures, scarcity discovery, and reusable
+  abstraction
+- A recursive learning framework, used as a mechanism rather than an identity
+- An exploration of reflexive intelligence and adaptation
 
 ## What MindShift Is Not
 
@@ -148,8 +155,8 @@ See [`docs/frameworks.md`](docs/frameworks.md) for how each lens is used.
 - A productivity or certification system
 - A claim of scientific completeness
 
-MindShift focuses on **cognition**. It does not create authority, govern
-execution, validate legitimacy, or determine execution eligibility.
+MindShift focuses on **abstraction transfer**. It does not create authority, govern
+execution, validate legitimacy, determine execution eligibility, or operate external systems.
 
 ---
 
@@ -186,7 +193,8 @@ execution, validate legitimacy, or determine execution eligibility.
 
 Information is becoming abundant.
 
-Learning is becoming the differentiator.
+Learning is becoming the differentiator, and reusable abstraction is the durable
+asset that learning can produce.
 
 The future advantage is not access to answers.
 
@@ -198,8 +206,13 @@ Observe → Model → Validate → Learn → Improve → Repeat
 
 Learning how to learn remains one of the most powerful recursive advantages available to any system.
 
-The [reframing audit](docs/reviews/mindshift-reframing-audit.md) compresses MindShift as **Abstraction Discovery Infrastructure**:
+MindShift compresses as **System Abstraction Infrastructure**:
 
 ```text
-Reality → Pattern → Abstraction → Transfer
+Observation → Pattern → Abstraction → Primitive → Transfer
 ```
+
+Frameworks are instruments. Abstractions are the reusable asset. Transfer is the
+test of usefulness. A recurring output is scarcity discovery: MindShift often
+clarifies where abundance hides the scarce dependency, proof, legitimacy,
+learning, or leverage point.

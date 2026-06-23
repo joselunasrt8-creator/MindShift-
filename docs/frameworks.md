@@ -16,11 +16,12 @@ Frameworks are not the final output of MindShift. Frameworks are child artifacts
 produced by abstraction discovery. The parent process is:
 
 ```text
-Reality → Pattern → Abstraction → Transfer
+Observation → Pattern → Abstraction → Primitive → Transfer
 ```
 
 A framework belongs here only when it helps an observed pattern become a
-transferable abstraction that improves future cognition.
+transferable abstraction or primitive that improves future cognition. Transfer,
+not framework production, is the test of usefulness.
 
 ## First Principles Thinking
 

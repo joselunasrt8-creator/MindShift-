@@ -1,8 +1,9 @@
 # Contributing to MindShift
 
-MindShift is an independent, open-source cognition infrastructure project.
-Contributions are welcome when they strengthen the project's focus: learning,
-adaptation, validation, pattern recognition, recursive improvement, and reflexive
+MindShift is an independent, open System Abstraction Infrastructure.
+Contributions are welcome when they strengthen the project's focus: observation,
+pattern recognition, abstraction, transferable primitives, scarcity discovery,
+learning, adaptation, validation, recursive improvement, and reflexive
 intelligence.
 
 Before contributing, read [`CLAUDE.md`](CLAUDE.md) and [`docs/scope.md`](docs/scope.md).
@@ -30,7 +31,8 @@ Contributions should embody the same principles the project studies:
 
 ## Out of Scope
 
-MindShift focuses on cognition. The following are out of scope (see
+MindShift focuses on abstraction transfer. Cognition and learning systems are
+mechanisms, not product identity. The following are out of scope (see
 [`docs/scope.md`](docs/scope.md)):
 
 - Governance, authority, or legitimacy mechanisms
@@ -48,6 +50,17 @@ Before proposing any change, run it through the
 If the change only adds something *beside* the loop, it does not belong here. This
 is a required check, not a suggestion — every pull request must state how it
 passes (the [PR template](.github/pull_request_template.md) prompts for it).
+
+## Useful Review Questions
+
+Contributors are not required to answer every question below, but they are useful
+when reviewing whether a contribution strengthens abstraction transfer:
+
+1. What abstraction emerged?
+2. What transfers across domains?
+3. What scarcity was discovered?
+4. What dependency question emerged?
+5. Does the contribution strengthen abstraction transfer?
 
 ## How to Contribute
 

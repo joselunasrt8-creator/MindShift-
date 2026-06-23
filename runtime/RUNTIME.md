@@ -1,8 +1,8 @@
 # MindShift Runtime
 
-The MindShift runtime keeps proposed action review separate from execution. Runtime records describe progression and readiness; they do not perform external actions, auto-create proof, or mutate external systems.
-
-## Runtime Progression
+The MindShift runtime is a non-operative documentation model for preserving
+bounded intent, authority, boundary review, and evidence records without creating
+an execution platform.
 
 ```text
 Issue
@@ -10,15 +10,20 @@ Issue
 → Manual Maintainer Approval
 → Authority Record
 → Execution Boundary Checklist
-→ Proof only after scoped execution
+→ Eligible / NULL
+→ Proof Closure only after separately scoped action occurred
 ```
 
-## Execution Boundary Checklist
+## Proof Closure
 
-The execution boundary checklist is the first eligibility check after authority. It verifies readiness only.
+Proof closure is the final record after scoped execution has occurred outside of
+this template. It must link back to the intent candidate, authority record, and
+execution boundary checklist that bounded the action.
 
-An `APPROVED` authority record does not execute an action. It only allows the proposed action to be reviewed for eligibility against bounded scope, explicit constraints, expiry, and expected proof.
+Proof closure records evidence only. It records what happened, what authority
+allowed it, what evidence exists, and what remains unresolved.
 
-The checklist does not execute actions, call external services, merge, deploy, mutate external systems, or generate proof. Eligibility is not proof; proof can only be created after a separately scoped execution has occurred.
+Proof closure does not create authority. It does not convert eligibility into
+proof, and it does not make future actions eligible automatically.
 
-Missing authority, missing scope, missing constraints, or missing proof expectation keeps the action `NULL` / not eligible.
+If no separately scoped action occurred, proof remains NULL / not created.

@@ -12,17 +12,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Verify runtime files exist
-        shell: bash
+      - name: Check runtime template files exist
         run: |
-          set -euo pipefail
-
-          required_files=(
-            "runtime/RUNTIME.md"
-            "runtime/execution-boundary/README.md"
-            "runtime/execution-boundary/example-boundary-checklist.md"
-          )
-
-          for file in "${required_files[@]}"; do
-            test -f "$file"
-          done
+          test -f runtime/RUNTIME.md
+          test -f runtime/proof/README.md
+          test -f runtime/proof/example-proof-closure.md

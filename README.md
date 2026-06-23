@@ -22,6 +22,10 @@ MindShift asks:
 
 ## MindShift Runtime
 
+MindShift includes a non-operative runtime documentation template for bounded intent, authority, boundary review, and evidence records. Proof closure templates record evidence after separately scoped actions; they do not authorize or execute actions.
+
+## Core Runtime
+
 ```text
 Observe → Model → Validate → Learn → Improve → Repeat
 ```

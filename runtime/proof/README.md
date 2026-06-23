@@ -1,18 +1,17 @@
 # Proof Closure
 
-Proof is evidence recorded after a separately scoped action has occurred. It is
-not the action itself and does not cause an action to happen.
+Proof closure records evidence only after a separately scoped action occurred.
+It is not the action itself and does not cause an action to happen.
 
-Proof is not authority. Authority remains the prior record that allowed a scoped
-action to be considered or performed.
+Proof is not authority. Authority remains the prior manual record that allowed a
+bounded action to proceed to boundary review.
 
 Proof is not eligibility. Eligibility is only a boundary outcome that says a
-scoped action may proceed, or returns NULL when it may not proceed. Eligibility
-is not proof that anything happened.
+scoped action may proceed, or returns `NULL` when it may not proceed.
 
-Proof is not created by issue creation, authority approval, or checklist
-completion. Those records may be linked later, but they do not themselves create
-proof.
+Proof is not auto-created by issue creation, intent candidates, authority
+approval, checklist completion, workflow execution, or learning logs. Those
+records may be linked later, but they do not themselves create proof.
 
 Proof closure records:
 

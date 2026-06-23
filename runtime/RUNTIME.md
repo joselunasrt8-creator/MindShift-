@@ -1,29 +1,40 @@
 # MindShift Runtime
 
 The MindShift runtime is a non-operative documentation model for preserving
-bounded intent, authority, boundary review, and evidence records without creating
-an execution platform.
+bounded intent, manual authority, boundary review, proof closure, and learning
+records without creating an execution platform.
 
 ```text
 Issue
 → Intent Candidate
-→ Manual Maintainer Approval
+→ Manual Approval
 → Authority Record
 → Execution Boundary Checklist
 → Eligible / NULL
-→ Proof Closure only after separately scoped action occurred
+→ Separately Scoped Action
+→ Proof Closure
+→ Learning Log
+→ New Observation
 ```
 
-## Proof Closure
+## Boundary Invariants
 
-Proof closure is the final record after scoped execution has occurred outside of
-this template. It must link back to the intent candidate, authority record, and
-execution boundary checklist that bounded the action.
+- Intent candidates are not authority.
+- Authority is not execution.
+- Eligibility is not proof.
+- Proof is not authority.
+- Learning does not mutate authority.
+- Learning does not mutate execution eligibility.
+- No automatic external execution.
 
-Proof closure records evidence only. It records what happened, what authority
-allowed it, what evidence exists, and what remains unresolved.
+## Runtime Artifacts
 
-Proof closure does not create authority. It does not convert eligibility into
-proof, and it does not make future actions eligible automatically.
+- `runtime/intents/README.md` defines issue-backed observation and intent candidate boundaries.
+- `runtime/authority/README.md` defines manual maintainer authority records.
+- `runtime/execution-boundary/README.md` defines eligibility review boundaries.
+- `runtime/proof/README.md` defines evidence-only proof closure.
+- `runtime/learning/README.md` defines learning logs that create new observations only.
 
-If no separately scoped action occurred, proof remains NULL / not created.
+The runtime records topology and evidence only. It does not authorize, validate,
+execute, merge, deploy, call APIs, create proof automatically, or mutate future
+execution eligibility.

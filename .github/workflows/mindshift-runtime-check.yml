@@ -5,15 +5,11 @@ on:
   push:
 
 jobs:
-  file-presence:
-    name: File presence only
+  non-operative-notice:
+    name: Non-operative runtime notice
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Check runtime template files exist
+      - name: State non-operative boundary
         run: |
-          test -f runtime/RUNTIME.md
-          test -f runtime/proof/README.md
-          test -f runtime/proof/example-proof-closure.md
+          echo "MindShift runtime check is non-operative."
+          echo "It creates no authority, proof, eligibility change, release action, repository integration action, or external execution."

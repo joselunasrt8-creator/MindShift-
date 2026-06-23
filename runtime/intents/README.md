@@ -2,18 +2,15 @@
 
 GitHub issues are observation containers. They can hold structured information
 about what was observed, how it is modeled, what evidence supports it, and what
-action might be considered next.
+action might be proposed for later review.
 
-Issue templates create structured intent candidates. An intent candidate is a
-proposal for review, not an authorization mechanism. Intent candidates do not
-authorize execution, do not create proof, and do not grant operational authority.
+Intent candidates propose actions only. They are not authorization mechanisms,
+and they do not authorize execution, create proof, grant operational authority,
+trigger workflows, call APIs, merge, deploy, or mutate external systems.
 
 Maintainer approval is required before any authority object exists. Authority
-must be explicit, bounded, and separate from issue creation.
-
-ContinuityOS begins only after an accepted intent candidate moves toward
-authority and execution eligibility. Until then, MindShift remains in the
-observation, modeling, validation, and candidate-proposal portion of the loop.
+must be explicit, manual, bounded, and separate from issue creation or intent
+candidate creation.
 
 ## Handoff Boundary
 
@@ -22,8 +19,9 @@ MindShift:
 Observe → Model → Validate → Intent Candidate
 
 ContinuityOS:
-Authority → Validation → Execution Boundary → Proof
+Authority → Execution Boundary → Proof → Learning
 ```
 
-This boundary keeps MindShift non-operative: issues can propose intent
-candidates only, and no execution is allowed from issue creation.
+MindShift ends at Intent Candidate. ContinuityOS begins at Authority. This
+boundary keeps issues and intent candidates non-operative: they can propose
+bounded actions for review only, and no execution is allowed from issue creation.

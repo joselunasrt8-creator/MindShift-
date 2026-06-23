@@ -12,8 +12,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Check runtime files exist
+      - name: Verify runtime files exist
+        shell: bash
         run: |
-          test -f runtime/RUNTIME.md
-          test -f runtime/learning/README.md
-          test -f runtime/learning/example-learning-log.md
+          set -euo pipefail
+
+          required_files=(
+            "runtime/RUNTIME.md"
+            "runtime/execution-boundary/README.md"
+            "runtime/execution-boundary/example-boundary-checklist.md"
+          )
+
+          for file in "${required_files[@]}"; do
+            test -f "$file"
+          done

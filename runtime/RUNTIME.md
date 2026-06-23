@@ -1,9 +1,8 @@
 # MindShift Runtime
 
-The MindShift runtime is a non-operative documentation loop. It describes how an
-issue can progress through intent, approval, authority, boundary review,
-eligibility, separately scoped action, proof closure, and learning without
-creating an autonomous execution surface.
+The MindShift runtime keeps proposed action review separate from execution. Runtime records describe progression and readiness; they do not perform external actions, auto-create proof, or mutate external systems.
+
+## Runtime Progression
 
 ```text
 Issue
@@ -11,19 +10,15 @@ Issue
 → Manual Maintainer Approval
 → Authority Record
 → Execution Boundary Checklist
-→ Eligible / NULL
-→ Separately Scoped Action
-→ Proof Closure
-→ Learn
+→ Proof only after scoped execution
 ```
 
-## Learning Log
+## Execution Boundary Checklist
 
-Learning is the recursive close of the MindShift loop. It turns proof closure
-into future observation by recording interpretation only: what changed, what was
-validated, what was falsified, and what should be observed next.
+The execution boundary checklist is the first eligibility check after authority. It verifies readiness only.
 
-Learning does not mutate authority or eligibility. It does not create proof, it
-does not authorize execution, and it does not execute actions. Future action
-still requires a new intent candidate and separate approval before any later
-runtime step can be considered.
+An `APPROVED` authority record does not execute an action. It only allows the proposed action to be reviewed for eligibility against bounded scope, explicit constraints, expiry, and expected proof.
+
+The checklist does not execute actions, call external services, merge, deploy, mutate external systems, or generate proof. Eligibility is not proof; proof can only be created after a separately scoped execution has occurred.
+
+Missing authority, missing scope, missing constraints, or missing proof expectation keeps the action `NULL` / not eligible.

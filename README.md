@@ -197,3 +197,9 @@ Observe → Model → Validate → Learn → Improve → Repeat
 ```
 
 Learning how to learn remains one of the most powerful recursive advantages available to any system.
+
+The [reframing audit](docs/reviews/mindshift-reframing-audit.md) compresses MindShift as **Abstraction Discovery Infrastructure**:
+
+```text
+Reality → Pattern → Abstraction → Transfer
+```

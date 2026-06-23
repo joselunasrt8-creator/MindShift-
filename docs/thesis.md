@@ -66,6 +66,22 @@ If it only adds something *beside* the loop, it does not belong here. This filte
 is itself a feedback loop: it keeps the project's scope self-correcting. See
 [scope.md](scope.md) for the boundaries this protects.
 
+## Current Compression
+
+MindShift's current highest-fidelity compression is:
+
+```text
+Reality
+→ Pattern
+→ Abstraction
+→ Transfer
+```
+
+This does not replace the invariant. It clarifies what the recursive learning loop
+produces when it works: transferable abstractions that improve future cognition.
+
+See the [MindShift Reframing Audit](reviews/mindshift-reframing-audit.md).
+
 ## What MindShift Exists For
 
 > MindShift exists because the highest-leverage thing any system can improve is

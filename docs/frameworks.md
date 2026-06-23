@@ -10,6 +10,18 @@ leverage. The value is in how they combine within the core runtime.
 > the thesis is unharmed. None may become load-bearing; promoting any one of them
 > to "essential" would contradict the very claim it is meant to serve.
 
+## Boundary Note — Frameworks Are Child Artifacts
+
+Frameworks are not the final output of MindShift. Frameworks are child artifacts
+produced by abstraction discovery. The parent process is:
+
+```text
+Reality → Pattern → Abstraction → Transfer
+```
+
+A framework belongs here only when it helps an observed pattern become a
+transferable abstraction that improves future cognition.
+
 ## First Principles Thinking
 
 Decompose a problem to its fundamental truths and reason up from there, rather

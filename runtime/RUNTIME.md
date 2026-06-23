@@ -1,24 +1,29 @@
 # MindShift Runtime
 
-MindShift keeps runtime thinking bounded to cognition and learning. It observes,
-models, validates, and proposes intent candidates without creating authority or
-execution rights.
+The MindShift runtime is a non-operative documentation loop. It describes how an
+issue can progress through intent, approval, authority, boundary review,
+eligibility, separately scoped action, proof closure, and learning without
+creating an autonomous execution surface.
 
 ```text
-Observe → Model → Validate → Intent Candidate → Authority → Execution Boundary → Proof → Learn
+Issue
+→ Intent Candidate
+→ Manual Maintainer Approval
+→ Authority Record
+→ Execution Boundary Checklist
+→ Eligible / NULL
+→ Separately Scoped Action
+→ Proof Closure
+→ Learn
 ```
 
-## GitHub Issue Intent Candidates
+## Learning Log
 
-A GitHub issue can capture a structured observation for runtime review. The
-MindShift Intent Candidate issue template records the observation, model summary,
-evidence, proposed action, requested scope, boundary constraints, expected proof,
-and learning question.
+Learning is the recursive close of the MindShift loop. It turns proof closure
+into future observation by recording interpretation only: what changed, what was
+validated, what was falsified, and what should be observed next.
 
-The issue is not authority. The issue is not execution. It only proposes a
-candidate action for maintainer review. Authority must be created separately as
-an explicit bounded artifact before any execution eligibility exists.
-
-Issue creation does not grant permission, does not create proof, and does not
-trigger real external action. Proof is required only after separately authorized,
-scoped execution occurs.
+Learning does not mutate authority or eligibility. It does not create proof, it
+does not authorize execution, and it does not execute actions. Future action
+still requires a new intent candidate and separate approval before any later
+runtime step can be considered.

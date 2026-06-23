@@ -3,25 +3,33 @@
 ## System Abstraction Infrastructure
 
 MindShift is an independent, open System Abstraction Infrastructure for identifying
-recurring patterns, abstractions, scarcity, and transferable primitives. It studies
-how systems learn, adapt, validate, and improve over time, but cognition is a
-mechanism rather than the project identity.
+recurring patterns, abstractions, scarcity, and transferable primitives across domains.
 
-It began with a single observation:
+Its purpose is to observe reality, compress complexity, and produce reusable models
+that transfer across systems.
+
+The output is not information.
+
+The output is better abstractions.
+
+It began with a simple observation:
 
 > Learning becomes intelligence when it loops back on itself.
 
-The project uses recursive learning systems, feedback loops, pattern recognition,
-reflection, meta-learning, and cognitive architecture as instruments for moving
-from reality to transferable abstraction.
+Over time, that expanded into a broader question:
 
-Rather than asking:
+> How do recurring patterns become reusable systems?
 
-> What should I learn?
+MindShift uses observation, pattern recognition, recursive learning, feedback loops,
+reflection, and abstraction to discover models that transfer across domains.
 
-MindShift asks:
+Software.
+Business.
+Logistics.
+Organizations.
+AI systems.
 
-> What reusable abstraction emerges, and where does it transfer?
+Any environment where complexity can be compressed into reusable understanding.
 
 ---
 

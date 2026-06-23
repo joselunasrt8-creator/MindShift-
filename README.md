@@ -22,19 +22,32 @@ MindShift asks:
 
 ## MindShift Runtime
 
+The cognitive learning loop remains:
+
 ```text
 Observe → Model → Validate → Learn → Improve → Repeat
 ```
 
-Intent candidates can be captured through the MindShift Intent Candidate issue template.
+The structured runtime artifact chain is documented in [`runtime/RUNTIME.md`](runtime/RUNTIME.md):
+
+```text
+Issue
+→ Intent Candidate
+→ Manual Approval
+→ Authority Record
+→ Execution Boundary Checklist
+→ Eligible / NULL
+→ Separately Scoped Action
+→ Proof Closure
+→ Learning Log
+→ New Observation
+```
+
+Intent candidates can be captured through the MindShift Intent Candidate issue template. Intent candidates are proposals only; they are not authority. Approved authority records can be reviewed through a non-operative execution-boundary checklist before any action is considered eligible. Eligibility is not proof, proof is not authority, and learning logs do not mutate authority or execution eligibility.
 
 The goal is not information accumulation.
 
 The goal is continuous improvement of the process that produces understanding.
-
-## MindShift Runtime
-
-Approved authority records can be reviewed through a non-operative execution-boundary checklist before any action is considered eligible.
 
 ---
 
@@ -148,8 +161,12 @@ execution, validate legitimacy, or determine execution eligibility.
 | [`docs/frameworks.md`](docs/frameworks.md) | The framework lenses MindShift integrates |
 | [`docs/grandmaster-mode.md`](docs/grandmaster-mode.md) | The four-stage analysis method |
 | [`docs/examples/`](docs/examples/) | Worked Grandmaster Mode analyses that feed back into the method |
-| [`runtime/RUNTIME.md`](runtime/RUNTIME.md) | Runtime boundary notes for structured observations and intent candidates |
-| [`runtime/intents/README.md`](runtime/intents/README.md) | Intent candidate handoff boundary between MindShift and ContinuityOS |
+| [`runtime/RUNTIME.md`](runtime/RUNTIME.md) | Canonical runtime lifecycle and boundary invariants |
+| [`runtime/intents/README.md`](runtime/intents/README.md) | Intent candidates as non-authority proposals |
+| [`runtime/authority/README.md`](runtime/authority/README.md) | Authority records as bounded manual approvals, not execution |
+| [`runtime/execution-boundary/README.md`](runtime/execution-boundary/README.md) | Execution-boundary checklist for eligibility / NULL review |
+| [`runtime/proof/README.md`](runtime/proof/README.md) | Proof closure after separately scoped action; proof is not authority |
+| [`runtime/learning/README.md`](runtime/learning/README.md) | Learning logs after proof closure; learning does not mutate authority or eligibility |
 | [`docs/lineage.md`](docs/lineage.md) | Historical context and the recurring invariant |
 | [`docs/scope.md`](docs/scope.md) | Boundaries: what MindShift is and is not |
 | [`docs/roadmap.md`](docs/roadmap.md) | Future / optional work, filtered against the thesis |

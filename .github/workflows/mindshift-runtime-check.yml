@@ -5,24 +5,13 @@ on:
   push:
 
 jobs:
-  file-presence:
-    name: File presence only
+  non-operative-notice:
+    name: Non-operative notice only
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Verify runtime files exist
+      - name: Runtime check intentionally non-operative
         shell: bash
         run: |
           set -euo pipefail
-
-          required_files=(
-            "runtime/RUNTIME.md"
-            "runtime/execution-boundary/README.md"
-            "runtime/execution-boundary/example-boundary-checklist.md"
-          )
-
-          for file in "${required_files[@]}"; do
-            test -f "$file"
-          done
+          echo "MindShift runtime workflows are non-operative."
+          echo "This workflow does not checkout code, use external actions, create authority, create proof, change eligibility, deploy, merge, or call external services."

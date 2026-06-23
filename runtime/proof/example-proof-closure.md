@@ -6,15 +6,15 @@ proof-example-checklist-001
 
 ## Linked Intent Candidate
 
-runtime/examples/example-intent-candidate.md
+Illustrative placeholder: `runtime/examples/example-intent-candidate.md`
 
 ## Linked Authority Record
 
-runtime/examples/example-authority-record.md
+runtime/authority/example-authority-record.md
 
 ## Linked Boundary Checklist
 
-runtime/examples/example-checklist.md
+runtime/execution-boundary/example-boundary-checklist.md
 
 ## Action Claimed
 
@@ -22,7 +22,7 @@ checklist artifact created
 
 ## Evidence Reference
 
-runtime/examples/example-checklist.md
+runtime/execution-boundary/example-boundary-checklist.md
 
 ## Result
 

@@ -1,23 +1,28 @@
 # MindShift
 
-## Context & Cognition Infrastructure
+<p align="center">
+  <img
+    src="4D949479-3F1F-45EE-9785-F586A0CDB8A2.png"
+    alt="MindShift — Context Modeling Framework for AI Systems"
+    width="100%">
+</p>
+
+## Context Modeling Framework for AI Systems
 
 > From observations to better models.
 
-[Hero Image]
+MindShift is a context modeling framework for AI systems.
 
-MindShift is the research and cognition infrastructure that transforms observations into structured understanding.
-
-It develops the theories, models, and methodologies used to understand complex systems before structural analysis or governed execution.
+It transforms observations into structured context and reusable models that improve downstream reasoning, structural analysis, and governed execution.
 
 ---
 
 ## Purpose
 
-MindShift asks:
+### Primary Research Question
 
 ```text
-How do systems learn, adapt, and improve?
+How do systems construct better models from observations?
 ```
 
 It provides:
@@ -63,6 +68,8 @@ ContinuityOS
 Determines whether execution is legitimate
 ```
 
+MindShift produces structured context and models that are consumed by downstream structural analysis and governed execution systems.
+
 MindShift remains upstream of structural analysis and governed execution. It produces better models; it does not determine authority, legitimacy, runtime eligibility, or execution.
 
 ---
@@ -70,12 +77,35 @@ MindShift remains upstream of structural analysis and governed execution. It pro
 ## Long-Term Vision
 
 ```text
-Observation → Context → Cognition → Structural Analysis → Governance → Execution
+Observation
+→ Context
+→ Models
+→ Structural Analysis
+→ Governance
+→ Execution
 ```
 
 ---
 
-## Current Research Areas
+## Outputs
+
+MindShift produces:
+
+- structured context
+- reusable models
+- abstractions
+- learning artifacts
+
+MindShift does not produce:
+
+- execution
+- authority
+- legitimacy
+- runtime governance
+
+---
+
+## Active Research Areas
 
 - Context assembly
 - Cognitive governance
@@ -89,21 +119,29 @@ Observation → Context → Cognition → Structural Analysis → Governance →
 
 ## MindShift Runtime
 
-MindShift includes a non-operative runtime documentation model that reconciles the cognitive loop with an artifact lifecycle for bounded intent, authority, execution-boundary review, proof closure, and learning.
-
-The cognitive loop remains:
+MindShift includes a documented, non-operative runtime model describing how observations evolve into validated models through bounded lifecycle artifacts.
 
 ```text
-Observation → Pattern → Model → Validation → Learning → Improvement
+Observation
+→ Pattern
+→ Model
+→ Validation
+→ Learning
+→ Improvement
 ```
-
-The artifact lifecycle is:
 
 ```text
-Issue → Intent Candidate → Manual Approval → Authority Record → Execution Boundary Checklist → Eligible / NULL → Separately Scoped Action → Proof Closure → Learning Log → New Observation
+Issue
+→ Intent Candidate
+→ Manual Approval
+→ Authority Record
+→ Execution Boundary Review
+→ Eligible / NULL
+→ Separately Scoped Action
+→ Proof Closure
+→ Learning Log
+→ New Observation
 ```
-
-The runtime does not create authority, execute actions, create proof, determine future eligibility automatically, perform releases, or operate external systems. Learning closes the loop only by producing a new observation for a future separately approved cycle.
 
 Runtime documentation:
 
@@ -115,37 +153,6 @@ Runtime documentation:
 - [`runtime/execution-boundary/README.md`](runtime/execution-boundary/README.md)
 - [`runtime/proof/README.md`](runtime/proof/README.md)
 - [`runtime/learning/README.md`](runtime/learning/README.md)
-
-The manual runbook explains how to move through the non-operative lifecycle without confusing documentation artifacts with authority, execution, eligibility, or proof.
-
----
-
-## Repository Map
-
-| Path | Purpose |
-| --- | --- |
-| [`README.md`](README.md) | Project overview (this file) |
-| [`CLAUDE.md`](CLAUDE.md) | Repository-level operating guide and Grandmaster Mode |
-| [`docs/thesis.md`](docs/thesis.md) | The center: the invariant, canonical compression, and decision filter |
-| [`docs/core-runtime.md`](docs/core-runtime.md) | The Observe → Improve loop in depth |
-| [`docs/principles.md`](docs/principles.md) | Operating principles |
-| [`docs/frameworks.md`](docs/frameworks.md) | The framework lenses MindShift integrates |
-| [`docs/grandmaster-mode.md`](docs/grandmaster-mode.md) | The four-stage analysis method |
-| [`docs/examples/`](docs/examples/) | Worked Grandmaster Mode analyses that feed back into the method |
-| [`runtime/RUNTIME.md`](runtime/RUNTIME.md) | Canonical non-operative runtime lifecycle and boundary invariants |
-| [`runtime/lifecycle/README.md`](runtime/lifecycle/README.md) | Runtime lifecycle index and closure rule |
-| [`runtime/lifecycle/manual-runbook.md`](runtime/lifecycle/manual-runbook.md) | Contributor-facing manual guide and boundary map for the non-operative runtime lifecycle |
-| [`runtime/intents/README.md`](runtime/intents/README.md) | Intent candidate documentation and handoff boundary |
-| [`runtime/authority/README.md`](runtime/authority/README.md) | Authority record documentation for bounded manual approval |
-| [`runtime/execution-boundary/README.md`](runtime/execution-boundary/README.md) | Execution-boundary checklist documentation for Eligible / NULL review |
-| [`runtime/proof/README.md`](runtime/proof/README.md) | Proof closure documentation after separately scoped action |
-| [`runtime/learning/README.md`](runtime/learning/README.md) | Learning log documentation for new observations |
-| [`docs/lineage.md`](docs/lineage.md) | Historical context and the recurring invariant |
-| [`docs/scope.md`](docs/scope.md) | Boundaries: what MindShift is and is not |
-| [`docs/roadmap.md`](docs/roadmap.md) | Future / optional work, filtered against the thesis |
-| [`docs/reviews/`](docs/reviews/) | Periodic compression reviews checking the repo against its thesis |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to contribute |
-| [`LICENSE`](LICENSE) | Apache-2.0 License |
 
 ---
 
@@ -176,3 +183,32 @@ Frameworks are instruments. Abstractions are the reusable asset. Transfer is the
 test of usefulness. A recurring output is scarcity discovery: MindShift often
 clarifies where abundance hides the scarce dependency, proof, legitimacy,
 learning, or leverage point.
+
+---
+
+## Repository Map
+
+| Path | Purpose |
+| --- | --- |
+| [`README.md`](README.md) | Project overview (this file) |
+| [`CLAUDE.md`](CLAUDE.md) | Repository-level operating guide and Grandmaster Mode |
+| [`docs/thesis.md`](docs/thesis.md) | The center: the invariant, canonical compression, and decision filter |
+| [`docs/core-runtime.md`](docs/core-runtime.md) | The Observe → Improve loop in depth |
+| [`docs/principles.md`](docs/principles.md) | Operating principles |
+| [`docs/frameworks.md`](docs/frameworks.md) | The framework lenses MindShift integrates |
+| [`docs/grandmaster-mode.md`](docs/grandmaster-mode.md) | The four-stage analysis method |
+| [`docs/examples/`](docs/examples/) | Worked Grandmaster Mode analyses that feed back into the method |
+| [`runtime/RUNTIME.md`](runtime/RUNTIME.md) | Canonical non-operative runtime lifecycle and boundary invariants |
+| [`runtime/lifecycle/README.md`](runtime/lifecycle/README.md) | Runtime lifecycle index and closure rule |
+| [`runtime/lifecycle/manual-runbook.md`](runtime/lifecycle/manual-runbook.md) | Contributor-facing manual guide and boundary map for the non-operative runtime lifecycle |
+| [`runtime/intents/README.md`](runtime/intents/README.md) | Intent candidate documentation and handoff boundary |
+| [`runtime/authority/README.md`](runtime/authority/README.md) | Authority record documentation for bounded manual approval |
+| [`runtime/execution-boundary/README.md`](runtime/execution-boundary/README.md) | Execution-boundary checklist documentation for Eligible / NULL review |
+| [`runtime/proof/README.md`](runtime/proof/README.md) | Proof closure documentation after separately scoped action |
+| [`runtime/learning/README.md`](runtime/learning/README.md) | Learning log documentation for new observations |
+| [`docs/lineage.md`](docs/lineage.md) | Historical context and the recurring invariant |
+| [`docs/scope.md`](docs/scope.md) | Boundaries: what MindShift is and is not |
+| [`docs/roadmap.md`](docs/roadmap.md) | Future / optional work, filtered against the thesis |
+| [`docs/reviews/`](docs/reviews/) | Periodic compression reviews checking the repo against its thesis |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to contribute |
+| [`LICENSE`](LICENSE) | Apache-2.0 License |

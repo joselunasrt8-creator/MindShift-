@@ -1,35 +1,89 @@
 # MindShift
 
-## System Abstraction Infrastructure
+## Context & Cognition Infrastructure
 
-MindShift is an independent, open System Abstraction Infrastructure for identifying
-recurring patterns, abstractions, scarcity, and transferable primitives across domains.
+> From observations to better models.
 
-Its purpose is to observe reality, compress complexity, and produce reusable models
-that transfer across systems.
+[Hero Image]
 
-The output is not information.
+MindShift is the research and cognition infrastructure that transforms observations into structured understanding.
 
-The output is better abstractions.
+It develops the theories, models, and methodologies used to understand complex systems before structural analysis or governed execution.
 
-It began with a simple observation:
+---
 
-> Learning becomes intelligence when it loops back on itself.
+## Purpose
 
-Over time, that expanded into a broader question:
+MindShift asks:
 
-> How do recurring patterns become reusable systems?
+```text
+How do systems learn, adapt, and improve?
+```
 
-MindShift uses observation, pattern recognition, recursive learning, feedback loops,
-reflection, and abstraction to discover models that transfer across domains.
+It provides:
 
-Software.
-Business.
-Logistics.
-Organizations.
-AI systems.
+- Context assembly
+- Observation management
+- Pattern extraction
+- Model formation
+- Reflection
+- Intent candidate generation
+- Cognitive governance
 
-Any environment where complexity can be compressed into reusable understanding.
+It does not provide:
+
+- Execution
+- Authority
+- Legitimacy
+- Runtime governance
+
+---
+
+## Canonical Progression
+
+```text
+Observation → Pattern → Model → Validation → Learning → Improvement
+```
+
+---
+
+## Relationship to the Platform
+
+```text
+MindShift
+↓
+Produces better models
+
+SYNAPSE
+↓
+Produces deterministic structural insight
+
+ContinuityOS
+↓
+Determines whether execution is legitimate
+```
+
+MindShift remains upstream of structural analysis and governed execution. It produces better models; it does not determine authority, legitimacy, runtime eligibility, or execution.
+
+---
+
+## Long-Term Vision
+
+```text
+Observation → Context → Cognition → Structural Analysis → Governance → Execution
+```
+
+---
+
+## Current Research Areas
+
+- Context assembly
+- Cognitive governance
+- Model evaluation
+- Reflection systems
+- Memory architecture
+- AI cognition
+- Human-AI collaboration
 
 ---
 
@@ -40,7 +94,7 @@ MindShift includes a non-operative runtime documentation model that reconciles t
 The cognitive loop remains:
 
 ```text
-Observe → Model → Validate → Learn → Improve → Repeat
+Observation → Pattern → Model → Validation → Learning → Improvement
 ```
 
 The artifact lifecycle is:
@@ -62,109 +116,7 @@ Runtime documentation:
 - [`runtime/proof/README.md`](runtime/proof/README.md)
 - [`runtime/learning/README.md`](runtime/learning/README.md)
 
-The manual runbook explains how to move through the non-operative lifecycle
-without confusing documentation artifacts with authority, execution,
-eligibility, or proof.
-
----
-
-## Core Question
-
-```text
-How do systems learn, adapt, validate, and improve over time?
-```
-
-This question applies to:
-
-- Individuals
-- Teams
-- Organizations
-- AI systems
-- Multi-agent systems
-- Learning environments
-
----
-
-## Foundational Principles
-
-### Reality First
-
-All models remain subordinate to reality.
-
-```text
-Assumption → Test → Validation → Revision
-```
-
-### Feedback Creates Learning
-
-Without feedback, improvement stalls.
-
-```text
-Action → Feedback → Adaptation
-```
-
-### Pattern Recognition Matters
-
-Understanding emerges from recognizing relationships across observations. Seek
-patterns, invariants, feedback loops, leverage points, and recurring structures.
-
-### Learning About Learning
-
-The highest-leverage improvements often come from improving the learning process itself.
-
-### Recursive Improvement
-
-Every cycle should improve future cycles.
-
----
-
-## Framework Areas
-
-MindShift draws from and integrates concepts including:
-
-- First Principles Thinking
-- Pattern Recognition
-- Learning Systems
-- Meta-Learning
-- Reflexive Intelligence
-- Bateson Levels of Learning
-- Dilts Logical Levels
-- Cybernetics
-- Kaizen / PDCA
-- OODA Loops
-- Systems Thinking
-- Flow Theory
-- Feedback Systems
-- Cognitive Architecture
-- Recursive Improvement
-
-See [`docs/frameworks.md`](docs/frameworks.md) for how each lens is used.
-
----
-
-## What MindShift Is
-
-- An open System Abstraction Infrastructure
-- A non-operative way to move from observation to pattern, abstraction, primitive,
-  and transfer
-- A research space for recurring structures, scarcity discovery, and reusable
-  abstraction
-- A recursive learning framework, used as a mechanism rather than an identity
-- An exploration of reflexive intelligence and adaptation
-
-## What MindShift Is Not
-
-- A governance system
-- An execution platform
-- An agent framework
-- A legitimacy or eligibility protocol
-- A replacement for machine learning
-- A large language model
-- A productivity or certification system
-- A claim of scientific completeness
-
-MindShift focuses on **abstraction transfer**. It does not create authority, govern
-execution, validate legitimacy, determine execution eligibility, or operate external systems.
+The manual runbook explains how to move through the non-operative lifecycle without confusing documentation artifacts with authority, execution, eligibility, or proof.
 
 ---
 

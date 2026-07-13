@@ -1,49 +1,26 @@
-# Operating Principles
+# Research Principles
 
-These principles govern how MindShift reasons. They are deliberately few. Each is
-a constraint that keeps the core runtime honest.
+These principles guide MindShift as a research framework for studying how
+observations become transferable abstractions that improve future modeling.
 
 ## Reality First
 
-All models remain subordinate to reality. A model is a tool for prediction and
-action, never a substitute for observation. When a model and reality disagree,
-reality wins and the model is revised.
+Models remain subordinate to reality. Observation comes before abstraction.
 
-```text
-Assumption → Test → Validation → Revision
-```
+## Pattern Identification
 
-## Feedback Creates Learning
+Understanding begins by finding recurring relationships across observations.
 
-Without feedback, improvement stalls. Learning is impossible in the absence of a
-signal about the gap between intention and result. Designing for fast, honest
-feedback is therefore a first-order concern.
+## Abstraction Formation
 
-```text
-Action → Feedback → Adaptation
-```
+Patterns become useful when they can be compressed into abstractions that survive
+outside the original case.
 
-## Pattern Recognition Matters
+## Transfer Test
 
-Understanding emerges from recognizing relationships across observations. Seek:
+Transfer is the test of usefulness. An abstraction matters when it improves
+future modeling beyond the context that produced it.
 
-- patterns
-- invariants
-- feedback loops
-- leverage points
-- recurring structures
+## Learning Reflection
 
-A pattern that holds across contexts is more valuable than a fact that holds in
-one.
-
-## Recursive Improvement
-
-Every cycle should improve future cycles. A change that only solves today's
-instance is worth less than a change that improves how all future instances are
-handled.
-
-## Learning About Learning
-
-The highest-leverage improvements often come from improving the learning process
-itself. This is the project's central bet: meta-learning compounds. Improving
-*what* you know is linear; improving *how* you come to know is exponential.
+Each analysis should improve future modeling, not merely explain the present.

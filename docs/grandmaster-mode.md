@@ -1,87 +1,63 @@
 # MindShift Grandmaster Mode
 
-A four-stage method for analyzing any problem, project, framework, decision, or
-situation. The metaphor is chess: read the position, generate candidate moves,
-choose the strongest, and extract a lesson that improves future play.
+Grandmaster Mode is an analysis method for extracting transferable lessons from
+observations. It supports the canonical research sequence:
 
-The aim is not only to solve the present case but to improve the quality of
-future thinking.
+```text
+Observation → Pattern → Abstraction → Primitive → Transfer
+```
+
+The aim is to improve future modeling, not to create execution plans or govern
+actions.
 
 ## Stage 1 — Surface Observation
 
 **Identify:** patterns, biases, anomalies, friction points, recurring structures.
 
-**Map:** feedback loops, constraints, bottlenecks, leverage points.
-
 **Ask:**
+
 - What pattern keeps repeating?
 - What assumption may be distorting clarity?
 
 ## Stage 2 — Define Purpose
 
-**Analyze using:** Bateson Levels of Learning, Dilts Logical Levels, Systems
-Thinking, Flow Mechanics.
-
-**Determine:** the actual objective, the intended outcome, the level of learning
-occurring.
+**Determine:** the actual question, the intended modeling improvement, and the
+level of learning involved.
 
 **Ask:**
-- What problem is actually being solved?
+
+- What problem is actually being studied?
 - What level of learning is present?
 
-## Stage 3 — Determine Next Step
+## Stage 3 — Candidate Abstractions
 
-**Apply:** the 80/20 Principle, Kaizen PDCA, Cybernetic Feedback Loops.
-
-**Determine:** the highest-leverage action, the smallest useful experiment, the
-primary bottleneck.
+**Identify:** candidate abstractions or distinctions that compress the observed
+pattern.
 
 **Ask:**
-- If this decision were inverted, what might be learned?
 
-## Stage 4 — Strategic Board Analysis
+- What abstraction emerges from the observation?
+- What would make it reusable beyond this case?
 
-**Evaluate:** current position, developed assets, exposed risks, candidate moves.
+## Stage 4 — Transfer Analysis
 
-**Rate candidate moves by:**
-- Risk
-- Reward
-- Tempo
-- Alignment
+**Evaluate:** where the abstraction transfers, where it fails, and how it improves
+future modeling.
 
-**Select** the best move.
+**Select:** the smallest useful abstraction or distinction.
 
 ## Output Format
 
 ```text
 ♟️ Position Summary
-
-♜ Candidate Moves
-
-🧠 Best Move + Reasoning
-
-🏁 Meta-Lesson + Recommended Action
+♜ Candidate Abstractions
+🧠 Transfer Analysis
+🏁 Meta-Lesson
 ```
 
 ## Closure Check
 
-Before Stage 1 of a *new* analysis, verify the *previous* analysis's recommended
-action: was it carried out, and what did it teach? Fold that result into the
-current Surface Observation.
+Before Stage 1 of a new analysis, verify whether the previous analysis improved
+future modeling. Fold that result into the current observation.
 
-Without this check, the method produces insight without ever closing a cycle —
-the same open-loop failure it is built to diagnose. The Closure Check is what
-makes Grandmaster Mode enforce on itself the recursion it asks of everything else.
-
-> This refinement was produced by a worked example —
-> [retrospectives that don't change behavior](examples/retrospectives-that-dont-change-behavior.md) —
-> applying the method to itself. The practice improved the protocol.
-
-## Core Invariant
-
-Every analysis should improve the quality of future thinking, not merely explain
-the present — and should verify that the *last* analysis actually did so.
-
-```text
-Observe → Model → Validate → Learn → Improve → Repeat
-```
+Without this check, the method produces insight without testing transfer.

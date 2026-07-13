@@ -1,4 +1,4 @@
-name: continuity-agent-attribution-gate
+name: repository-continuity-attribution-gate
 
 on:
   pull_request:

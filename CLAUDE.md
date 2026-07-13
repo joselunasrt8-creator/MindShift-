@@ -1,54 +1,45 @@
 # MindShift — Repository Operating Guide
 
-This file orients any contributor (human or AI) working in this repository. It
-defines what MindShift is, the invariants it preserves, and the analysis method
-the project operates by.
+This file orients contributors working in this repository. It defines the
+surviving MindShift identity, its boundaries, and the analysis method used here.
 
 ## What MindShift Is
 
-MindShift is an independent, open-source **cognition infrastructure** project.
+MindShift is a research framework for studying how observations become
+transferable abstractions that improve future modeling.
 
-It is **not** a governance system, execution platform, agent framework, or
-legitimacy protocol. Its focus is learning, adaptation, validation, pattern
-recognition, recursive improvement, and reflexive intelligence.
-
-The core observation:
-
-> Learning becomes intelligence when it loops back on itself.
-
-The project explores how systems learn, adapt, validate understanding, and
-improve over time.
-
-## Core Runtime
+The canonical research question is:
 
 ```text
-Observe → Model → Validate → Learn → Improve → Repeat
+How can observations be converted into transferable abstractions that improve future modeling?
 ```
 
-The goal is not information accumulation. The goal is continuous improvement of
-the process that produces understanding.
+The canonical research sequence is:
 
-## Scope
+```text
+Observation → Pattern → Abstraction → Primitive → Transfer
+```
 
-MindShift explores: Pattern Recognition, Learning Systems, Meta-Learning,
-Reflexive Intelligence, Bateson Levels of Learning, Dilts Logical Levels,
-Cybernetics, Kaizen / PDCA, OODA Loops, Systems Thinking, Flow Theory, Feedback
-Systems, Cognitive Architecture, and Recursive Improvement.
+## What MindShift Is Not
 
-MindShift does **not** create authority, govern execution, validate legitimacy,
-or determine execution eligibility. It focuses on cognition. It has no
-dependency on any external governance or execution system.
+MindShift is not independent infrastructure, a deterministic runtime, execution
+infrastructure, legitimacy infrastructure, authority infrastructure, governance
+infrastructure, or an agent framework.
+
+MindShift does not own execution, authority, approval, legitimacy, execution
+eligibility, execution boundaries, proof closure, governed mutation, or replay.
+Repository governance may use external mechanisms, including ContinuityOS, but
+that governance is not MindShift functionality.
 
 ## Operating Principles
 
-- **Reality First** — All models remain subordinate to reality.
-  `Assumption → Test → Validation → Revision`
-- **Feedback Creates Learning** — `Action → Feedback → Adaptation`
-- **Pattern Recognition Matters** — Seek patterns, invariants, feedback loops,
-  leverage points, and recurring structures.
-- **Recursive Improvement** — Every cycle should improve future cycles.
-- **Learning About Learning** — The highest-leverage improvements often come from
-  improving the learning process itself.
+- **Reality First** — Models remain subordinate to reality.
+- **Pattern Recognition** — Seek recurring structures across observations.
+- **Abstraction Formation** — Compress patterns into abstractions that can be
+  reused beyond the original case.
+- **Transfer Test** — Treat transfer across contexts as the test of usefulness.
+- **Learning Reflection** — Each analysis should improve future modeling, not
+  merely explain the present.
 
 ## MindShift Grandmaster Mode
 
@@ -63,52 +54,42 @@ through the following stages.
 
 ### Stage 2 — Define Purpose
 
-- Analyze using: Bateson Levels of Learning, Dilts Logical Levels, Systems
-  Thinking, Flow Mechanics.
-- Determine: actual objective, intended outcome, level of learning occurring.
+- Analyze using optional learning and systems lenses.
+- Determine: actual objective, intended outcome, and level of learning occurring.
 - Ask: What problem is actually being solved? What level of learning is present?
 
-### Stage 3 — Determine Next Step
+### Stage 3 — Determine Next Research Move
 
-- Apply: 80/20 Principle, Kaizen PDCA, Cybernetic Feedback Loops.
-- Determine: highest-leverage action, smallest useful experiment, primary
-  bottleneck.
-- Ask: If this decision were inverted, what might be learned?
+- Determine: the highest-leverage research question, smallest useful observation,
+  and primary bottleneck to abstraction transfer.
+- Ask: If this interpretation were inverted, what might be learned?
 
-### Stage 4 — Strategic Board Analysis
+### Stage 4 — Transfer Analysis
 
-- Evaluate: current position, developed assets, exposed risks, candidate moves.
-- Rate candidate moves by: Risk, Reward, Tempo, Alignment.
-- Select the best move.
+- Evaluate: candidate abstractions, transfer scope, limits, and model-improvement
+  value.
+- Select the abstraction or distinction most likely to improve future modeling.
 
 ### Output Format
 
 ```text
 ♟️ Position Summary
-♜ Candidate Moves
-🧠 Best Move + Reasoning
-🏁 Meta-Lesson + Recommended Action
+♜ Candidate Abstractions
+🧠 Transfer Analysis
+🏁 Meta-Lesson
 ```
 
-Before a new analysis, run the **Closure Check**: verify the previous analysis's
-recommended action and fold its result into the current observation. The canonical
-specification of this method, including the Closure Check, lives in
-[`docs/grandmaster-mode.md`](docs/grandmaster-mode.md); this section is a summary.
-
-## Core Invariant
-
-Every analysis should improve the quality of future thinking, not merely explain
-the present — and should verify that the *last* analysis actually did so.
-
-```text
-Observe → Model → Validate → Learn → Improve → Repeat
-```
+Before a new analysis, run the **Closure Check**: verify whether the previous
+analysis improved future modeling and fold that result into the current
+observation. The canonical specification of this method, including the Closure
+Check, lives in [`docs/grandmaster-mode.md`](docs/grandmaster-mode.md); this
+section is a summary.
 
 ## Conventions for This Repository
 
-- Keep contributions aligned with the scope above; cognition, not governance or
-  execution.
-- Prefer clear prose and explicit feedback loops in any concept documented here.
-- Preserve and refine the lineage and the core invariant; do not dilute them.
+- Keep contributions aligned with the scope above: research on observation,
+  patterns, abstraction, primitive extraction, transfer, and model improvement.
+- Prefer clear prose and explicit reasoning traces.
+- Preserve the canonical identity, question, and sequence.
 - Documentation lives in [`docs/`](docs/). Update the Repository Map in
-  [`README.md`](README.md) when adding new documents.
+  [`README.md`](README.md) when adding, removing, or renaming documents.

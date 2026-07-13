@@ -1,11 +1,5 @@
 # MindShift
 
-<p align="center">
-  <img
-    src="4D949479-3F1F-45EE-9785-F586A0CDB8A2.png"
-    alt="MindShift — Research Framework for Transferable Abstraction"
-    width="100%">
-</p>
 
 ## Research Framework for Transferable Abstraction
 

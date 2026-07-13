@@ -1,53 +1,60 @@
 # Scope and Boundaries
 
-Clear boundaries keep a project coherent. MindShift's boundaries are as much a
-part of its definition as its goals.
+Clear boundaries keep MindShift coherent.
 
 ## What MindShift Is
 
-- An open System Abstraction Infrastructure
-- A non-operative way to move from observation to pattern, abstraction, primitive,
-  and transfer
-- A research space for recurring structures, scarcity discovery, and reusable
-  abstraction
-- A recursive learning framework, used as a mechanism rather than an identity
-- An exploration of reflexive intelligence and adaptation
+MindShift is a research framework for studying how observations become
+transferable abstractions that improve future modeling.
+
+It studies:
+
+- observations;
+- pattern identification;
+- abstraction formation;
+- primitive extraction;
+- transfer across contexts;
+- learning reflection; and
+- model improvement.
+
+## Canonical Research Question
+
+```text
+How can observations be converted into transferable abstractions that improve future modeling?
+```
+
+## Canonical Research Sequence
+
+```text
+Observation → Pattern → Abstraction → Primitive → Transfer
+```
 
 ## What MindShift Is Not
 
-- A governance system
-- An execution platform
-- An agent framework
-- A legitimacy protocol
-- A mechanism for determining execution eligibility
-- A replacement for machine learning
-- A large language model
-- A productivity system
-- A certification framework
-- A claim of scientific completeness
+MindShift is not:
 
-## Explicit Non-Goals
+- independent infrastructure;
+- a deterministic runtime;
+- execution infrastructure;
+- legitimacy infrastructure;
+- authority infrastructure;
+- governance infrastructure;
+- an agent framework;
+- a mechanism for approval;
+- a mechanism for execution eligibility;
+- a proof system; or
+- a replacement for SYNAPSE or ContinuityOS.
 
-MindShift focuses on **abstraction transfer**. Cognition, learning systems, and
-recursive learning remain mechanisms. Specifically, MindShift does not:
+## Ownership Boundaries
 
-- create authority
-- govern execution
-- validate legitimacy
-- determine execution eligibility
-- operate external systems
+MindShift owns research on observation, pattern identification, abstraction
+formation, primitive extraction, transfer, learning reflection, and model
+improvement.
 
-## Independence
+SYNAPSE owns deterministic structural analysis.
 
-MindShift is independent. It does not depend on any external governance,
-execution, or legitimacy system, and it does not assume the existence of one. Its
-concern is how observations become patterns, abstractions, transferable
-primitives, and improved learning — nothing more, and nothing that would quietly
-expand into the categories listed above.
+ContinuityOS owns authority, legitimacy, execution eligibility, execution
+boundaries, proof, governed mutation, replay, and reconciliation.
 
-## Why the Boundaries Matter
-
-Scope creep is a learning failure: it happens when a system stops validating its
-purpose against reality. By naming what MindShift is not, the project keeps its
-leverage concentrated on abstraction transfer and resists the drift toward
-authority, governance, legitimacy, or execution that would dilute that focus.
+Repository governance may use external mechanisms, including ContinuityOS. That
+repository governance is not MindShift functionality.

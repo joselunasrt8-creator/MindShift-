@@ -48,6 +48,12 @@ future modeling.
 
 ## Output Format
 
+The four-part output format below is **mandatory** for a Grandmaster Mode
+analysis. Each analysis must include all four headings; the format is not merely
+illustrative. Additional sections are allowed when they add useful evidence or
+reasoning, but each extension must explicitly identify the canonical section it
+supports so that the four-part output remains complete and recognizable.
+
 ```text
 ♟️ Position Summary
 ♜ Candidate Abstractions

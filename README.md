@@ -79,12 +79,15 @@ MindShift is not:
 
 MindShift does not own execution, authority, approval, legitimacy, execution
 eligibility, execution boundaries, proof closure, governed mutation, or replay.
-Those responsibilities belong outside the MindShift research framework.
+MindShift also excludes deterministic structural analysis from its scope.
 
-SYNAPSE owns deterministic structural analysis.
+> **Evidence boundary:** This repository is locally authoritative only for
+> MindShift's scope. It does not cite an immutable authoritative specification
+> for SYNAPSE or ContinuityOS, so their responsibility assignments remain
+> externally unresolved and are not asserted here.
 
-ContinuityOS may govern this repository, but repository governance is not
-MindShift functionality.
+Repository governance, whether or not it uses an external mechanism such as
+ContinuityOS, is not MindShift functionality.
 
 ---
 

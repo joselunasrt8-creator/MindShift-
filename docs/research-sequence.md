@@ -183,9 +183,9 @@ the original observation.
 
 ## Primitive
 
-A primitive is an abstraction reduced to a reusable distinction or mechanism. In
-Phase 1, MindShift does not elevate primitives into machine objects, schemas, or
-runtime artifacts.
+A primitive is an abstraction reduced to a reusable distinction or mechanism.
+MindShift does not elevate primitives into machine objects, schemas, or runtime
+artifacts.
 
 ## Transfer
 

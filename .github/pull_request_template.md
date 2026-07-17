@@ -20,6 +20,24 @@ How it passes:
 
 <!-- One or two sentences. -->
 
+## Canonical Terminology Review
+
+<!-- Complete this section when the change affects canonical terminology. -->
+
+Paths reviewed:
+
+<!--
+List docs/thesis.md and the affected summaries checked in README.md, CLAUDE.md,
+and docs/scope.md.
+-->
+
+Deliberate deviations:
+
+<!--
+Record each accepted wording difference and why it is appropriate, or state
+"None."
+-->
+
 ## Checklist
 
 - [ ] Preserves the canonical identity.

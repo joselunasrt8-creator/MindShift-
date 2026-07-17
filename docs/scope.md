@@ -43,18 +43,22 @@ MindShift is not:
 - a mechanism for approval;
 - a mechanism for execution eligibility;
 - a proof system; or
-- a replacement for SYNAPSE or ContinuityOS.
+- a specification for SYNAPSE or ContinuityOS.
 
-## Ownership Boundaries
+## Scope Boundaries
 
-MindShift owns research on observation, pattern identification, abstraction
-formation, primitive extraction, transfer, learning reflection, and model
-improvement.
+MindShift's scope includes research on observation, pattern identification,
+abstraction formation, primitive extraction, transfer, learning reflection, and
+model improvement.
 
-SYNAPSE owns deterministic structural analysis.
+MindShift's scope excludes deterministic structural analysis, authority,
+legitimacy, execution eligibility, execution boundaries, proof, governed
+mutation, replay, reconciliation, and repository governance.
 
-ContinuityOS owns authority, legitimacy, execution eligibility, execution
-boundaries, proof, governed mutation, replay, and reconciliation.
+> **Evidence boundary:** This repository is locally authoritative only for
+> MindShift's scope. It does not cite an immutable authoritative specification
+> for SYNAPSE or ContinuityOS, so their responsibility assignments remain
+> externally unresolved and are not asserted here.
 
-Repository governance may use external mechanisms, including ContinuityOS. That
-repository governance is not MindShift functionality.
+Repository governance may use external mechanisms, including ContinuityOS, but
+that possibility does not assign responsibility to an external project.

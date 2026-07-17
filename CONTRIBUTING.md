@@ -41,6 +41,23 @@ research sequence, it does not belong here.
 4. What primitive or distinction transfers?
 5. How does it improve future modeling?
 
+## Canonical Terminology Review
+
+For changes that affect canonical terminology, perform this bounded manual
+review:
+
+1. Compare the proposed text with [`docs/thesis.md`](docs/thesis.md), which is
+   the canonical reference for terminology.
+2. Identify every intentional wording difference from the thesis.
+3. Check the affected summaries in [`README.md`](README.md),
+   [`CLAUDE.md`](CLAUDE.md), and [`docs/scope.md`](docs/scope.md) for consistency.
+4. In the pull request, record the paths reviewed and any accepted divergence,
+   including why the differing wording is appropriate. If there is no accepted
+   divergence, state that explicitly.
+
+This is a static, human review procedure. Do not treat it as an executable
+validator or expand it into repository-wide validation.
+
 ## How to Contribute
 
 1. Create a topic branch for your change.

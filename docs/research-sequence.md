@@ -132,6 +132,45 @@ advantages.
 An observation names what is seen in reality before it is compressed into a
 model. Useful observations attend to anomalies, friction, recurrence, and context.
 
+### Observation methodology
+
+Classify each observation before using it as evidence. The class describes how
+the observation relates to the phenomenon; it does not rank the observation or
+remove the need to examine its provenance.
+
+- **Empirical:** Directly collected from an event, behavior, measurement, or
+  artifact in the world through a stated observation or measurement process.
+- **Reported:** Received through another person's account, testimony, summary,
+  or documentation rather than observed directly by the researcher.
+- **Synthetic:** Produced by a model, simulation, generated dataset, or other
+  constructed process. Its evidentiary value depends on the assumptions and
+  inputs of that process, not on independent contact with the world.
+- **Illustrative:** Invented or simplified to explain, explore, or challenge an
+  idea. It can clarify reasoning but is not evidence that the depicted event or
+  relationship occurs in reality.
+
+Every observation must carry a minimum accompanying record:
+
+- **Source class:** Empirical, reported, synthetic, or illustrative.
+- **Observation context:** The setting, population, system, or circumstances in
+  which the observation arose.
+- **Collection method:** How the observation was obtained, selected, measured,
+  reported, generated, or constructed.
+- **Temporal scope:** When it was collected or generated and the period it
+  describes.
+- **Observer or custodian:** The person or organization that observed, generated,
+  reported, or currently maintains the source record.
+- **Known limitations:** Provenance gaps, selection effects, measurement limits,
+  construction assumptions, or other constraints on interpretation.
+- **Contradictory evidence:** Known observations or accounts that conflict with
+  the observation, or an explicit statement that none has yet been identified.
+- **Confidence:** A calibrated qualitative judgment or reasoned range, with the
+  basis for that judgment.
+
+Missing information must be marked as unknown rather than inferred. Classification
+does not convert synthetic or illustrative material into empirical evidence, and
+reported observations should not be presented as direct observations.
+
 ## Pattern
 
 A pattern is a recurring relationship across observations. A pattern matters when

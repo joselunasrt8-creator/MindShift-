@@ -28,6 +28,9 @@ Observation
 This sequence is not a runtime, execution loop, computational lifecycle, agent
 architecture, or governance process.
 
+Support for each transition is assessed using the detailed evidence predicates
+in [`research-sequence.md`](research-sequence.md#evidence-predicates).
+
 ## Core Claim
 
 Learning becomes useful for future modeling when observed patterns are compressed

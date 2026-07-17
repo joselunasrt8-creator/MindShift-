@@ -3,10 +3,25 @@
 
 ## Research Framework for Transferable Abstraction
 
-> From observations to transferable abstractions.
+> MindShift transforms observations into higher-quality abstractions that improve understanding.
 
-MindShift is a research framework for studying how observations become
-transferable abstractions that improve future modeling.
+MindShift is a non-operational research framework for studying how observations become transferable abstractions, mental models, and reusable knowledge.
+
+MindShift improves understanding. It does not execute, authorize, govern, or mutate external systems.
+
+---
+
+## Canonical Purpose
+
+```text
+Reality
+        ↓
+Observation
+        ↓
+Higher-Quality Abstractions
+        ↓
+Better Understanding
+```
 
 ---
 

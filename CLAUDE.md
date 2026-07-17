@@ -28,8 +28,14 @@ infrastructure, or an agent framework.
 
 MindShift does not own execution, authority, approval, legitimacy, execution
 eligibility, execution boundaries, proof closure, governed mutation, or replay.
-Repository governance may use external mechanisms, including ContinuityOS, but
-that governance is not MindShift functionality.
+It also excludes deterministic structural analysis and repository governance
+from its functionality, whether or not repository governance uses an external
+mechanism such as ContinuityOS.
+
+> **Evidence boundary:** This repository is locally authoritative only for
+> MindShift's scope. It does not cite an immutable authoritative specification
+> for SYNAPSE or ContinuityOS, so their responsibility assignments remain
+> externally unresolved and are not asserted here.
 
 ## Operating Principles
 

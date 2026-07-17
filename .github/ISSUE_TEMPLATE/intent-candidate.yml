@@ -1,9 +1,21 @@
-name: MindShift Research Hypothesis
-description: Capture an observation, pattern, candidate abstraction, and transfer question.
+name: MindShift Early-Stage Hypothesis Intake
+description: Capture an early-stage observation, pattern, candidate abstraction, and transfer question.
 title: "Research Hypothesis: "
 labels:
   - mindshift-research
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Early-stage hypothesis intake
+
+        This form is a descriptive intake artifact, not a complete analysis
+        record or an executable instruction.
+
+        Candidate primitive selection, transfer results, and closure disposition
+        are intentionally deferred. Complete those later-stage analysis sections,
+        including contradictory evidence and confidence updates, in a
+        [Grandmaster Mode analysis](../../blob/main/docs/grandmaster-mode.md).
   - type: textarea
     id: observation
     attributes:

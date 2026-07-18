@@ -106,5 +106,6 @@ ContinuityOS, is not MindShift functionality.
 | [`docs/lineage.md`](docs/lineage.md) | Historical context for the surviving research invariant |
 | [`docs/scope.md`](docs/scope.md) | Project boundaries |
 | [`docs/roadmap.md`](docs/roadmap.md) | Future optional work filtered against the thesis |
+| [`docs/reference-execution/v1.0/freeze-readiness-record.md`](docs/reference-execution/v1.0/freeze-readiness-record.md) | Repository-owned Reference Execution v1.0 freeze and readiness determination |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution guidance |
 | [`LICENSE`](LICENSE) | Apache-2.0 License |

@@ -1,6 +1,23 @@
 # MindShift
 
 
+
+<p align="center">
+  <img src="docs/images/mindshift.png" alt="MindShift" width="100%">
+</p>
+
+## The Journey
+
+<p align="center">
+  <img src="docs/images/the-journey.png" alt="The Journey" width="100%">
+</p>
+
+## The Journey from Information to Impact
+
+<p align="center">
+  <img src="docs/images/journey-from-information-to-impact.png" alt="The Journey from Information to Impact" width="100%">
+</p>
+
 ## Research Framework for Transferable Abstraction
 
 > MindShift transforms observations into higher-quality abstractions that improve understanding.
@@ -109,3 +126,61 @@ ContinuityOS, is not MindShift functionality.
 | [`docs/reference-execution/v1.0/freeze-readiness-record.md`](docs/reference-execution/v1.0/freeze-readiness-record.md) | Repository-owned Reference Execution v1.0 freeze and readiness determination |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution guidance |
 | [`LICENSE`](LICENSE) | Apache-2.0 License |
+
+---
+
+## Visual Research Narrative
+
+### The Hierarchy of Understanding
+
+<p align="center">
+  <img src="docs/images/hierarchy-of-understanding.png" alt="The Hierarchy of Understanding" width="100%">
+</p>
+
+### From Information to Understanding
+
+<p align="center">
+  <img src="docs/images/from-information-to-understanding.png" alt="From Information to Understanding" width="100%">
+</p>
+
+### Understanding Compounds
+
+<p align="center">
+  <img src="docs/images/understanding-compounds.png" alt="Understanding Compounds" width="100%">
+</p>
+
+### Scientific Instruments Accelerate Learning
+
+<p align="center">
+  <img src="docs/images/instruments-accelerate-learning.png" alt="Scientific Instruments Accelerate Learning" width="100%">
+</p>
+
+### The Research Flywheel
+
+<p align="center">
+  <img src="docs/images/research-flywheel.png" alt="The Research Flywheel" width="100%">
+</p>
+
+### Engineering Becomes the Production of Understanding
+
+<p align="center">
+  <img src="docs/images/engineering-becomes-production.png" alt="Engineering Becomes the Production of Understanding" width="100%">
+</p>
+
+### Future Vision
+
+<p align="center">
+  <img src="docs/images/future-vision.png" alt="Future Vision" width="100%">
+</p>
+
+### Proof
+
+<p align="center">
+  <img src="docs/images/proof.png" alt="Proof" width="100%">
+</p>
+
+### Why Understanding
+
+<p align="center">
+  <img src="docs/images/why-understanding.png" alt="Why Understanding" width="100%">
+</p>

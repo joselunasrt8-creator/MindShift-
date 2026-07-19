@@ -6,18 +6,6 @@
   <img src="docs/images/mindshift.png" alt="MindShift" width="100%">
 </p>
 
-## The Journey
-
-<p align="center">
-  <img src="docs/images/the-journey.png" alt="The Journey" width="100%">
-</p>
-
-## The Journey from Information to Impact
-
-<p align="center">
-  <img src="docs/images/journey-from-information-to-impact.png" alt="The Journey from Information to Impact" width="100%">
-</p>
-
 ## Research Framework for Transferable Abstraction
 
 > MindShift transforms observations into higher-quality abstractions that improve understanding.
@@ -27,6 +15,16 @@ MindShift is a non-operational research framework for studying how observations 
 MindShift improves understanding. It does not execute, authorize, govern, or mutate external systems.
 
 ---
+
+## The Journey from Information to Impact
+
+<p align="center">
+  <img src="docs/images/journey-from-information-to-impact.png" alt="The Journey from Information to Impact" width="100%">
+</p>
+
+---
+
+MindShift studies how observations become reusable understanding.
 
 ## Canonical Purpose
 
@@ -42,6 +40,10 @@ Better Understanding
 
 ---
 
+### Hierarchy of Understanding
+
+The hierarchy below situates that purpose within the progression from reality to understanding.
+
 <p align="center">
   <img src="docs/images/hierarchy-of-understanding.png" alt="The Hierarchy of Understanding" width="100%">
 </p>
@@ -55,6 +57,10 @@ How can observations be converted into transferable abstractions that improve fu
 ```
 
 ---
+
+### From Information to Understanding
+
+The following figure traces the movement from information to understanding.
 
 <p align="center">
   <img src="docs/images/from-information-to-understanding.png" alt="From Information to Understanding" width="100%">
@@ -76,6 +82,10 @@ This is a research sequence, not a runtime, execution loop, or computational
 lifecycle.
 
 ---
+
+### Understanding Compounds
+
+Understanding compounds as these research steps are revisited over time.
 
 <p align="center">
   <img src="docs/images/understanding-compounds.png" alt="Understanding Compounds" width="100%">
@@ -100,9 +110,15 @@ transferable abstractions emerge and how they improve future modeling.
 
 ---
 
+### Scientific Instruments Accelerate Learning
+
+Scientific instruments and the research flywheel illustrate how the framework accelerates learning.
+
 <p align="center">
   <img src="docs/images/instruments-accelerate-learning.png" alt="Scientific Instruments Accelerate Learning" width="100%">
 </p>
+
+### Research Flywheel
 
 <p align="center">
   <img src="docs/images/research-flywheel.png" alt="The Research Flywheel" width="100%">
@@ -136,23 +152,31 @@ ContinuityOS, is not MindShift functionality.
 
 ---
 
-## Long-Term Direction
+## Long-Term Vision
+
+These research principles motivate a broader vision for engineering.
+
+### Engineering Becomes the Production of Understanding
 
 <p align="center">
   <img src="docs/images/engineering-becomes-production.png" alt="Engineering Becomes the Production of Understanding" width="100%">
 </p>
 
+### Future Vision
+
 <p align="center">
   <img src="docs/images/future-vision.png" alt="Future Vision" width="100%">
 </p>
 
-## Proof
+## Evidence in Practice
+
+The value of a research framework is measured by the evidence and engineering decisions it enables.
 
 <p align="center">
   <img src="docs/images/proof.png" alt="Proof" width="100%">
 </p>
 
-## Why Understanding
+## Why Understanding Matters
 
 <p align="center">
   <img src="docs/images/why-understanding.png" alt="Why Understanding" width="100%">
@@ -160,7 +184,7 @@ ContinuityOS, is not MindShift functionality.
 
 ---
 
-## Repository Map
+## Repository Structure
 
 | Path | Purpose |
 | --- | --- |

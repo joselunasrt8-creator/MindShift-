@@ -4,7 +4,10 @@
 **Status:** Canonical contract
 **Owner:** MindShift
 **Upstream artifact contract:** [Observation to Research Handoff Contract](observation-to-research-handoff-contract.md), version 1.0.0 (frozen)
-**Downstream consumers:** MindShift #52, MindShift #53, and Continufy Reference Execution v1.0
+**Downstream consumers:** MindShift #33, MindShift #52, MindShift #53, and Continufy Reference Execution v1.0
+
+> Instrument-version freeze does not freeze the MindShift repository reference boundary.
+> Repository-level freeze remains owned by MindShift #52.
 
 ## Purpose and boundary
 
@@ -134,9 +137,11 @@ Packaging readiness determines whether a specific instrument version is stable e
 | --- | --- |
 | `NOT_READY` | One or more required readiness inputs are missing, mutable, inconsistent, or unresolved. |
 | `READY_FOR_FREEZE` | Required documentation, contracts, examples, and readiness evidence are complete and internally consistent; immutable release binding has not yet been made. |
-| `FROZEN` | An immutable version/repository binding, compatibility statement, and preserved readiness record exist. |
+| `FROZEN` | An immutable instrument-version binding, compatibility statement, and preserved readiness record exist. |
 | `EXECUTED` | `FROZEN` plus at least one complete frozen Execution Record for the exact version. |
 | `CALIBRATED` | `EXECUTED` plus a preserved Execution Evaluation and Calibration Record, including explicit dispositions for identified candidates. |
+
+`FROZEN` applies only to the identified instrument version and its readiness record. It does not establish the repository-level Reference Execution v1.0 boundary, which remains owned by MindShift #52.
 
 To reach `READY_FOR_FREEZE`, the version needs: this execution lifecycle contract and the consumed Issue #64 artifact contract identified by exact version; a complete execution contract and valid execution-record example; evaluation, calibration, improvement, versioning, and supersession contracts; at least one valid and invalid example; compatibility and migration policy; and a readiness record identifying custodian, assessed document/revision set, evidence inspected, unresolved items, and resulting state.
 
@@ -184,4 +189,24 @@ An Execution Evaluation marks a Candidate Abstraction â€œscientifically provenâ€
 
 ## Consumer obligations
 
+MindShift #33 consumes this lifecycle contract when assembling MindShift Canon v1. MindShift #52 uses the resulting canon and readiness evidence to define the repository-level reference boundary. MindShift #53 then executes the frozen reference run. Continufy records the cross-repository coordination envelope without inheriting MindShift semantics.
+
 Downstream consumers may rely on an exact frozen version only when its immutable binding and compatibility statement are available. They retain execution identity, input references, instrument version, revision, uncertainty, and supersession links. They may create their own records under their own ownership, but must not mutate MindShift records or treat readiness, execution, evaluation, or calibration as authority, truth, or deployment approval.
+
+## Closure evidence
+
+When Issue #40 closes, its closure record must bind:
+
+```text
+Terminal outcome: DOCUMENTATION_CONTRACT_COMPLETE
+Pull request:
+Merged commit:
+Default branch containing the contract:
+Canonical document path:
+README discoverability path:
+Immediate downstream consumer: MindShift #33
+Further downstream consumers: MindShift #52; MindShift #53; Continufy Reference Execution v1.0
+Known limitations:
+```
+
+Issue closure proves that this lifecycle contract is merged, canonical, discoverable, and connected downstream. It does not prove that the repository boundary is frozen, that a reference execution occurred, or that any research claim was validated.

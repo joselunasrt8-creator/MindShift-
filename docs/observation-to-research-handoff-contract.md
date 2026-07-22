@@ -1,8 +1,12 @@
 # Observation to Research Handoff Contract
 
 **Contract version:** 1.0.0 (frozen)
-**Status:** Canonical
+**Status:** Canonical contract
 **Owner:** MindShift
+**Downstream consumers:** MindShift #40 and Methodology Engineering #49
+
+> Contract freeze does not freeze the MindShift repository reference boundary.
+> Repository-level freeze remains owned by MindShift #52.
 
 ## Purpose and boundary
 
@@ -238,6 +242,18 @@ contradictions, and `Unknown` values. It may add methodology-specific artifacts
 under its own ownership, but must not relabel candidates as validated or overwrite
 MindShift source artifacts.
 
+The first named downstream consumers are:
+
+```text
+MindShift #40
+Defines execution, calibration, closure, improvement, and packaging readiness
+for the artifacts governed by this contract.
+
+Methodology Engineering #49
+Consumes Candidate Evaluation Requests and defines separately owned research
+evaluation, claim-validation, and bounded research-finding artifacts.
+```
+
 If a research output is later supplied to MindShift, it enters as a new
 Observation (normally a Reported Observation) with its own provenance and limits;
 it does not retroactively validate or mutate the handoff source.
@@ -280,3 +296,28 @@ and transition rules in this document. Additive examples may be introduced only
 when they do not redefine a term, required field, transition, or ownership rule.
 Any semantic change requires a new contract version and an explicit compatibility
 statement for downstream consumers.
+
+This document-level freeze establishes a stable contract for downstream use. It
+does not freeze the repository, its complete canon, its reference-execution
+manifest, or its readiness determination. Those remain separate outputs of
+MindShift #33 and MindShift #52.
+
+## Closure evidence
+
+When the issue implementing this contract closes, its closure record must bind:
+
+```text
+Terminal outcome: DOCUMENTATION_CONTRACT_COMPLETE
+Pull request:
+Merged commit:
+Default branch containing the contract:
+Canonical document path:
+README discoverability path:
+Downstream consumers: MindShift #40; Methodology Engineering #49
+Known limitations:
+Follow-up issues: MindShift #40; MindShift #33; MindShift #52
+```
+
+Issue closure proves that this contract is merged, canonical, discoverable, and
+connected downstream. It does not prove runtime execution, repository freeze, or
+research validation.

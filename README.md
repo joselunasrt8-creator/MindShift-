@@ -192,6 +192,7 @@ The value of a research framework is measured by the evidence and engineering de
 | [`CLAUDE.md`](CLAUDE.md) | Contributor operating guide |
 | [`docs/thesis.md`](docs/thesis.md) | Canonical thesis and decision filter |
 | [`docs/research-sequence.md`](docs/research-sequence.md) | The canonical Observation → Pattern → Abstraction → Primitive → Transfer sequence |
+| [`docs/observation-to-research-handoff-contract.md`](docs/observation-to-research-handoff-contract.md) | Frozen v1.0 contract for candidate cognition and research handoff artifacts |
 | [`docs/principles.md`](docs/principles.md) | Research principles |
 | [`docs/frameworks.md`](docs/frameworks.md) | Optional lenses used to study learning and abstraction transfer |
 | [`docs/context-window-abstraction-hypothesis.md`](docs/context-window-abstraction-hypothesis.md) | Exploratory candidate hypothesis on context availability and reusable abstractions |

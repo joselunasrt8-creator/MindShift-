@@ -4,8 +4,10 @@ Clear boundaries keep MindShift coherent.
 
 ## What MindShift Is
 
-MindShift is a research framework for studying how observations become
-transferable abstractions that improve future modeling.
+MindShift is Context and Cognition-Governance Infrastructure: a research
+framework for constructing and governing the context that conditions candidate
+cognition. It studies how observations become transferable abstractions that
+improve future modeling.
 
 It studies:
 
@@ -38,7 +40,6 @@ MindShift is not:
 - execution infrastructure;
 - legitimacy infrastructure;
 - authority infrastructure;
-- governance infrastructure;
 - an agent framework;
 - a mechanism for approval;
 - a mechanism for execution eligibility;

@@ -1,13 +1,16 @@
 # The Thesis
 
-This is the center of MindShift. Everything else in the repository is an
-instrument in service of what is stated here. If a future change conflicts with
-this document, this document wins.
+This document is the MindShift thesis, research-question, and decision-filter
+surface. [MindShift Canon v1](canon-v1.md) owns system-level identity,
+artifact, lifecycle, and handoff semantics; this thesis does not redefine them.
 
 ## Canonical Identity
 
-MindShift is a research framework for studying how observations become
-transferable abstractions that improve future modeling.
+MindShift is Context and Cognition-Governance Infrastructure: a research
+framework for studying how observations become transferable abstractions that
+improve future modeling. Its system-level ownership and lifecycle boundaries are
+defined by [MindShift Canon v1](canon-v1.md); this document owns the thesis,
+research question, and decision filter.
 
 ## Canonical Research Question
 

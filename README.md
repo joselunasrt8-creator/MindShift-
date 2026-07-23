@@ -10,9 +10,13 @@
 
 > MindShift transforms observations into higher-quality abstractions that improve understanding.
 
-MindShift is a non-operational research framework for studying how observations become transferable abstractions, mental models, and reusable knowledge.
+MindShift is Context and Cognition-Governance Infrastructure: a non-operational
+research framework for constructing and governing the context that conditions
+candidate cognition.
 
-MindShift improves understanding. It does not execute, authorize, govern, or mutate external systems.
+MindShift improves understanding. It does not authorize or mutate external
+systems, validate research claims, confer legitimacy, grant permission, or
+determine execution eligibility.
 
 ---
 
@@ -135,7 +139,7 @@ MindShift is not:
 - execution infrastructure;
 - legitimacy infrastructure;
 - authority infrastructure;
-- governance infrastructure; or
+- repository-governance infrastructure; or
 - an agent framework.
 
 MindShift does not own execution, authority, approval, legitimacy, execution
@@ -189,6 +193,7 @@ The value of a research framework is measured by the evidence and engineering de
 | Path | Purpose |
 | --- | --- |
 | [`README.md`](README.md) | Canonical project overview |
+| [`docs/canon-v1.md`](docs/canon-v1.md) | **MindShift Canon v1:** canonical system identity, ownership, lifecycle assembly, handoffs, and non-responsibilities |
 | [`CLAUDE.md`](CLAUDE.md) | Contributor operating guide |
 | [`docs/thesis.md`](docs/thesis.md) | Canonical thesis and decision filter |
 | [`docs/research-sequence.md`](docs/research-sequence.md) | The canonical Observation → Pattern → Abstraction → Primitive → Transfer sequence |

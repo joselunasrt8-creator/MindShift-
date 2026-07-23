@@ -7,7 +7,10 @@
 **Owner:** MindShift
 
 **Consumes without redefining:** [Observation to Research Handoff Contract](observation-to-research-handoff-contract.md) v1.0.0 and [Instrument Execution Lifecycle Contract](instrument-execution-lifecycle-contract.md) v1.0.0
+
 **Immediate downstream consumer:** MindShift #52
+
+Later upstream contract versions require an explicit compatibility review and a new canon version or compatibility statement before Canon v1 may consume them.
 
 ## 1. Purpose, role, and governing invariant
 
@@ -16,6 +19,8 @@ MindShift is **Context and Cognition-Governance Infrastructure**. Its repository
 MindShift governs its documentation artifacts and their traceability, uncertainty, versioning, and custody boundaries. It does not govern people, external systems, research conclusions, or deployment.
 
 Its canonical thesis remains: observations can be formed into transferable abstractions that improve future modeling. Canon v1 places that thesis in an accountable candidate-cognition system; it does not turn the thesis into a validated finding.
+
+**Canon ownership:** Canon v1 owns the system-level assembly of repository identity, artifact relationships, lifecycle relationships, handoffs, invariants, and non-responsibilities. It does not become the owner of Observation definitions, Candidate Cognition definitions, Research Handoff definitions, Execution Record definitions, instrument lifecycle semantics, or their detailed fields and transitions. Those remain owned by their originating frozen contracts.
 
 **Primary invariant:** a MindShift artifact must retain its identity, owner, immediate-input links, uncertainty, limitations, contradictions, and applicable version or immutable reference for its whole recorded lifetime. Later work may add a linked successor, correction, withdrawal, retirement, or supersession record; it must not rewrite the artifact it describes.
 
@@ -180,7 +185,21 @@ Canon v1 is an assembly specification. The two consumed v1.0.0 contracts retain 
 
 Historical artifacts, executions, evaluations, calibrations, versions, proposals, readiness records, withdrawals, and supersessions are immutable after their recorded freeze. Corrections and withdrawals are append-only successor records that state the reason, effect, predecessor, and reproduction compatibility. Retirement stops recommendation for new use; it does not delete, edit, or invalidate history.
 
-**Issue #52 readiness statement:** Canon v1 supplies the identity, artifacts, lifecycle boundaries, handoffs, and freeze distinction required for MindShift #52 to assess and freeze the repository reference boundary without further semantic definition. This statement is not itself a repository freeze, a readiness determination, execution authorization, or evidence that a reference execution occurred.
+### Canon readiness for MindShift #52
+
+```text
+Repository identity defined                 ✓
+Artifact ownership complete                 ✓
+Cognition lifecycle assembly complete       ✓
+Instrument lifecycle assembly complete      ✓
+Repository boundary semantics complete      ✓
+Cross-repository handoffs defined           ✓
+
+Repository reference boundary              NOT YET FROZEN
+Reference execution                         NOT YET PERFORMED
+```
+
+Canon v1 supplies the identity, artifacts, lifecycle boundaries, handoffs, and freeze distinction required for MindShift #52 to assess and freeze the repository reference boundary without further semantic definition. This readiness statement is not itself a repository freeze, a readiness determination, execution authorization, or evidence that a reference execution occurred.
 
 ## 10. Closure evidence
 
@@ -194,6 +213,7 @@ Default branch containing the canon:
 Canonical canon path: docs/canon-v1.md
 README discoverability path: README.md → Repository Structure → MindShift Canon v1
 Upstream contracts: Issue #64; Issue #40
+Upstream contract versions: Observation to Research Handoff Contract v1.0.0; Instrument Execution Lifecycle Contract v1.0.0
 Immediate downstream consumer: Issue #52
 Known limitations:
 ```

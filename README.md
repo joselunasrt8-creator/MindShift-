@@ -207,6 +207,7 @@ The value of a research framework is measured by the evidence and engineering de
 | [`docs/scope.md`](docs/scope.md) | Project boundaries |
 | [`docs/roadmap.md`](docs/roadmap.md) | Future optional work filtered against the thesis |
 | [`docs/instrument-execution-lifecycle-contract.md`](docs/instrument-execution-lifecycle-contract.md) | Frozen execution, evaluation, calibration, versioning, packaging-readiness, and supersession contract |
-| [`docs/reference-execution/v1.0/freeze-readiness-record.md`](docs/reference-execution/v1.0/freeze-readiness-record.md) | Repository-owned Reference Execution v1.0 freeze and readiness determination |
+| [`docs/reference-execution/v1.0/freeze-record.md`](docs/reference-execution/v1.0/freeze-record.md) | **Reference Execution v1.0 boundary:** immutable source manifest, version bindings, input contract, limitations, readiness, and Issue #53 handoff |
+| [`docs/reference-execution/v1.0/freeze-readiness-record.md`](docs/reference-execution/v1.0/freeze-readiness-record.md) | Superseded historical readiness assessment retained for traceability |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution guidance |
 | [`LICENSE`](LICENSE) | Apache-2.0 License |

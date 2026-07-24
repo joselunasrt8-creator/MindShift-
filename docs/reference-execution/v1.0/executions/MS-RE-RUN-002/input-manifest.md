@@ -38,6 +38,30 @@
 
 Observations are `Reported` accounts of transcript passages, not direct empirical findings. Each preserves source location, account/interpretation distinction, provenance gaps, confidence basis, limitations, contradictions, and `Unknown` values. Patterns require at least two linked observations; abstractions remain candidate and non-authoritative. The transcript was read as immutable source evidence: no byte, wording, order, correction, normalization, or substitute was changed.
 
+## Planned output paths
+
+The following output locations were bound before transcript processing:
+
+```text
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/input-manifest.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/transcript-manifest.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/observations/OBS-001.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/observations/OBS-002.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/observations/OBS-003.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/observations/OBS-004.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/observations/OBS-005.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/patterns/PAT-001.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/patterns/PAT-002.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/candidate-abstractions/CA-001.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/candidate-cognition.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/candidate-evaluation-request.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/research-handoff.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/execution-record.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/execution-evaluation.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/limitations-register.md
+docs/reference-execution/v1.0/executions/MS-RE-RUN-002/execution-summary.md
+```
+
 ## Environment and stopping rules
 
 | Field | Value |
@@ -47,7 +71,6 @@ Observations are `Reported` accounts of transcript passages, not direct empirica
 | Environment | Linux `6.12.13`, `x86_64`; Git `2.43.0`; `/workspace/MindShift-`. |
 | Assistance | OpenAI Codex assisted inspection and artifact preparation. It is not an authority, validator, owner, or source of transcript content. |
 | Stopping rules | Stop if the sole transcript cannot be immutably bound; if required metadata must be inferred; if a transition predicate cannot be met; or after all transcript content and declared outputs are preserved. |
-| Expected outputs | This execution directory: observations, patterns, candidate abstractions, candidate cognition, evaluation request, handoff, record, evaluation, limitations, and summary. |
 
 ## Unresolved prerequisites
 

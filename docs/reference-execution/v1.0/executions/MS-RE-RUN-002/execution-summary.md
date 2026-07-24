@@ -1,6 +1,7 @@
 # MS-RE-RUN-002 Closure Record
 
-**Terminal outcome:** `REFERENCE_EXECUTION_COMPLETED_WITH_CANDIDATE_OUTPUTS`
+**Terminal outcome:** `REFERENCE_EXECUTION_COMPLETED`
+**Candidate output status:** `PRODUCED`
 **Execution identifier:** `MS-RE-RUN-002`
 **Transcript identifier:** `MIT-6.1200J-Lecture-11`
 **Custodian:** OpenAI Codex execution agent (`/root`)
@@ -17,8 +18,14 @@
 | Candidate and handoff outputs | `CA-001`, `MS-RE-RUN-002-COG-001`, `MS-RE-RUN-002-CER-001`, and prepared-undelivered `MS-RE-RUN-002-RH-001`. |
 | Evaluation and limitations | [`execution-evaluation.md`](execution-evaluation.md) and [`limitations-register.md`](limitations-register.md). |
 
+```text
+Handoff artifact produced
+≠
+Handoff completed
+```
+
 ## Final determination
 
-The bounded reference execution completed because exactly one transcript was immutably admitted and all declared transcript content was processed into the required preserved package. The package records a non-authoritative candidate account and a prepared, undelivered research request. It does not establish mathematical truth, research validity, authority, legitimacy, action permission, deployment readiness, or transfer of responsibility.
+The bounded reference execution completed because exactly one transcript was immutably admitted and all declared transcript content was processed into the required preserved package. The package records a non-authoritative candidate account and a prepared, undelivered research request. The MindShift execution is complete, but no cross-repository transfer has occurred. It does not establish mathematical truth, research validity, authority, legitimacy, action permission, deployment readiness, or transfer of responsibility.
 
 A future research recipient or successor must preserve this execution, its source binding, and all uncertainty; it must not rewrite the transcript or this closure record.

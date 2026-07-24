@@ -26,4 +26,22 @@
 
 The execution stopped because the required exactly-one real transcript could not be immutably bound with its minimum provenance, custody, collection, confidentiality, scope, and integrity information. This outcome preserves the evidence of the failed admission without substituting repository examples, synthesizing a transcript, altering wording, or inferring missing provenance.
 
+```text
+Stopped-execution package complete
+≠
+Reference execution complete
+```
+
+## Required successor action
+
+Supply and immutably bind one admissible real transcript, including the required provenance, custody, collection, confidentiality, scope, and integrity information.
+
+Then create a new successor execution with a new immutable identity:
+
+```text
+MS-RE-RUN-002
+```
+
+Do not reopen, reuse, or overwrite `MS-RE-RUN-001`. The successor must link back to this stopped record and preserve this outcome as negative execution evidence.
+
 This closure establishes neither a completed reference execution nor scientific validation, general correctness, authority, legitimacy, research validity, or deployment readiness.

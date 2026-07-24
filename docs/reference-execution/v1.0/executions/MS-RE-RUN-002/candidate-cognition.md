@@ -3,7 +3,7 @@
 **Identity:** `MS-RE-RUN-002-COG-001`
 **Contract:** Observation to Research Handoff Contract v1.0.0
 **Owner:** MindShift
-**Maturity state:** `evaluation-requested`
+**Maturity state:** `handed-off`
 **Created at:** `2026-07-24T08:55:28Z`
 
 ## Inquiry and current candidate understanding
@@ -31,4 +31,4 @@ The candidate carries forward all Observation and Pattern limitations: one repor
 
 ## Maturity rationale
 
-The inquiry, composition, assumptions, scope, and limits are explicit, so the cognition is framed. The linked Candidate Evaluation Request has been prepared, making the descriptive state `evaluation-requested`. This state does not imply validation, authority, or a research result.
+The inquiry, composition, assumptions, scope, and limits are explicit. The linked Candidate Evaluation Request and Research Handoff record have been produced, so the descriptive maturity state is `handed-off`. The handoff remains prepared and undelivered; this state does not imply external receipt, validation, authority, or a research result.

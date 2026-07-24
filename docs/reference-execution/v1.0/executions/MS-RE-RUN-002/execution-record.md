@@ -6,7 +6,8 @@
 **Started / ended:** `2026-07-24T08:55:28Z`
 **Lifecycle state:** frozen at publication
 **Execution disposition:** `completed`
-**Terminal outcome:** `REFERENCE_EXECUTION_COMPLETED_WITH_CANDIDATE_OUTPUTS`
+**Terminal outcome:** `REFERENCE_EXECUTION_COMPLETED`
+**Candidate output status:** `PRODUCED`
 
 ## Immutable binding
 

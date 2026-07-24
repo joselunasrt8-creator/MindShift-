@@ -7,9 +7,15 @@
 **Source execution:** `MS-RE-RUN-001`  
 **Scope:** Instrument behavior through the declared stop at required-input admission; this is not an evaluation of research claims, transcript content, scientific truth, research validity, or conclusions.  
 
+```text
+Execution-package completeness
+≠
+Reference-run completion
+```
+
 | Dimension | Finding | Evidence | Scope limit |
 | --- | --- | --- | --- |
-| Completeness | observed | Input manifest, transcript manifest, stop condition, output-status records, limitations, and execution record are present. | Candidate artifacts are intentionally absent because the required transcript was unavailable. |
+| Completeness | observed for the stopped-execution package | Input manifest, transcript manifest, stop condition, output-status records, limitations, and execution record are present. | The reference run itself is not complete; candidate artifacts are intentionally absent because the required transcript was unavailable. |
 | Traceability | observed | `input-manifest.md` links the frozen commits; `transcript-manifest.md` and `execution-record.md` link the stopping condition and outputs. | No source-to-observation trace can exist without transcript content. |
 | Ambiguity | observed | The source-boundary manifest has no transcript, while the reference run requires one. | This evaluation does not resolve whether another custodian has an admissible transcript. |
 | Friction | observed | Admission cannot proceed from repository materials alone; the required source must be supplied with immutable reference and constraints. | Time/cost of obtaining a transcript was not measured. |
@@ -19,4 +25,4 @@
 
 ## Evaluation conclusion
 
-The instrument's stop path preserved the unavailable prerequisite without constructing unsupported candidate artifacts. The evaluation is bounded to this stopped execution and supplies no validation or conclusion about research.
+The instrument's stop path preserved the unavailable prerequisite without constructing unsupported candidate artifacts. The stopped-execution package is complete for its bounded disposition, but Reference Run 1 was not completed. This evaluation supplies no validation or conclusion about research.

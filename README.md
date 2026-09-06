@@ -202,6 +202,7 @@ The value of a research framework is measured by the evidence and engineering de
 | [`docs/frameworks.md`](docs/frameworks.md) | Optional lenses used to study learning and abstraction transfer |
 | [`docs/context-window-abstraction-hypothesis.md`](docs/context-window-abstraction-hypothesis.md) | Exploratory candidate hypothesis on context availability and reusable abstractions |
 | [`docs/issue-76/`](docs/issue-76/) | Issue #76 observations, candidate repository-legibility model, and prepared empirical handoff |
+| [`docs/issue-79/experiment-record.md`](docs/issue-79/experiment-record.md) | Issue #79 prospective StateGate consumer-experiment boundary and preserved blocked preflight |
 | [`docs/grandmaster-mode.md`](docs/grandmaster-mode.md) | Analysis method for extracting transferable lessons |
 | [`docs/examples/`](docs/examples/) | Worked analyses that feed lessons back into the method |
 | [`docs/lineage.md`](docs/lineage.md) | Historical context for the surviving research invariant |

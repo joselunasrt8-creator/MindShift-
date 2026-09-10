@@ -39,7 +39,7 @@ evidence remain unchanged.
 | --- | --- |
 | Independent variable | Context construction only: `ORDINARY_RAW` versus `MINDSHIFT_STRUCTURED_V1`. |
 | Experimental unit | One independently generated answer to one frozen task in one condition. |
-| Primary dependent variable | Per-answer preregistered quality score: `correctness + relevant_information_used - critical_information_omitted - unsupported_claims - stale_context_errors - contradictions`, normalized to 0-100 as section 8 defines. |
+| Primary dependent variable | Per-answer preregistered quality score: normalized correctness and relevant-information use minus normalized penalties for omissions, unsupported claims, stale-context errors, and contradictions, on a 0–100 scale as section 8 defines. |
 | Secondary dependent variables | Individual rubric dimensions, input/output tokens, combined context cost, and blinded evaluator preference. |
 | Fixed controls | Exact model snapshot/provider, system instruction, task prompt, source bytes, source ordering, generation settings, output cap, run count, context handling, and tool prohibition. |
 | Deliberately varied | Delimiters, ordering, grouping, and explicit epistemic/provenance labels produced by the frozen treatment procedure. |
@@ -58,10 +58,12 @@ before model output and may not be replaced after performance is observed.
 `source-manifest.json` freezes every eligible source by path, source commit, and
 SHA-256. For each task, both conditions receive every byte of every listed
 source exactly once. No other repository content, retrieval, memory, tool,
-hidden summary, answer key, or evaluator reference may enter generation.
-Condition wrappers may add only procedure labels; they may not add factual
-claims. Hash failure, missing source, truncation, or unequal source membership
-is `EXPERIMENT_INVALID`.
+hidden summary, answer key, evaluator reference, or task-specific checklist may
+enter generation. Condition wrappers may add only procedure labels and generic
+structural metadata; they may not add factual claims or disclose the task's
+`information_requirements` or `bounded_reference` to either generation arm.
+Hash failure, missing source, truncation, unequal source membership, or leakage
+of evaluator-only task metadata is `EXPERIMENT_INVALID`.
 
 ## 4. Ordinary/raw context procedure (`ORDINARY_RAW_V1`)
 
@@ -73,8 +75,9 @@ This is a credible competent-user baseline, not a weakened control.
 4. Concatenate sources without edits using `\n\n--- SOURCE: <path> ---\n\n` delimiters.
 5. Append the exact task prompt under `--- TASK ---`.
 
-No summarization, relevance filtering, annotations, deprioritization, or answer
-hints are allowed. Source order is identical to `source_ids`.
+No summarization, relevance filtering, annotations, deprioritization, answer
+hints, `information_requirements`, or bounded references are allowed. Source
+order is identical to `source_ids`.
 
 ## 5. MindShift context procedure (`MINDSHIFT_STRUCTURED_V1`)
 
@@ -95,16 +98,17 @@ MindShift mechanism or production service.
    presentation, not truth status.
 4. Within each category retain manifest source order and original segment order.
    Empty categories say `No source segment classified by the frozen rule.`
-5. `TASK RELEVANCE` lists, without paraphrase, the task's frozen
-   `information_requirements`; this is task metadata available in both protocol
-   arms but presented only by the treatment as the intended structural change.
+5. `TASK RELEVANCE` may contain only the exact task prompt already supplied to both
+   arms, prefixed with `Task focus:`. It must not include `information_requirements`,
+   bounded references, evaluator rubrics, answer keys, or any task-specific hints
+   unavailable to the control arm.
 6. `LINEAGE AND PROVENANCE` lists each source ID, path, source commit, and hash.
 7. Prepend the same allowed-source and candidate-output instruction as control,
    then append the identical exact task under `--- TASK ---`.
 
-The procedure reorganizes and labels; it may not omit, rewrite, summarize, or
-duplicate source segments. This explicitly tests the candidate value of
-current/prior observation, finding, assumption, contradiction, stale-state,
+The procedure reorganizes and labels; it may not omit, rewrite, summarize,
+duplicate, or privilege source facts. This explicitly tests the candidate value
+of current/prior observation, finding, assumption, contradiction, stale-state,
 relevance, and lineage distinctions supported by existing research while
 marking the classifier itself as hypothetical.
 
@@ -145,6 +149,8 @@ experiment `EXPERIMENT_INVALID`. There is no post-output model substitution.
 ## 7. Contamination and custody controls
 
 - Generation has no evaluator rubric beyond the task and no bounded reference.
+- `information_requirements` and `bounded_reference` are evaluator-only metadata
+  and must never be inserted into either generation arm.
 - Evaluators have source corpus, task, bounded reference, and rubric, but not
   condition identity or paired output until scores are locked.
 - Builders, generators, and evaluators use separate fresh sessions; no output
@@ -152,8 +158,8 @@ experiment `EXPERIMENT_INVALID`. There is no post-output model substitution.
 - Freeze hashes of contexts, run manifest, raw responses, score sheets, and the
   condition-key file. Keep the key sealed until all scores/preferences lock.
 - Any early output inspection, source inequality, answer leakage, unblinding,
-  outcome-aware protocol change, or missing audit trail yields
-  `EXPERIMENT_INVALID`.
+  outcome-aware protocol change, evaluator-metadata leakage, or missing audit
+  trail yields `EXPERIMENT_INVALID`.
 
 ## 8. Frozen evaluation rubric and aggregation
 
@@ -174,13 +180,17 @@ explicitly identified below.
 | Context/token cost | integer | Provider-reported input and output tokens; also UTF-8 byte count. Not quality-scored. |
 | Evaluator preference | control / treatment / tie, subjective | After independent scoring, choose the answer better satisfying correctness, source use, omission, and unsupported-claim criteria; no style-only preference. |
 
-Quality points = `25*correctness + 25*relevant_used -
-12.5*(omissions + unsupported + stale + contradictions)`, clipped to `[0,100]`.
-The primary pair effect is treatment minus control. Aggregate by first taking
-the median pair effect across 20 replicates within each task, then the equally
-weighted mean of the four task medians. Report every dimension, invalid pair,
-and token cost; do not hide adverse subtasks. Preference is the proportion of
-non-ties favoring treatment, with ties reported separately.
+Primary quality score =
+`12.5*correctness + 12.5*relevant_used - 6.25*(omissions + unsupported + stale + contradictions)`,
+clipped to `[0,100]`.
+
+This normalization gives the two positive dimensions a combined maximum of 100
+before penalties, preventing routine saturation while retaining the original
+relative penalty structure. The primary pair effect is treatment minus control.
+Aggregate by first taking the median pair effect across 20 replicates within each
+task, then the equally weighted mean of the four task medians. Report every
+dimension, invalid pair, and token cost; do not hide adverse subtasks. Preference
+is the proportion of non-ties favoring treatment, with ties reported separately.
 
 ## 9. Frozen terminal decision rule
 

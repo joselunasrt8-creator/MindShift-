@@ -48,10 +48,16 @@ required = [
     "No treatment/control output",
     "invalid outcomes are admissible",
     "not a MindShift runtime",
+    "must never be inserted into either generation arm",
+    "12.5*correctness + 12.5*relevant_used",
 ]
 normalized_protocol = " ".join(protocol.split())
 for phrase in required:
     assert phrase in normalized_protocol, phrase
+
+# Guard against the original treatment-only task-hint leakage and saturating score.
+assert "TASK RELEVANCE` lists, without paraphrase, the task's frozen" not in protocol
+assert "25*correctness + 25*relevant_used" not in protocol
 
 reserved = [HERE / "outputs", HERE / "results", HERE / "determination.json"]
 assert not any(path.exists() for path in reserved)

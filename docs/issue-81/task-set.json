@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "frozen_status": "PREREGISTERED_NO_OUTCOMES",
+  "tasks": [
+    {
+      "task_id": "MS81-T01",
+      "prompt": "Using only the supplied source material, explain MindShift's canonical purpose and research sequence to a new contributor. Distinguish candidate cognition from authority or validated findings, and identify what must happen when information is unknown or contradictory.",
+      "source_ids": ["SRC-README", "SRC-CANON", "SRC-SEQUENCE"],
+      "information_requirements": ["canonical purpose", "Observation to Pattern to Abstraction to Primitive to Transfer sequence", "candidate/non-authoritative boundary", "Unknown handling", "contradiction preservation"],
+      "evaluation_dimensions": ["correctness", "relevant_information_used", "critical_information_omitted", "unsupported_claims", "contradictions"],
+      "bounded_reference": "README canonical purpose and sequence; Canon v1 sections 1-3; research-sequence evidence and failure conditions. No external facts are admissible."
+    },
+    {
+      "task_id": "MS81-T02",
+      "prompt": "A team proposes to overwrite an earlier Candidate Cognition after a later research disposition calls it unsupported, then treat the updated record as approval to deploy. Using only the supplied source material, assess each proposed step and give the boundary-preserving record path.",
+      "source_ids": ["SRC-CANON", "SRC-HANDOFF", "SRC-LIFECYCLE"],
+      "information_requirements": ["append-only successor/correction semantics", "reported observation return path", "artifact ownership", "candidate versus finding", "no approval/deployment authority"],
+      "evaluation_dimensions": ["correctness", "relevant_information_used", "critical_information_omitted", "unsupported_claims", "stale_context_errors", "contradictions"],
+      "bounded_reference": "Canon v1 lifecycle integrity and return path, ownership table, and non-responsibilities; frozen handoff and instrument lifecycle contracts. The earlier artifact must remain preserved and deployment authority is outside MindShift."
+    },
+    {
+      "task_id": "MS81-T03",
+      "prompt": "Using only the supplied source material, design a bounded empirical comparison for proposition P-01 from Issue #76. State what is fixed, what varies, what evidence could count against the proposition, and which claims the comparison cannot establish.",
+      "source_ids": ["SRC-76-MODEL", "SRC-76-HANDOFF", "SRC-CONTEXT-HYPOTHESIS"],
+      "information_requirements": ["P-01 comparison", "revision binding", "serious docs-only baseline", "adverse outcomes", "context budget or cost", "bounded/non-authoritative claim"],
+      "evaluation_dimensions": ["correctness", "relevant_information_used", "critical_information_omitted", "unsupported_claims", "contradictions"],
+      "bounded_reference": "Issue #76 empirical handoff P-01 and required independence; candidate-model alternatives and invalidation conditions; context hypothesis prospective test requirements. No favorable result is presumed."
+    },
+    {
+      "task_id": "MS81-T04",
+      "prompt": "Using only the supplied source material, determine whether a larger context window by itself establishes improved reusable abstraction. Give the strongest supported conclusion, the required prospective test elements, and at least three failure or confounding conditions.",
+      "source_ids": ["SRC-CONTEXT-HYPOTHESIS", "SRC-SEQUENCE", "SRC-THESIS"],
+      "information_requirements": ["candidate-hypothesis status", "availability versus abstraction distinction", "prospective test", "transfer requirement", "leakage/hindsight/confounds", "bounded conclusion"],
+      "evaluation_dimensions": ["correctness", "relevant_information_used", "critical_information_omitted", "unsupported_claims", "stale_context_errors", "contradictions"],
+      "bounded_reference": "Context-window hypothesis sections on status, comparison, and tests; research-sequence Transfer criteria and failure conditions; thesis decision filter. Larger context alone does not establish the claim."
+    }
+  ]
+}

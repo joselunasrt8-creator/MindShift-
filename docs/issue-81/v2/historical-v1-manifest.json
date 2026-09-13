@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "terminal_determination": "EXPERIMENT_INVALID",
+  "artifacts": [
+    {
+      "path": "docs/issue-81/protocol.md",
+      "sha256": "ca183c0110c8e699271d099ab976d446927d39eeea323910d025d2eb0f64b58a"
+    },
+    {
+      "path": "docs/issue-81/source-manifest.json",
+      "sha256": "39b096402b2f3675cc7f2b0a86439dab96b578a4d2326d686c83ddd32c5386b4"
+    },
+    {
+      "path": "docs/issue-81/task-set.json",
+      "sha256": "c39c99ff73c3ebde8a7ebd25d4bf475c28041536b7965164422aaec6c8d889b8"
+    },
+    {
+      "path": "docs/issue-81/validate_protocol.py",
+      "sha256": "26cf50c1c3bc1d8d5eadf304daa553c0874e03ab48e79f745dfec6755b4e719a"
+    },
+    {
+      "path": "docs/issue-81/experiment-record.md",
+      "sha256": "a9e36ce3e6c9ea33d20d398c01696218701ce817285185caac8f744a91542fca"
+    }
+  ]
+}

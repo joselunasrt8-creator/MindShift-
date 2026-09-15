@@ -1,78 +1,52 @@
 # MindShift
 
+## Context and Cognition-Governance Research
 
+MindShift studies how observations and assembled context condition candidate cognition: patterns, abstractions, models, assumptions, reflections, and intent candidates.
 
-<p align="center">
-  <img src="docs/images/mindshift.png" alt="MindShift" width="100%">
-</p>
+Its central research question is:
 
-## Research Framework for Transferable Abstraction
+> **Can a governed context-construction process improve future modeling or task performance relative to a strong baseline, and under what conditions?**
 
-> MindShift transforms observations into higher-quality abstractions that improve understanding.
-
-MindShift is Context and Cognition-Governance Infrastructure: a non-operational
-research framework for constructing and governing the context that conditions
-candidate cognition.
-
-MindShift improves understanding. It does not authorize or mutate external
-systems, validate research claims, confer legitimacy, grant permission, or
-determine execution eligibility.
-
----
-
-## The Journey from Information to Impact
-
-<p align="center">
-  <img src="docs/images/journey-from-information-to-impact.png" alt="The Journey from Information to Impact" width="100%">
-</p>
-
----
-
-MindShift studies how observations become reusable understanding.
-
-## Canonical Purpose
+MindShift does not assume that an abstraction is higher quality merely because the framework produced it. Improvement is an empirical claim that requires an explicit task, comparator, measurement rule, and prospective evaluation.
 
 ```text
-Reality
-        ↓
+Context construction ≠ truth
+Abstraction ≠ validated knowledge
+Better-looking reasoning ≠ measured improvement
+Cognition ≠ legitimacy
+Candidate intent ≠ authority
+```
+
+## Canonical research model
+
+```text
 Observation
-        ↓
-Higher-Quality Abstractions
-        ↓
-Better Understanding
+    ↓
+Context assembly
+    ↓
+Candidate cognition
+    ↓
+Evaluation
+    ↓
+Observed effect on a defined task
 ```
 
----
+Candidate cognition may include:
 
-### Hierarchy of Understanding
+- patterns;
+- abstractions;
+- assumptions;
+- models;
+- reflections;
+- transferable primitives; and
+- intent candidates.
 
-The hierarchy below situates that purpose within the progression from reality to understanding.
+The first four arrows describe a research process, not guaranteed improvement. The final effect must be measured.
 
-<p align="center">
-  <img src="docs/images/hierarchy-of-understanding.png" alt="The Hierarchy of Understanding" width="100%">
-</p>
+## Research sequence
 
----
-
-## Canonical Research Question
-
-```text
-How can observations be converted into transferable abstractions that improve future modeling?
-```
-
----
-
-### From Information to Understanding
-
-The following figure traces the movement from information to understanding.
-
-<p align="center">
-  <img src="docs/images/from-information-to-understanding.png" alt="From Information to Understanding" width="100%">
-</p>
-
----
-
-## Canonical Research Sequence
+The existing conceptual sequence remains useful as a hypothesis-generating structure:
 
 ```text
 Observation
@@ -82,135 +56,174 @@ Observation
 → Transfer
 ```
 
-This is a research sequence, not a runtime, execution loop, or computational
-lifecycle.
+This is a research sequence, not a runtime, execution loop, or computational lifecycle. A pattern may be spurious, an abstraction may fail to transfer, a proposed primitive may not be stable, and transfer may degrade performance.
 
----
-
-### Understanding Compounds
-
-Understanding compounds as these research steps are revisited over time.
-
-<p align="center">
-  <img src="docs/images/understanding-compounds.png" alt="Understanding Compounds" width="100%">
-</p>
-
----
-
-## What MindShift Studies
+## What MindShift studies
 
 MindShift studies:
 
-- observations;
+- observation capture and representation;
+- context selection and assembly;
 - pattern identification;
 - abstraction formation;
+- assumption tracking;
+- reflection and model revision;
 - primitive extraction;
-- transfer across contexts;
-- learning reflection; and
-- model improvement.
+- transfer across tasks or contexts;
+- behavioral or reasoning lineage; and
+- whether these processes measurably improve a defined outcome.
 
-MindShift does not define a machine object for primitives. It studies how
-transferable abstractions emerge and how they improve future modeling.
+MindShift does not define correctness by internal coherence alone. A model or abstraction must be evaluated against an appropriate external criterion when the research question requires one.
 
----
+## Evidence ladder
 
-### Scientific Instruments Accelerate Learning
+MindShift claims should advance only with the corresponding evidence:
 
-Scientific instruments and the research flywheel illustrate how the framework accelerates learning.
+```text
+Framework defined
+        ↓
+Process reproducible
+        ↓
+Candidate abstraction produced
+        ↓
+Task-level evaluation
+        ↓
+Baseline comparison
+        ↓
+Replication / transfer
+        ↓
+Bounded claim of improvement
+```
 
-<p align="center">
-  <img src="docs/images/instruments-accelerate-learning.png" alt="Scientific Instruments Accelerate Learning" width="100%">
-</p>
+A repository artifact demonstrating that MindShift can produce structured context is evidence of mechanism operation. It is not by itself evidence that the resulting cognition is better.
 
-### Research Flywheel
+## Evaluation boundary
 
-<p align="center">
-  <img src="docs/images/research-flywheel.png" alt="The Research Flywheel" width="100%">
-</p>
+Claims such as “higher-quality abstraction,” “better understanding,” “improved modeling,” or “transferable primitive” require operational definitions.
 
----
+A valid experiment should specify prospectively:
+
+1. the task;
+2. the source/context available to each condition;
+3. the baseline or comparator;
+4. the output being evaluated;
+5. the scoring or adjudication rule;
+6. contamination and leakage controls;
+7. stopping/exclusion rules; and
+8. the claim permitted by each outcome.
+
+Useful outcome classes include accuracy, completeness, calibration, task success, error rate, transfer performance, time/cost, and human adjudication under a frozen rubric. The correct metric depends on the experiment.
+
+## Current empirical boundary
+
+The repository contains research instruments and experiment records, including Issue #76, Issue #79, and Issue #81 work. Their existence demonstrates increasing experimental discipline and reproducible protocol machinery.
+
+They do not automatically establish the general proposition that MindShift improves cognition.
+
+In particular:
+
+- a prepared protocol is not a completed experiment;
+- a blocked or invalid execution is not evidence of improvement;
+- deterministic validation of an experiment record is not validation of the underlying cognitive claim;
+- one successful task would not establish general transfer; and
+- internal use across Continufy repositories would not establish independent external value.
+
+## Falsification boundary
+
+MindShift must permit outcomes that weaken or terminate its central hypothesis. Examples include:
+
+- baseline context performs equally well;
+- MindShift context reduces performance;
+- gains disappear under blinded evaluation;
+- improvements arise only from greater token/context volume rather than the framework's structure;
+- abstractions fail to transfer across tasks;
+- the process introduces systematic bias or stale assumptions;
+- benefits are too small relative to latency, complexity, or cost;
+- simpler context-selection methods perform equally well; or
+- results do not replicate.
+
+Any of these is a legitimate research result.
 
 ## Boundaries
 
-MindShift is not:
+MindShift is **Context and Cognition-Governance research infrastructure**. It is not:
 
-- independent infrastructure;
-- a deterministic runtime;
 - execution infrastructure;
 - legitimacy infrastructure;
 - authority infrastructure;
-- repository-governance infrastructure; or
-- an agent framework.
+- repository-governance infrastructure;
+- a permission system;
+- a deterministic structural-analysis engine; or
+- an autonomous agent runtime.
 
-MindShift does not own execution, authority, approval, legitimacy, execution
-eligibility, execution boundaries, proof closure, governed mutation, or replay.
-MindShift also excludes deterministic structural analysis from its scope.
+MindShift does not authorize or mutate external systems, confer legitimacy, grant permission, determine execution eligibility, or make candidate intent executable.
 
-> **Evidence boundary:** This repository is locally authoritative only for
-> MindShift's scope. It does not cite an immutable authoritative specification
-> for SYNAPSE or ContinuityOS, so their responsibility assignments remain
-> externally unresolved and are not asserted here.
+```text
+MindShift output
+      ↓
+Candidate cognition / intent
+      ↓
+External validation or governance as required
+      ↓
+No execution authority originates here
+```
 
-Repository governance, whether or not it uses an external mechanism such as
-ContinuityOS, is not MindShift functionality.
+## Relationship to the Continufy system
 
----
+Within the Continufy architecture, MindShift occupies the cognition-governance layer. It may construct context and produce candidate models or intent for downstream systems.
 
-## Long-Term Vision
+That relationship must not collapse layer boundaries:
 
-These research principles motivate a broader vision for engineering.
+```text
+LLM capability ≠ MindShift cognition governance
+MindShift cognition ≠ ContinuityOS legitimacy
+Candidate intent ≠ authorized action
+Research validation ≠ execution permission
+```
 
-### Engineering Becomes the Production of Understanding
+MindShift can improve a downstream system only if the improvement is actually measured. Architectural placement is not evidence of effect.
 
-<p align="center">
-  <img src="docs/images/engineering-becomes-production.png" alt="Engineering Becomes the Production of Understanding" width="100%">
-</p>
-
-### Future Vision
-
-<p align="center">
-  <img src="docs/images/future-vision.png" alt="Future Vision" width="100%">
-</p>
-
-## Evidence in Practice
-
-The value of a research framework is measured by the evidence and engineering decisions it enables.
-
-<p align="center">
-  <img src="docs/images/proof.png" alt="Proof" width="100%">
-</p>
-
-## Why Understanding Matters
-
-<p align="center">
-  <img src="docs/images/why-understanding.png" alt="Why Understanding" width="100%">
-</p>
-
----
-
-## Repository Structure
+## Repository structure
 
 | Path | Purpose |
 | --- | --- |
-| [`README.md`](README.md) | Canonical project overview |
-| [`docs/canon-v1.md`](docs/canon-v1.md) | **MindShift Canon v1:** canonical system identity, ownership, lifecycle assembly, handoffs, and non-responsibilities |
-| [`CLAUDE.md`](CLAUDE.md) | Contributor operating guide |
-| [`docs/thesis.md`](docs/thesis.md) | Canonical thesis and decision filter |
-| [`docs/research-sequence.md`](docs/research-sequence.md) | The canonical Observation → Pattern → Abstraction → Primitive → Transfer sequence |
-| [`docs/observation-to-research-handoff-contract.md`](docs/observation-to-research-handoff-contract.md) | Frozen v1.0 contract for candidate cognition and research handoff artifacts |
-| [`docs/principles.md`](docs/principles.md) | Research principles |
-| [`docs/frameworks.md`](docs/frameworks.md) | Optional lenses used to study learning and abstraction transfer |
-| [`docs/context-window-abstraction-hypothesis.md`](docs/context-window-abstraction-hypothesis.md) | Exploratory candidate hypothesis on context availability and reusable abstractions |
-| [`docs/issue-76/`](docs/issue-76/) | Issue #76 observations, candidate repository-legibility model, and prepared empirical handoff |
-| [`docs/issue-79/experiment-record.md`](docs/issue-79/experiment-record.md) | Issue #79 prospective StateGate consumer-experiment boundary and preserved blocked preflight |
-| [`docs/issue-81/`](docs/issue-81/) | Issue #81 frozen context experiment protocol, task/source manifests, deterministic validator, and pre-outcome invalid execution record |
-| [`docs/grandmaster-mode.md`](docs/grandmaster-mode.md) | Analysis method for extracting transferable lessons |
-| [`docs/examples/`](docs/examples/) | Worked analyses that feed lessons back into the method |
-| [`docs/lineage.md`](docs/lineage.md) | Historical context for the surviving research invariant |
-| [`docs/scope.md`](docs/scope.md) | Project boundaries |
-| [`docs/roadmap.md`](docs/roadmap.md) | Future optional work filtered against the thesis |
-| [`docs/instrument-execution-lifecycle-contract.md`](docs/instrument-execution-lifecycle-contract.md) | Frozen execution, evaluation, calibration, versioning, packaging-readiness, and supersession contract |
-| [`docs/reference-execution/v1.0/freeze-record.md`](docs/reference-execution/v1.0/freeze-record.md) | **Reference Execution v1.0 boundary:** immutable source manifest, version bindings, input contract, limitations, readiness, and Issue #53 handoff |
-| [`docs/reference-execution/v1.0/freeze-readiness-record.md`](docs/reference-execution/v1.0/freeze-readiness-record.md) | Superseded historical readiness assessment retained for traceability |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution guidance |
-| [`LICENSE`](LICENSE) | Apache-2.0 License |
+| `README.md` | Project overview and evidence boundary |
+| `docs/canon-v1.md` | Canonical system identity, ownership, lifecycle assembly, handoffs, and non-responsibilities |
+| `docs/thesis.md` | Thesis and decision filter |
+| `docs/research-sequence.md` | Observation → Pattern → Abstraction → Primitive → Transfer sequence |
+| `docs/observation-to-research-handoff-contract.md` | Frozen candidate-cognition/research handoff contract |
+| `docs/principles.md` | Research principles |
+| `docs/frameworks.md` | Optional analytical lenses |
+| `docs/context-window-abstraction-hypothesis.md` | Exploratory context/abstraction hypothesis |
+| `docs/issue-76/` | Repository-legibility observations and empirical handoff |
+| `docs/issue-79/experiment-record.md` | StateGate consumer-experiment boundary and blocked preflight |
+| `docs/issue-81/` | Frozen context experiment protocol and execution records |
+| `docs/grandmaster-mode.md` | Transferable-lesson extraction method |
+| `docs/examples/` | Worked analyses |
+| `docs/lineage.md` | Historical lineage |
+| `docs/scope.md` | Project boundaries |
+| `docs/roadmap.md` | Future work filtered against the thesis |
+| `docs/instrument-execution-lifecycle-contract.md` | Experiment instrument lifecycle contract |
+| `docs/reference-execution/v1.0/` | Reference execution and freeze records |
+
+## Current objective
+
+The highest-value next step is not additional conceptual expansion. It is completing clean prospective comparisons that isolate whether MindShift's context construction causes measurable improvement over strong simpler baselines.
+
+The framework should earn increasingly strong claims in this order:
+
+```text
+Can structure context
+        ↓
+Can do so reproducibly
+        ↓
+Changes measurable task outcomes
+        ↓
+Beats strong baseline
+        ↓
+Transfers across tasks
+        ↓
+Provides enough value to justify its complexity
+```
+
+Until those stages are supported, MindShift should be treated as a research framework and experimental cognition-governance infrastructure—not as proven general-purpose cognitive improvement technology.

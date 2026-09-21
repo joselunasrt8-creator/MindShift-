@@ -88,7 +88,8 @@ one completion, no tools or retrieval, no conversation history, no shared prompt
 cache, and a maximum of 2,000 output tokens. If supported, pair seeds are
 `810200 + task ordinal`; lack of seed support must be recorded but does not
 permit substitution. Pair order is determined by the low bit of
-`SHA-256("MS81-V2|<task_id>")`; requests use fresh sessions. A failed call may be
+`SHA-256("MS81-V2|<task_id>")`: bit `0` means control first then treatment;
+bit `1` means treatment first then control. Requests use fresh sessions. A failed call may be
 retried once with identical bytes. Any incomplete pair invalidates v2.
 
 The exact system instruction is:
@@ -129,7 +130,14 @@ cannot be established, preserve `EVALUATION_BLOCKED`; do not manufacture scores.
 Per-answer quality is
 `clip(12.5*correctness + 12.5*relevant_used - 6.25*(omissions + unsupported + stale + contradictions), 0, 100)`.
 Pair effect is treatment minus control. The aggregate effect is the arithmetic
-mean of the four pair effects. Preserve all dimensions and per-task effects.
+mean of the four pair effects. For evaluator preference, each evaluator casts
+one blinded vote per pair: treatment, control, or tie after unblinding the
+sealed condition key. If a third evaluator was triggered for that pair, use the
+majority of the three votes; otherwise use the two initial votes. A split
+treatment/control vote, all-tie vote, or any vote set without a strict majority
+is one pair-level tie. Terminal rules count pair-level treatment wins versus
+pair-level control wins; tied pairs count for neither arm. Preserve all
+dimensions, evaluator votes, pair-level preferences, and per-task effects.
 
 ## 6. Frozen terminal rules
 

@@ -1,0 +1,17 @@
+{
+  "schema_version": "2.0.0",
+  "repository": "https://github.com/joselunasrt8-creator/MindShift-",
+  "source_commit": "d31d7630c5c2189dc350626215f2ba0c65b667a0",
+  "hash_algorithm": "sha256",
+  "sources": [
+    {"source_id":"SRC-README","path":"README.md","sha256":"6cd624eb794fbf62cef3a71b78c6e602f58ef0ff6787132915ac339b326522c2"},
+    {"source_id":"SRC-CANON","path":"docs/canon-v1.md","sha256":"7f16aa51b1afc858ae7f7e61081f80ba0f4ff8bf31c7abc42a668e96a261d6ee"},
+    {"source_id":"SRC-SEQUENCE","path":"docs/research-sequence.md","sha256":"4dd0f68cceee6db6dd1e64f77a9f690b1ce2793549972157cc7c70966f83e576"},
+    {"source_id":"SRC-HANDOFF","path":"docs/observation-to-research-handoff-contract.md","sha256":"a7e12caa717530b406b6de7f87a95eba3d52c676ea0dc7d8ff55902c7403563e"},
+    {"source_id":"SRC-LIFECYCLE","path":"docs/instrument-execution-lifecycle-contract.md","sha256":"7eb00b9829e0053ee2e7f2700df28194c85b8c005d254ac1e282aedbcbbdbae9"},
+    {"source_id":"SRC-76-MODEL","path":"docs/issue-76/candidate-model.md","sha256":"32f9f9e977d5ab799cd104cc9ab16e0f05b6092e1b4ca68f101fac1baed958ac"},
+    {"source_id":"SRC-76-HANDOFF","path":"docs/issue-76/empirical-handoff.md","sha256":"709de03c7722fa3ef1f2d2caa57c33770923e9f189747a6775ea2d701e1587d2"},
+    {"source_id":"SRC-CONTEXT-HYPOTHESIS","path":"docs/context-window-abstraction-hypothesis.md","sha256":"69217e4b0d3ce6867e5d309fa6494cd54b864bdff73ed5f6e81f2c7fb64b880f"},
+    {"source_id":"SRC-THESIS","path":"docs/thesis.md","sha256":"9f6b6165dd366a011fc22132f693c28b629cc260e379af6e8b90865a79d29eac"}
+  ]
+}

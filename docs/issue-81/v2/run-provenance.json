@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0.0",
   "experiment_id": "MS81-V2-2026-09-21-MINIMAL-MATCHED",
-  "frozen_protocol_commit": "bd40efaacced05290e4c48d31a92f9e4f3655400",
+  "frozen_protocol_commit": "91cb3907c3ac2f219e9885c8277db94f63db16e9",
   "freeze_timestamp_utc": "2026-09-21T01:18:19+00:00",
   "preflight_timestamp_utc": "2026-09-21T01:18:31+00:00",
   "execution_environment": "Codex Cloud Linux workspace",
@@ -25,5 +25,5 @@
   "blocker": "No authenticated model execution interface exposes and enforces the frozen provider/model identity and inference controls for eight independent calls.",
   "issue_closure_permitted": false,
   "hosted_freeze_verified": true,
-  "hosted_freeze_note": "Hosted audit republished the unchanged frozen protocol objects as commit bd40efa before any model generation. The preserved deterministic preflight originated in the earlier Codex workspace and made zero model calls."
+  "hosted_freeze_note": "Pre-outcome PR review found underspecified source ordering, request-order mapping, and preference aggregation. With zero model calls and zero inspected outcomes, those defects were corrected prospectively and the corrected protocol/manifests/constructor were frozen at 91cb3907c3ac2f219e9885c8277db94f63db16e9. The deterministic preflight was regenerated afterward and made zero model calls."
 }

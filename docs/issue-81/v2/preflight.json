@@ -74,21 +74,21 @@
     },
     {
       "control_context_bytes": 19248,
-      "control_context_sha256": "75afddd6d0fcaed56e3fb353965c9442b21b670020dce39ec6e61793e8078c67",
+      "control_context_sha256": "d0a36d13442ec0efced1f39eeba925a30e542dddcf3f42c54eb1810ea2e7d13b",
       "control_task_occurrences": 1,
       "evaluator_metadata_reachable_by_constructor": false,
       "nothing_omitted_or_duplicated": true,
       "source_bytes_match": true,
       "source_hashes_match": true,
       "source_ids": [
-        "SRC-CONTEXT-HYPOTHESIS",
         "SRC-SEQUENCE",
+        "SRC-CONTEXT-HYPOTHESIS",
         "SRC-THESIS"
       ],
       "task_byte_identical": true,
       "task_id": "MS81-V2-T04",
       "treatment_context_bytes": 24564,
-      "treatment_context_sha256": "54518cfffed015b2502fc850da8f03333c13a7e39da20f6c23598df5ff3d9788",
+      "treatment_context_sha256": "35d1d5bee86cf0810a2c266e9f5c591a8878ef3ad504488f1976fa29df69fceb",
       "treatment_task_occurrences": 1
     }
   ]

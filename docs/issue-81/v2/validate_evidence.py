@@ -8,7 +8,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 HERE = Path(__file__).resolve().parent
-FREEZE = "bd40efaacced05290e4c48d31a92f9e4f3655400"
+FREEZE = "56886b7bb7018d729dc4a65651c7e635878dc697"
 V1_BLOBS = {
     "docs/issue-81/protocol.md": "ace1422f87757f65905ba5a976348d2ae33690cf",
     "docs/issue-81/task-set.json": "c027b3fcab614e3155205553647c41e76849c05b",
@@ -16,11 +16,11 @@ V1_BLOBS = {
     "docs/issue-81/validate_protocol.py": "cfd586944a6f2e6736ae0646dc91200c76756cb2",
     "docs/issue-81/experiment-record.md": "d8df5f343d2fb4938ae84d465e0c4cfbc2ef27a6",
 }
-FROZEN_HASHES = {
-    "protocol.md": "4003570bcdc0190d0c444f966239693783d960acf8d8de893111fb0087bd2fcf",
-    "task-set.json": "1894d261ed7d6e873c63a6d25af281473b2adf1d11d561b9ebe75bdef3c21f22",
-    "source-manifest.json": "d527c5f4758d01dcf4ec85f08e98f4c0b147fcf2fcb8e9d76096db3e61c97d33",
-    "construct_and_validate.py": "a4e0283e325ee4652730e00b32c81f44ff340c38b4eef569b1deae2ef63eba0a",
+FROZEN_BLOBS = {
+    "protocol.md": "c48c3f597fde3932c6dcb38c06a41d35733fc5b6",
+    "task-set.json": "d62de2cc38739bf59a991c6922afb9ef8a080277",
+    "source-manifest.json": "b49ef2b7e0b02d0a59371e67c29e4f028bb54964",
+    "construct_and_validate.py": "9265673905d22fa88be787e084a445e35fa38625",
 }
 
 
@@ -30,8 +30,11 @@ def git(*args: str) -> str:
 
 for path, expected in V1_BLOBS.items():
     assert git("rev-parse", f"HEAD:{path}") == expected, f"v1 changed: {path}"
-for name, expected in FROZEN_HASHES.items():
-    assert hashlib.sha256((HERE / name).read_bytes()).hexdigest() == expected, name
+if not __debug__:
+    raise SystemExit("Issue #81 v2 evidence validation refuses optimized Python")
+
+for name, expected in FROZEN_BLOBS.items():
+    assert git("rev-parse", f"HEAD:docs/issue-81/v2/{name}") == expected, name
 assert git("merge-base", "--is-ancestor", FREEZE, "HEAD") == ""
 
 preflight = json.loads((HERE / "preflight.json").read_text())

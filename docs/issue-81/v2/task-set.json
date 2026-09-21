@@ -27,7 +27,7 @@
     {
       "task_id": "MS81-V2-T04",
       "prompt": "Using only the supplied source material, determine whether a larger context window by itself establishes improved reusable abstraction. Give the strongest supported conclusion, the required prospective test elements, and at least three failure or confounding conditions.",
-      "source_ids": ["SRC-CONTEXT-HYPOTHESIS", "SRC-SEQUENCE", "SRC-THESIS"],
+      "source_ids": ["SRC-SEQUENCE", "SRC-CONTEXT-HYPOTHESIS", "SRC-THESIS"],
       "information_requirements": ["candidate-hypothesis status", "availability versus abstraction distinction", "prospective test", "transfer requirement", "leakage/hindsight/confounds", "bounded conclusion"],
       "bounded_reference": "Context-window hypothesis sections on status, comparison, and tests; research-sequence Transfer criteria and failure conditions; thesis decision filter. Larger context alone does not establish the claim."
     }

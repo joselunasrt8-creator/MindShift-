@@ -170,7 +170,15 @@ def validate() -> dict:
         generation = {key: task[key] for key in ("task_id", "prompt", "source_ids")}
         ids = generation["source_ids"]
         assert len(ids) == len(set(ids)) and set(ids) <= set(source_map)
-        selected = [source_map[source_id] for source_id in ids]
+        selected = [
+            source_map[item["source_id"]]
+            for item in manifest["sources"]
+            if item["source_id"] in ids
+        ]
+        selected_ids = [source.source_id for source in selected]
+        assert ids == selected_ids, (
+            f"{generation['task_id']}: source_ids must follow frozen manifest order"
+        )
         control, control_chunks = construct_control(selected, generation["prompt"])
         treatment, treatment_chunks = construct_treatment(selected, generation["prompt"])
         expected = [source.payload for source in selected]

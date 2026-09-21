@@ -1,7 +1,7 @@
 # Issue #81 v2 execution record
 
 **Experiment identity:** `MS81-V2-2026-09-21-MINIMAL-MATCHED`
-**Frozen protocol commit:** `bd40efaacced05290e4c48d31a92f9e4f3655400`
+**Frozen protocol commit:** `91cb3907c3ac2f219e9885c8277db94f63db16e9`
 **Execution environment:** Codex Cloud, Linux workspace, UTC
 **Preflight:** `PASS`
 **Generation status:** `NOT_STARTED`
@@ -29,19 +29,23 @@ record, but no empirical Issue #81 model response, score, blind key, or result.
 The v1 artifacts remain byte-identical to the pre-v2 Git blobs and are neither
 repaired nor used as effectiveness evidence.
 
-V2 has separate identity, versioned paths, and lineage. The protocol, task set,
-source manifest, and constructors were published in the hosted freeze commit `bd40efa` before any model output. The deterministic preflight artifact was produced in the earlier Codex workspace and is preserved as a zero-model-call equivalence check; hosted lineage does not claim that this preflight postdated `bd40efa`. Their SHA-256 identities are:
+V2 has separate identity, versioned paths, and lineage. An initial hosted freeze
+was reviewed before any model generation. PR review found three prospective
+specification defects: one task did not follow frozen manifest source order,
+the request-order hash bit lacked an explicit arm mapping, and evaluator
+preference aggregation/tie handling was underspecified. Because zero model
+calls and zero outcome inspections had occurred, those defects were corrected
+prospectively rather than treated as outcome-aware mutation.
 
-| Frozen object | SHA-256 |
-| --- | --- |
-| `protocol.md` | `4003570bcdc0190d0c444f966239693783d960acf8d8de893111fb0087bd2fcf` |
-| `task-set.json` | `1894d261ed7d6e873c63a6d25af281473b2adf1d11d561b9ebe75bdef3c21f22` |
-| `source-manifest.json` | `d527c5f4758d01dcf4ec85f08e98f4c0b147fcf2fcb8e9d76096db3e61c97d33` |
-| `construct_and_validate.py` | `a4e0283e325ee4652730e00b32c81f44ff340c38b4eef569b1deae2ef63eba0a` |
+The corrected protocol, task set, source manifest, and constructor are frozen at
+commit `91cb3907c3ac2f219e9885c8277db94f63db16e9`. The evidence validator binds
+their exact Git blob identities at that commit and rejects any later mutation.
+The deterministic preflight was regenerated only after this corrected freeze
+and made zero model calls.
 
 ## Deterministic equivalence preflight
 
-`preflight.json` was generated after the freeze by the frozen constructor. All
+`preflight.json` was regenerated after the corrected freeze by the frozen constructor. All
 four pairs pass. For every task it records identical source IDs, source
 identities, hashes, and bytes; exact reconstruction with no omission or
 duplication; byte-identical task and fixed controls; exactly one task occurrence
@@ -92,7 +96,7 @@ locked scores, per-task effects, and exactly one frozen terminal determination.
 
 ## Limitations and non-claims
 
-- The original Codex execution could not retrieve hosted Issue #81/PR state. The later hosted audit recovered that state and repaired only publication lineage before any model output.
+- The original Codex execution could not retrieve hosted Issue #81/PR state. Later hosted review recovered that state and identified prospective protocol defects; they were corrected and re-frozen before any model output.
 - No claim is made about immutable snapshot availability outside this workspace.
 - Zero empirical observations means no effect, null effect, degradation, or
   indeterminacy is inferred.

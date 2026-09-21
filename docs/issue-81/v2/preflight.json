@@ -1,0 +1,95 @@
+{
+  "independent_variable": "source-context organization only",
+  "inference_settings": {
+    "completions": 1,
+    "conversation_history": false,
+    "max_output_tokens": 2000,
+    "retrieval": false,
+    "shared_prompt_cache": false,
+    "temperature": 0,
+    "tools": false,
+    "top_p": 1
+  },
+  "model_calls_performed": 0,
+  "result": "PASS",
+  "schema_version": "2.0.0",
+  "system_instruction_sha256": "ca1c2c29f0c5602ddc4e46420e28184826460d95a533e5cd6ef9c9f8b097d6fe",
+  "tasks": [
+    {
+      "control_context_bytes": 38198,
+      "control_context_sha256": "edb0569fe015b507e056d488652f3531135f57ada89b874e6d4458b5faf4d6a9",
+      "control_task_occurrences": 1,
+      "evaluator_metadata_reachable_by_constructor": false,
+      "nothing_omitted_or_duplicated": true,
+      "source_bytes_match": true,
+      "source_hashes_match": true,
+      "source_ids": [
+        "SRC-README",
+        "SRC-CANON",
+        "SRC-SEQUENCE"
+      ],
+      "task_byte_identical": true,
+      "task_id": "MS81-V2-T01",
+      "treatment_context_bytes": 46224,
+      "treatment_context_sha256": "f70f355b2ab5ff7f0f9060cdead9c75b325b578f20420f43e610feca1fd4be1a",
+      "treatment_task_occurrences": 1
+    },
+    {
+      "control_context_bytes": 56486,
+      "control_context_sha256": "e361c7fa1ff5bae4f8551743d7841f5462e6a4e18be5508f7bd87928ab117572",
+      "control_task_occurrences": 1,
+      "evaluator_metadata_reachable_by_constructor": false,
+      "nothing_omitted_or_duplicated": true,
+      "source_bytes_match": true,
+      "source_hashes_match": true,
+      "source_ids": [
+        "SRC-CANON",
+        "SRC-HANDOFF",
+        "SRC-LIFECYCLE"
+      ],
+      "task_byte_identical": true,
+      "task_id": "MS81-V2-T02",
+      "treatment_context_bytes": 67375,
+      "treatment_context_sha256": "eda2dc448ba339c59eb14e242185e997c48702f08c1c4448a4fec19ef9767b44",
+      "treatment_task_occurrences": 1
+    },
+    {
+      "control_context_bytes": 35149,
+      "control_context_sha256": "4c677dc6e53943b697935f7e401ecc47491cdf1470942201c35392653a6c7533",
+      "control_task_occurrences": 1,
+      "evaluator_metadata_reachable_by_constructor": false,
+      "nothing_omitted_or_duplicated": true,
+      "source_bytes_match": true,
+      "source_hashes_match": true,
+      "source_ids": [
+        "SRC-76-MODEL",
+        "SRC-76-HANDOFF",
+        "SRC-CONTEXT-HYPOTHESIS"
+      ],
+      "task_byte_identical": true,
+      "task_id": "MS81-V2-T03",
+      "treatment_context_bytes": 42150,
+      "treatment_context_sha256": "8b33104a0c95601437af3ec862260e38cc9592baa19d005cb2e46feb4c117315",
+      "treatment_task_occurrences": 1
+    },
+    {
+      "control_context_bytes": 19248,
+      "control_context_sha256": "75afddd6d0fcaed56e3fb353965c9442b21b670020dce39ec6e61793e8078c67",
+      "control_task_occurrences": 1,
+      "evaluator_metadata_reachable_by_constructor": false,
+      "nothing_omitted_or_duplicated": true,
+      "source_bytes_match": true,
+      "source_hashes_match": true,
+      "source_ids": [
+        "SRC-CONTEXT-HYPOTHESIS",
+        "SRC-SEQUENCE",
+        "SRC-THESIS"
+      ],
+      "task_byte_identical": true,
+      "task_id": "MS81-V2-T04",
+      "treatment_context_bytes": 24564,
+      "treatment_context_sha256": "54518cfffed015b2502fc850da8f03333c13a7e39da20f6c23598df5ff3d9788",
+      "treatment_task_occurrences": 1
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joselunasrt8-creator/MindShift-/docs/issue-91/schemas/assessment.schema.json",
+  "title": "MindShift work-continuation candidate assessment v1",
+  "description": "A recommendation only. It grants no authority, permission, legitimacy, or execution capability.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["assessment_id", "work_item_id", "determination", "rationale", "evidence_refs", "unresolved_uncertainty", "cheaper_or_stronger_alternative", "falsification_condition", "authority", "execution_eligible", "assessor_identity", "assessor_configuration", "input_hash", "output_hash"],
+  "properties": {
+    "assessment_id": {"type": "string", "minLength": 1},
+    "work_item_id": {"type": "string", "pattern": "^MS91-WI-[0-9]{3}$"},
+    "determination": {"enum": ["CONTINUE", "DEFER", "STOP", "INDETERMINATE"]},
+    "rationale": {"type": "string", "minLength": 1},
+    "evidence_refs": {"type": "array", "items": {"type": "string", "pattern": "^E-[0-9]+$"}, "uniqueItems": true},
+    "unresolved_uncertainty": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "cheaper_or_stronger_alternative": {"type": ["string", "null"]},
+    "falsification_condition": {"type": "string", "minLength": 1},
+    "authority": {"type": "null"},
+    "execution_eligible": {"const": false},
+    "assessor_identity": {"type": "string", "minLength": 1},
+    "assessor_configuration": {"type": "object"},
+    "input_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "output_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

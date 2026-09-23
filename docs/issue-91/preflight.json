@@ -1,0 +1,24 @@
+{
+  "assessment_bundle_inventory_hash": "f523ffb037987aaa0346a1c2aa56b9c31b18eb2af092183c2f26782d4383b78f",
+  "checks": {
+    "continuation_assessments_generated": false,
+    "cutoff_constraints_pass": true,
+    "manifest_bound_identities_match": true,
+    "outcome_material_reachable": false,
+    "reconstruction_byte_identical": true,
+    "source_identities_and_hashes_resolve": true,
+    "work_items_validate": true
+  },
+  "cohort_identities": [
+    "MS91-WI-001",
+    "MS91-WI-002",
+    "MS91-WI-003",
+    "MS91-WI-004"
+  ],
+  "cohort_size": 4,
+  "manifest_hash": "4d4dd3477a9a2e006fa9c08f552448fba3f69ccb0d91d36eb1be7a747aeb2089",
+  "model_calls_performed": 0,
+  "result": "PASS",
+  "schema_version": "1.0.0",
+  "terminal_determination": "FROZEN_FOR_BLINDED_ASSESSMENT"
+}

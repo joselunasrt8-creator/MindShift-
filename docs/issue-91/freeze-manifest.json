@@ -1,0 +1,95 @@
+{
+  "assessment_bundle": {
+    "assessment-input/cohort.json": "c342385215079e0c3e2fcf689114cf95c0047a6a1a4d3dccedf68c2bef53be40",
+    "assessment-input/sources/MS91-WI-001/E-1.md": "0cf66580d7ff278e5d138e7c1b5e56f5cea5e5788f7971e47df6c785017283cb",
+    "assessment-input/sources/MS91-WI-002/E-1.md": "1ac631e1418b405e716df5c9619de6a07be8d40b30c29186f495511fd0794d58",
+    "assessment-input/sources/MS91-WI-002/E-2.md": "0cf66580d7ff278e5d138e7c1b5e56f5cea5e5788f7971e47df6c785017283cb",
+    "assessment-input/sources/MS91-WI-003/E-1.md": "ca183c0110c8e699271d099ab976d446927d39eeea323910d025d2eb0f64b58a",
+    "assessment-input/sources/MS91-WI-004/E-1.md": "4003570bcdc0190d0c444f966239693783d960acf8d8de893111fb0087bd2fcf",
+    "assessment-input/sources/MS91-WI-004/E-2.md": "a4e0283e325ee4652730e00b32c81f44ff340c38b4eef569b1deae2ef63eba0a",
+    "assessment-input/sources/MS91-WI-004/E-3.md": "1894d261ed7d6e873c63a6d25af281473b2adf1d11d561b9ebe75bdef3c21f22",
+    "assessment-input/sources/MS91-WI-004/E-4.md": "d527c5f4758d01dcf4ec85f08e98f4c0b147fcf2fcb8e9d76096db3e61c97d33"
+  },
+  "assessment_schema": {
+    "path": "schemas/assessment.schema.json",
+    "sha256": "76c87b39a91cc7a5d06aee9f3845fea95f168bbaca3e83e6c4a7816461b271d9"
+  },
+  "assessor_configuration": {
+    "completions": 1,
+    "conversation_history": false,
+    "inputs": "reconstructed assessment bundle only",
+    "repository_access": false,
+    "retrieval": false,
+    "selection": "No provider or model selected; bind an immutable identity in the separately invoked run.",
+    "session": "one fresh stateless session per item",
+    "shared_prompt_cache": false,
+    "temperature": 0,
+    "tools": false,
+    "top_p": 1
+  },
+  "bindings": {
+    "assessment-input/cohort.json": "c342385215079e0c3e2fcf689114cf95c0047a6a1a4d3dccedf68c2bef53be40",
+    "evaluation-rubric.json": "93818a92b0cfcaf8b9c6a3bf49b084b38c8d873ddedfcfd5c35a7c73f02d893e",
+    "outcomes/MS91-WI-001.md": "df6834fb5242f1f7a8eb4ea707e6a2a35738d0983caeb891c40fd12023092b79",
+    "outcomes/MS91-WI-002.md": "ec87eccf9ece118f8393c9f33da80b8c6d8a70a89834cc7e399451222cfee9e7",
+    "outcomes/MS91-WI-003.md": "a9e36ce3e6c9ea33d20d398c01696218701ce817285185caac8f744a91542fca",
+    "outcomes/MS91-WI-004.md": "ac69aa67bf2c6e1eb53a2cf8fe7dccea9779f4ba6639895978274e07c50d757b",
+    "outcomes/manifest.json": "116b5d3cbebf60b69eb87844cc01bfc216f26882f304e679d458bcfa9c05942d",
+    "protocol.md": "fe080a3a418034df232d2c2059acc6506e280263f23003ed3f24d397bfac2941",
+    "schemas/assessment.schema.json": "76c87b39a91cc7a5d06aee9f3845fea95f168bbaca3e83e6c4a7816461b271d9",
+    "schemas/work-item.schema.json": "8d43fda7dad51d5a4142794f08afeb879d4376a95d28c0fe8715eaa2e78883a2",
+    "validate_and_reconstruct.py": "7696db6b2ac5b01f0f1339cd36ce5fdec3e4d0bb028d2bb5ab1f8c268a20c0ba"
+  },
+  "cohort_identities": [
+    "MS91-WI-001",
+    "MS91-WI-002",
+    "MS91-WI-003",
+    "MS91-WI-004"
+  ],
+  "cutoff_timestamps": {
+    "MS91-WI-001": "2026-07-23T08:46:43-05:00",
+    "MS91-WI-002": "2026-07-24T03:50:53-05:00",
+    "MS91-WI-003": "2026-09-10T02:11:59-05:00",
+    "MS91-WI-004": "2026-09-20T20:29:16-05:00"
+  },
+  "evaluation_rubric": {
+    "path": "evaluation-rubric.json",
+    "sha256": "93818a92b0cfcaf8b9c6a3bf49b084b38c8d873ddedfcfd5c35a7c73f02d893e",
+    "version": "1.0.0"
+  },
+  "immutable_terminal_rules": [
+    "FROZEN_FOR_BLINDED_ASSESSMENT only after every preflight check passes.",
+    "BLOCKED_WITH_PRESERVED_EVIDENCE when a legitimate cohort or required prerequisite cannot be established.",
+    "PREPARATION_INVALID on leakage, unverifiable identity, mutable criteria, or another protocol defect.",
+    "A separate deliberate invocation is required to begin assessment."
+  ],
+  "manifest_hash": "4d4dd3477a9a2e006fa9c08f552448fba3f69ccb0d91d36eb1be7a747aeb2089",
+  "manifest_version": "1.0.0",
+  "model_calls_performed": 0,
+  "protocol_version": "1.0.0",
+  "source_hashes": [
+    "0cf66580d7ff278e5d138e7c1b5e56f5cea5e5788f7971e47df6c785017283cb",
+    "1ac631e1418b405e716df5c9619de6a07be8d40b30c29186f495511fd0794d58",
+    "0cf66580d7ff278e5d138e7c1b5e56f5cea5e5788f7971e47df6c785017283cb",
+    "ca183c0110c8e699271d099ab976d446927d39eeea323910d025d2eb0f64b58a",
+    "4003570bcdc0190d0c444f966239693783d960acf8d8de893111fb0087bd2fcf",
+    "a4e0283e325ee4652730e00b32c81f44ff340c38b4eef569b1deae2ef63eba0a",
+    "1894d261ed7d6e873c63a6d25af281473b2adf1d11d561b9ebe75bdef3c21f22",
+    "d527c5f4758d01dcf4ec85f08e98f4c0b147fcf2fcb8e9d76096db3e61c97d33"
+  ],
+  "starting_repository": {
+    "commit": "a87dced31b6d5aeac5c52c25cb3d4b817a5e6291",
+    "default_branch": "main (GitHub metadata unavailable in execution environment; repository convention and historical records only)",
+    "local_branch": "work",
+    "repository": "https://github.com/joselunasrt8-creator/MindShift-"
+  },
+  "status": "FROZEN_NO_ASSESSMENTS",
+  "validator": {
+    "path": "validate_and_reconstruct.py",
+    "sha256": "7696db6b2ac5b01f0f1339cd36ce5fdec3e4d0bb028d2bb5ab1f8c268a20c0ba"
+  },
+  "work_item_schema": {
+    "path": "schemas/work-item.schema.json",
+    "sha256": "8d43fda7dad51d5a4142794f08afeb879d4376a95d28c0fe8715eaa2e78883a2"
+  }
+}

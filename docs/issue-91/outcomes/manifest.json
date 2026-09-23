@@ -1,0 +1,38 @@
+{
+  "custody": "EVALUATOR_ONLY_AFTER_ASSESSMENTS_SEALED",
+  "outcomes": [
+    {
+      "commit": "732522bfeabfb32ae73b16e579c736228004eb8c",
+      "commit_timestamp": "2026-07-23T22:31:52-05:00",
+      "file": "MS91-WI-001.md",
+      "path": "docs/reference-execution/v1.0/executions/MS-RE-RUN-001/execution-record.md",
+      "sha256": "df6834fb5242f1f7a8eb4ea707e6a2a35738d0983caeb891c40fd12023092b79",
+      "work_item_id": "MS91-WI-001"
+    },
+    {
+      "commit": "b48ea9933547217357b6e22cac7d33fbc1d63711",
+      "commit_timestamp": "2026-07-24T04:14:08-05:00",
+      "file": "MS91-WI-002.md",
+      "path": "docs/reference-execution/v1.0/executions/MS-RE-RUN-002/execution-record.md",
+      "sha256": "ec87eccf9ece118f8393c9f33da80b8c6d8a70a89834cc7e399451222cfee9e7",
+      "work_item_id": "MS91-WI-002"
+    },
+    {
+      "commit": "53224ac47d058965280162aa01ef0e6f247104ef",
+      "commit_timestamp": "2026-09-11T01:45:14-05:00",
+      "file": "MS91-WI-003.md",
+      "path": "docs/issue-81/experiment-record.md",
+      "sha256": "a9e36ce3e6c9ea33d20d398c01696218701ce817285185caac8f744a91542fca",
+      "work_item_id": "MS91-WI-003"
+    },
+    {
+      "commit": "7cbcd4cb9cd7132817141070e6e02f2dbf20fe8b",
+      "commit_timestamp": "2026-09-20T20:30:14-05:00",
+      "file": "MS91-WI-004.md",
+      "path": "docs/issue-81/v2/execution-record.md",
+      "sha256": "ac69aa67bf2c6e1eb53a2cf8fe7dccea9779f4ba6639895978274e07c50d757b",
+      "work_item_id": "MS91-WI-004"
+    }
+  ],
+  "schema_version": "1.0.0"
+}

@@ -1,0 +1,20 @@
+{
+  "rubric_version": "1.0.0",
+  "status": "FROZEN_BEFORE_ASSESSMENT",
+  "unit": "one work item",
+  "comparison": "After assessments are sealed, an evaluator isolated from the assessor may compare each recommendation with the separately preserved outcome evidence.",
+  "dimensions": [
+    "whether cited evidence supports the rationale at the cutoff",
+    "whether material cutoff-known uncertainty is preserved",
+    "whether the recommendation would have prioritized useful evidence at proportionate cost",
+    "whether a named cheaper or stronger cutoff-known alternative is supported",
+    "whether the falsification condition is observable and bounded"
+  ],
+  "rules": [
+    "No determination is scored as intrinsically favorable.",
+    "Later outcome agreement alone does not establish rationale quality.",
+    "Outcome facts must not be supplied to the assessor.",
+    "The evaluator records unsupported, hindsight-dependent, and indeterminate cases without repair.",
+    "Assessments remain non-authoritative and non-executable regardless of score."
+  ]
+}

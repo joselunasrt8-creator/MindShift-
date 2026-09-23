@@ -1,0 +1,262 @@
+{
+  "evidence": [
+    {
+      "bundle_path": "sources/MS91-WI-001/E-1.md",
+      "commit": "34a99ff520a840fbf44a044e7a25e86b87a2512a",
+      "commit_timestamp": "2026-07-23T08:46:43-05:00",
+      "evidence_id": "E-1",
+      "path": "docs/reference-execution/v1.0/freeze-record.md",
+      "repository": "https://github.com/joselunasrt8-creator/MindShift-",
+      "sha256": "0cf66580d7ff278e5d138e7c1b5e56f5cea5e5788f7971e47df6c785017283cb"
+    },
+    {
+      "bundle_path": "sources/MS91-WI-002/E-1.md",
+      "commit": "388c49a6d31c9f630dd1ce15cb7f752fd212cd20",
+      "commit_timestamp": "2026-07-24T03:50:53-05:00",
+      "evidence_id": "E-1",
+      "path": "docs/reference-execution/transcripts/MIT-6.1200J-Lecture-11/transcript.md",
+      "repository": "https://github.com/joselunasrt8-creator/MindShift-",
+      "sha256": "1ac631e1418b405e716df5c9619de6a07be8d40b30c29186f495511fd0794d58"
+    },
+    {
+      "bundle_path": "sources/MS91-WI-002/E-2.md",
+      "commit": "34a99ff520a840fbf44a044e7a25e86b87a2512a",
+      "commit_timestamp": "2026-07-23T08:46:43-05:00",
+      "evidence_id": "E-2",
+      "path": "docs/reference-execution/v1.0/freeze-record.md",
+      "repository": "https://github.com/joselunasrt8-creator/MindShift-",
+      "sha256": "0cf66580d7ff278e5d138e7c1b5e56f5cea5e5788f7971e47df6c785017283cb"
+    },
+    {
+      "bundle_path": "sources/MS91-WI-003/E-1.md",
+      "commit": "7cb679b8e1de8f27df6cad661c2b43673221d9ba",
+      "commit_timestamp": "2026-09-10T02:11:59-05:00",
+      "evidence_id": "E-1",
+      "path": "docs/issue-81/protocol.md",
+      "repository": "https://github.com/joselunasrt8-creator/MindShift-",
+      "sha256": "ca183c0110c8e699271d099ab976d446927d39eeea323910d025d2eb0f64b58a"
+    },
+    {
+      "bundle_path": "sources/MS91-WI-004/E-1.md",
+      "commit": "bd40efaacced05290e4c48d31a92f9e4f3655400",
+      "commit_timestamp": "2026-09-20T20:29:16-05:00",
+      "evidence_id": "E-1",
+      "path": "docs/issue-81/v2/protocol.md",
+      "repository": "https://github.com/joselunasrt8-creator/MindShift-",
+      "sha256": "4003570bcdc0190d0c444f966239693783d960acf8d8de893111fb0087bd2fcf"
+    },
+    {
+      "bundle_path": "sources/MS91-WI-004/E-2.md",
+      "commit": "bd40efaacced05290e4c48d31a92f9e4f3655400",
+      "commit_timestamp": "2026-09-20T20:29:16-05:00",
+      "evidence_id": "E-2",
+      "path": "docs/issue-81/v2/construct_and_validate.py",
+      "repository": "https://github.com/joselunasrt8-creator/MindShift-",
+      "sha256": "a4e0283e325ee4652730e00b32c81f44ff340c38b4eef569b1deae2ef63eba0a"
+    },
+    {
+      "bundle_path": "sources/MS91-WI-004/E-3.md",
+      "commit": "bd40efaacced05290e4c48d31a92f9e4f3655400",
+      "commit_timestamp": "2026-09-20T20:29:16-05:00",
+      "evidence_id": "E-3",
+      "path": "docs/issue-81/v2/task-set.json",
+      "repository": "https://github.com/joselunasrt8-creator/MindShift-",
+      "sha256": "1894d261ed7d6e873c63a6d25af281473b2adf1d11d561b9ebe75bdef3c21f22"
+    },
+    {
+      "bundle_path": "sources/MS91-WI-004/E-4.md",
+      "commit": "bd40efaacced05290e4c48d31a92f9e4f3655400",
+      "commit_timestamp": "2026-09-20T20:29:16-05:00",
+      "evidence_id": "E-4",
+      "path": "docs/issue-81/v2/source-manifest.json",
+      "repository": "https://github.com/joselunasrt8-creator/MindShift-",
+      "sha256": "d527c5f4758d01dcf4ec85f08e98f4c0b147fcf2fcb8e9d76096db3e61c97d33"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "status": "FROZEN_NO_ASSESSMENTS",
+  "temporal_rule": "No information occurring after cutoff_timestamp is admissible as assessment input.",
+  "work_items": [
+    {
+      "cutoff_timestamp": "2026-07-23T08:46:43-05:00",
+      "downstream_decision": "Determine the run disposition as completed, stopped, or inconclusive and preserve evidence for later instrument evaluation.",
+      "estimated_cost": null,
+      "evidence_hashes": {
+        "E-1": "0cf66580d7ff278e5d138e7c1b5e56f5cea5e5788f7971e47df6c785017283cb"
+      },
+      "evidence_refs": [
+        "E-1"
+      ],
+      "excluded_post_cutoff_material": [
+        "All commits and artifacts with timestamps after cutoff_timestamp, including the separately held outcome evidence."
+      ],
+      "expected_evidence": [
+        "An immutable input manifest and transcript identity.",
+        "A frozen execution record, preserved candidate artifacts, deviations, unresolved items, and execution evaluation."
+      ],
+      "known_alternatives": [
+        "Abort and preserve the reason.",
+        "Publish a successor freeze or later instrument version if the frozen boundary must change."
+      ],
+      "known_blockers": [
+        "Unavailable required input, material ambiguity, confidentiality preventing permitted use, or reaching the declared boundary."
+      ],
+      "known_limitations": [
+        "Hosted issue text and comments were unavailable; the committed artifact is the complete admissible reconstruction boundary."
+      ],
+      "known_prerequisites": [
+        "A bounded real transcript with immutable identity, provenance, custody, usage constraints, and one non-presupposing inquiry.",
+        "A complete input manifest, execution identity, custodian, environment, stopping rules, and planned output paths."
+      ],
+      "proposed_work": "Execute Reference Run 1 on exactly one bounded real transcript within the frozen v1.0 reference boundary.",
+      "reconstruction_procedure": "Read only the exact hash-verified evidence files listed for this item; transcribe explicit cutoff-known claims without later-history inference.",
+      "repository": "https://github.com/joselunasrt8-creator/MindShift-",
+      "source_issue_or_artifact": {
+        "commit": "34a99ff520a840fbf44a044e7a25e86b87a2512a",
+        "identity": "MindShift Issue #53 / MS-RE-V1.0-BOUNDARY-2026-07-23",
+        "path": "docs/reference-execution/v1.0/freeze-record.md",
+        "sha256": "0cf66580d7ff278e5d138e7c1b5e56f5cea5e5788f7971e47df6c785017283cb"
+      },
+      "target_uncertainty": "Whether the documentation instrument can be applied faithfully to a real transcript and what friction, ambiguity, information loss, and negative observations result.",
+      "work_item_id": "MS91-WI-001"
+    },
+    {
+      "cutoff_timestamp": "2026-07-24T03:50:53-05:00",
+      "downstream_decision": "Determine whether the documentation instrument completed, stopped, or remained inconclusive and what bounded research handoff, if any, was supported.",
+      "estimated_cost": null,
+      "evidence_hashes": {
+        "E-1": "1ac631e1418b405e716df5c9619de6a07be8d40b30c29186f495511fd0794d58",
+        "E-2": "0cf66580d7ff278e5d138e7c1b5e56f5cea5e5788f7971e47df6c785017283cb"
+      },
+      "evidence_refs": [
+        "E-1",
+        "E-2"
+      ],
+      "excluded_post_cutoff_material": [
+        "All commits and artifacts with timestamps after cutoff_timestamp, including the separately held outcome evidence."
+      ],
+      "expected_evidence": [
+        "A hash-bound input manifest for the preserved transcript.",
+        "Execution records and candidate artifacts with immediate-input lineage, limitations, contradictions, and evaluation."
+      ],
+      "known_alternatives": [
+        "Stop with preserved evidence if the transcript cannot satisfy the frozen input contract.",
+        "Use no post-cutoff repository material or later instrument revision."
+      ],
+      "known_blockers": [
+        "Missing provenance or permission, material ambiguity, confidentiality restriction, or a reached stopping rule."
+      ],
+      "known_limitations": [
+        "Hosted issue text and comments were unavailable; the committed artifact is the complete admissible reconstruction boundary."
+      ],
+      "known_prerequisites": [
+        "The exact preserved transcript and the frozen v1.0 source boundary.",
+        "Declared inquiry, custody, environment, stopping rules, and output locations before processing."
+      ],
+      "proposed_work": "Apply the frozen MindShift Reference Execution v1.0 procedure to the newly preserved MIT 6.1200J Lecture 11 transcript.",
+      "reconstruction_procedure": "Read only the exact hash-verified evidence files listed for this item; transcribe explicit cutoff-known claims without later-history inference.",
+      "repository": "https://github.com/joselunasrt8-creator/MindShift-",
+      "source_issue_or_artifact": {
+        "commit": "388c49a6d31c9f630dd1ce15cb7f752fd212cd20",
+        "identity": "MS-RE-RUN-002 immutable transcript input",
+        "path": "docs/reference-execution/transcripts/MIT-6.1200J-Lecture-11/transcript.md",
+        "sha256": "1ac631e1418b405e716df5c9619de6a07be8d40b30c29186f495511fd0794d58"
+      },
+      "target_uncertainty": "Whether a second bounded real-transcript execution can produce traceable observations, patterns, candidate abstractions, and an evaluation while preserving the frozen boundaries.",
+      "work_item_id": "MS91-WI-002"
+    },
+    {
+      "cutoff_timestamp": "2026-09-10T02:11:59-05:00",
+      "downstream_decision": "Assign exactly one frozen experiment terminal state without claiming authority, execution eligibility, general validity, or product value.",
+      "estimated_cost": "160 model answers: four tasks by two conditions by 20 paired replicates, plus blinded human evaluation.",
+      "evidence_hashes": {
+        "E-1": "ca183c0110c8e699271d099ab976d446927d39eeea323910d025d2eb0f64b58a"
+      },
+      "evidence_refs": [
+        "E-1"
+      ],
+      "excluded_post_cutoff_material": [
+        "All commits and artifacts with timestamps after cutoff_timestamp, including the separately held outcome evidence."
+      ],
+      "expected_evidence": [
+        "Hash-verified equal source bytes and exact task presentation in both arms.",
+        "Sealed raw outputs, blind mappings, locked evaluator scores, per-task effects, confidence interval, token cost, and terminal determination."
+      ],
+      "known_alternatives": [
+        "Stop as EXPERIMENT_INVALID before model calls if equivalence preflight fails."
+      ],
+      "known_blockers": [
+        "Source/context mismatch, leakage, failed blinding, insufficient valid pairs, or inability to compute required measures."
+      ],
+      "known_limitations": [
+        "Hosted issue text and comments were unavailable; the committed artifact is the complete admissible reconstruction boundary."
+      ],
+      "known_prerequisites": [
+        "An immutable provider model identity satisfying frozen controls.",
+        "Context construction passing source equality, exact prompt, metadata isolation, and blinding checks.",
+        "Two blinded human evaluators and the frozen run size."
+      ],
+      "proposed_work": "Run the frozen matched comparison of ordinary/raw and MindShift-structured source context on four tasks.",
+      "reconstruction_procedure": "Read only the exact hash-verified evidence files listed for this item; transcribe explicit cutoff-known claims without later-history inference.",
+      "repository": "https://github.com/joselunasrt8-creator/MindShift-",
+      "source_issue_or_artifact": {
+        "commit": "7cb679b8e1de8f27df6cad661c2b43673221d9ba",
+        "identity": "MindShift Issue #81 protocol v1.0.0",
+        "path": "docs/issue-81/protocol.md",
+        "sha256": "ca183c0110c8e699271d099ab976d446927d39eeea323910d025d2eb0f64b58a"
+      },
+      "target_uncertainty": "Whether source-context structure, holding model, task, and source information constant, measurably improves candidate cognition.",
+      "work_item_id": "MS91-WI-003"
+    },
+    {
+      "cutoff_timestamp": "2026-09-20T20:29:16-05:00",
+      "downstream_decision": "Assign exactly one frozen v2 terminal determination after generation and valid blinded evaluation.",
+      "estimated_cost": "Eight model answers: four tasks by two conditions, plus two blinded human evaluations and possible adjudication.",
+      "evidence_hashes": {
+        "E-1": "4003570bcdc0190d0c444f966239693783d960acf8d8de893111fb0087bd2fcf",
+        "E-2": "a4e0283e325ee4652730e00b32c81f44ff340c38b4eef569b1deae2ef63eba0a",
+        "E-3": "1894d261ed7d6e873c63a6d25af281473b2adf1d11d561b9ebe75bdef3c21f22",
+        "E-4": "d527c5f4758d01dcf4ec85f08e98f4c0b147fcf2fcb8e9d76096db3e61c97d33"
+      },
+      "evidence_refs": [
+        "E-1",
+        "E-2",
+        "E-3",
+        "E-4"
+      ],
+      "excluded_post_cutoff_material": [
+        "All commits and artifacts with timestamps after cutoff_timestamp, including the separately held outcome evidence."
+      ],
+      "expected_evidence": [
+        "A passing deterministic constructor preflight.",
+        "Recorded provider and stable model identity, eight sealed raw responses, blinded scores, four pair effects, and a terminal determination."
+      ],
+      "known_alternatives": [
+        "Use the ordinary/raw condition as the serious baseline.",
+        "Preserve PROVIDER_IDENTITY_BLOCKED or EVALUATION_BLOCKED rather than manufacture results."
+      ],
+      "known_blockers": [
+        "Provider identity cannot be established, any incomplete pair, leakage/unblinding, failed invariant, or missing provenance."
+      ],
+      "known_limitations": [
+        "Hosted issue text and comments were unavailable; the committed artifact is the complete admissible reconstruction boundary."
+      ],
+      "known_prerequisites": [
+        "An authenticated provider with a stable model identity for all eight calls.",
+        "Passing deterministic preflight and complete frozen manifests.",
+        "Two independent blinded human evaluators."
+      ],
+      "proposed_work": "Run the prospective v2 minimal matched source-context-organization experiment: four pairs and eight answers.",
+      "reconstruction_procedure": "Read only the exact hash-verified evidence files listed for this item; transcribe explicit cutoff-known claims without later-history inference.",
+      "repository": "https://github.com/joselunasrt8-creator/MindShift-",
+      "source_issue_or_artifact": {
+        "commit": "bd40efaacced05290e4c48d31a92f9e4f3655400",
+        "identity": "MindShift Issue #81 prospective v2 protocol 2.0.0",
+        "path": "docs/issue-81/v2/protocol.md",
+        "sha256": "4003570bcdc0190d0c444f966239693783d960acf8d8de893111fb0087bd2fcf"
+      },
+      "target_uncertainty": "Whether source-context organization alone improves output under a minimal matched design.",
+      "work_item_id": "MS91-WI-004"
+    }
+  ]
+}

@@ -1,34 +1,18 @@
 # MindShift
 
-
-
 <p align="center">
   <img src="docs/images/mindshift.png" alt="MindShift" width="100%">
 </p>
 
-## Research Framework for Transferable Abstraction
+## Context and Cognition-Governance Research
 
-> MindShift transforms observations into higher-quality abstractions that improve understanding.
+> MindShift studies how observations can become higher-quality abstractions and reusable models without granting those models authority.
 
-MindShift is Context and Cognition-Governance Infrastructure: a non-operational
-research framework for constructing and governing the context that conditions
-candidate cognition.
+MindShift is Context and Cognition-Governance Infrastructure: a non-operational research framework for constructing, organizing, and governing the context that conditions candidate cognition.
 
-MindShift improves understanding. It does not authorize or mutate external
-systems, validate research claims, confer legitimacy, grant permission, or
-determine execution eligibility.
+MindShift improves candidate understanding. It does not authorize or mutate external systems, validate research claims, confer legitimacy, grant permission, or determine execution eligibility.
 
 ---
-
-## The Journey from Information to Impact
-
-<p align="center">
-  <img src="docs/images/journey-from-information-to-impact.png" alt="The Journey from Information to Impact" width="100%">
-</p>
-
----
-
-MindShift studies how observations become reusable understanding.
 
 ## Canonical Purpose
 
@@ -39,18 +23,10 @@ Observation
         ↓
 Higher-Quality Abstractions
         ↓
-Better Understanding
+Better Candidate Understanding
 ```
 
----
-
-### Hierarchy of Understanding
-
-The hierarchy below situates that purpose within the progression from reality to understanding.
-
-<p align="center">
-  <img src="docs/images/hierarchy-of-understanding.png" alt="The Hierarchy of Understanding" width="100%">
-</p>
+MindShift studies whether this progression can be made more reproducible, transferable, and useful across future reasoning tasks.
 
 ---
 
@@ -59,16 +35,6 @@ The hierarchy below situates that purpose within the progression from reality to
 ```text
 How can observations be converted into transferable abstractions that improve future modeling?
 ```
-
----
-
-### From Information to Understanding
-
-The following figure traces the movement from information to understanding.
-
-<p align="center">
-  <img src="docs/images/from-information-to-understanding.png" alt="From Information to Understanding" width="100%">
-</p>
 
 ---
 
@@ -82,18 +48,7 @@ Observation
 → Transfer
 ```
 
-This is a research sequence, not a runtime, execution loop, or computational
-lifecycle.
-
----
-
-### Understanding Compounds
-
-Understanding compounds as these research steps are revisited over time.
-
-<p align="center">
-  <img src="docs/images/understanding-compounds.png" alt="Understanding Compounds" width="100%">
-</p>
+This is a research sequence, not a runtime, execution loop, authority chain, or computational lifecycle.
 
 ---
 
@@ -106,27 +61,60 @@ MindShift studies:
 - abstraction formation;
 - primitive extraction;
 - transfer across contexts;
-- learning reflection; and
+- learning reflection;
+- context assembly;
+- assumption and lineage visibility; and
 - model improvement.
 
-MindShift does not define a machine object for primitives. It studies how
-transferable abstractions emerge and how they improve future modeling.
+MindShift does not define a machine object for primitives. It studies how transferable abstractions emerge, how they should be represented, and whether they improve future modeling.
 
 ---
 
-### Scientific Instruments Accelerate Learning
+## Production-Topology Boundary
 
-Scientific instruments and the research flywheel illustrate how the framework accelerates learning.
+MindShift is **not a mandatory dependency** of Continufy runtime systems.
 
-<p align="center">
-  <img src="docs/images/instruments-accelerate-learning.png" alt="Scientific Instruments Accelerate Learning" width="100%">
-</p>
+A production system may consume MindShift-produced context, abstractions, or candidate models only when evidence shows that doing so improves the target workflow. Ecosystem membership alone does not justify a runtime dependency.
 
-### Research Flywheel
+```text
+MindShift artifact
+        ↓
+Optional consumer
+        ↓
+Measured effect
+```
 
-<p align="center">
-  <img src="docs/images/research-flywheel.png" alt="The Research Flywheel" width="100%">
-</p>
+Possible outcomes include:
+
+```text
+MEASURABLY_USEFUL
+NO_MEASURABLE_EFFECT
+HARMFUL_OR_DESTABILIZING
+NOT_REQUIRED
+INDETERMINATE
+```
+
+Therefore:
+
+```text
+Research relationship
+≠
+Runtime dependency
+```
+
+```text
+Better cognition
+≠
+Greater authority
+```
+
+```text
+Context contribution
+≠
+Execution eligibility
+```
+
+The Continufy repository graph should be treated as a candidate topology. MindShift may remain upstream research infrastructure, become an optional evidence/context provider, be specialized to narrow workflows, or be absent from a production path entirely if experiments show no unique value.
 
 ---
 
@@ -134,57 +122,80 @@ Scientific instruments and the research flywheel illustrate how the framework ac
 
 MindShift is not:
 
-- independent infrastructure;
-- a deterministic runtime;
 - execution infrastructure;
 - legitimacy infrastructure;
 - authority infrastructure;
-- repository-governance infrastructure; or
-- an agent framework.
+- repository-governance infrastructure;
+- a deterministic structural-analysis engine;
+- a policy-enforcement runtime; or
+- an agent execution framework.
 
-MindShift does not own execution, authority, approval, legitimacy, execution
-eligibility, execution boundaries, proof closure, governed mutation, or replay.
-MindShift also excludes deterministic structural analysis from its scope.
+MindShift does not own execution, authority, approval, legitimacy, execution eligibility, execution boundaries, proof closure, governed mutation, replay prevention, or reconciliation.
 
-> **Evidence boundary:** This repository is locally authoritative only for
-> MindShift's scope. It does not cite an immutable authoritative specification
-> for SYNAPSE or ContinuityOS, so their responsibility assignments remain
-> externally unresolved and are not asserted here.
+Repository governance, whether or not it uses an external mechanism such as ContinuityOS or StateGate, is not MindShift functionality.
 
-Repository governance, whether or not it uses an external mechanism such as
-ContinuityOS, is not MindShift functionality.
+MindShift may produce candidate context, abstractions, assumptions, models, or research requests for downstream evaluation. Those artifacts do not carry authority merely because they originated here.
+
+---
+
+## Relationship to Continufy
+
+Within the current Continufy research program, responsibilities remain separate:
+
+```text
+LLM / reasoning system
+Produces candidate outputs
+
+MindShift
+Studies and governs candidate context and cognition
+
+Research systems
+Test candidate claims and abstractions
+
+Legitimacy infrastructure
+Determines execution eligibility where authority is required
+```
+
+These are responsibility boundaries, not a required linear production pipeline.
+
+MindShift does not derive authority from Continufy, ContinuityOS, SYNAPSE, or any other repository, and it does not confer authority on them.
+
+---
+
+## Current Evidence Boundary
+
+MindShift currently contains research frameworks, contracts, examples, and prospective experiments. Internal conformance, fixtures, rehearsals, and same-owner executions may demonstrate reproducibility or instrument behavior, but they do not by themselves establish:
+
+- improved production outcomes;
+- independent external usefulness;
+- economic value;
+- universal transferability; or
+- necessity in a production architecture.
+
+Those are empirical questions.
+
+The most important current falsification question is:
+
+> Does MindShift-governed context measurably improve reasoning quality, calibration, consistency, or downstream decisions compared with a strong baseline context process?
+
+If not, the production architecture should remain simpler.
 
 ---
 
 ## Long-Term Vision
 
-These research principles motivate a broader vision for engineering.
+MindShift explores whether disciplined context and abstraction governance can make long-lived intelligent systems easier to understand, evaluate, and improve without allowing improved cognition to silently expand authority.
 
-### Engineering Becomes the Production of Understanding
+```text
+Observe
+→ Model
+→ Validate
+→ Learn
+→ Improve
+→ Repeat
+```
 
-<p align="center">
-  <img src="docs/images/engineering-becomes-production.png" alt="Engineering Becomes the Production of Understanding" width="100%">
-</p>
-
-### Future Vision
-
-<p align="center">
-  <img src="docs/images/future-vision.png" alt="Future Vision" width="100%">
-</p>
-
-## Evidence in Practice
-
-The value of a research framework is measured by the evidence and engineering decisions it enables.
-
-<p align="center">
-  <img src="docs/images/proof.png" alt="Proof" width="100%">
-</p>
-
-## Why Understanding Matters
-
-<p align="center">
-  <img src="docs/images/why-understanding.png" alt="Why Understanding" width="100%">
-</p>
+This loop concerns cognition and learning. Any persistent change capable of altering future execution eligibility belongs to a separate legitimacy-governed boundary.
 
 ---
 
@@ -192,7 +203,7 @@ The value of a research framework is measured by the evidence and engineering de
 
 | Path | Purpose |
 | --- | --- |
-| [`README.md`](README.md) | Canonical project overview |
+| [`README.md`](README.md) | Project overview and responsibility boundary |
 | [`docs/canon-v1.md`](docs/canon-v1.md) | **MindShift Canon v1:** canonical system identity, ownership, lifecycle assembly, handoffs, and non-responsibilities |
 | [`CLAUDE.md`](CLAUDE.md) | Contributor operating guide |
 | [`docs/thesis.md`](docs/thesis.md) | Canonical thesis and decision filter |

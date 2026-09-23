@@ -1,0 +1,65 @@
+{
+  "assessment_artifacts": [],
+  "assessment_hashes": {},
+  "assessor": {
+    "identity": null,
+    "invoked": false,
+    "required_configuration": {
+      "completions": 1,
+      "conversation_history": false,
+      "inputs": "one reconstructed work-item input, the frozen assessment schema, and the frozen rubric only",
+      "repository_access": false,
+      "retrieval": false,
+      "session": "one fresh stateless session per item",
+      "shared_prompt_cache": false,
+      "temperature": 0,
+      "tools": false,
+      "top_p": 1
+    }
+  },
+  "blocking_reason": "The available model session exposes repository, shell, and web-retrieval tools and retains conversation history. No facility is available to create four fresh stateless assessor sessions with those capabilities disabled and with temperature, top_p, completion count, and shared prompt cache fixed and attestable. Invoking an assessor here would violate the frozen isolation configuration, so no work item was assessed.",
+  "frozen_manifest_hash": "4d4dd3477a9a2e006fa9c08f552448fba3f69ccb0d91d36eb1be7a747aeb2089",
+  "outcome_material_accessed": false,
+  "preflight": {
+    "assessment_bundle_inventory_hash": "f523ffb037987aaa0346a1c2aa56b9c31b18eb2af092183c2f26782d4383b78f",
+    "cohort_size": 4,
+    "continuation_assessments_generated": false,
+    "model_calls_performed": 0,
+    "result": "PASS",
+    "terminal_determination": "FROZEN_FOR_BLINDED_ASSESSMENT"
+  },
+  "starting_commit": "11d101b1d737ea4da6025e928c2bc407619d4903",
+  "terminal_determination": "ASSESSMENT_BLOCKED",
+  "validation": {
+    "assessments_generated": 0,
+    "assessments_validated": 0,
+    "bundle_reconstructed": true,
+    "freeze_hashes_verified": true
+  },
+  "work_items": [
+    {
+      "assessment_artifact": null,
+      "assessment_hash": null,
+      "determination": null,
+      "work_item_id": "MS91-WI-001"
+    },
+    {
+      "assessment_artifact": null,
+      "assessment_hash": null,
+      "determination": null,
+      "work_item_id": "MS91-WI-002"
+    },
+    {
+      "assessment_artifact": null,
+      "assessment_hash": null,
+      "determination": null,
+      "work_item_id": "MS91-WI-003"
+    },
+    {
+      "assessment_artifact": null,
+      "assessment_hash": null,
+      "determination": null,
+      "work_item_id": "MS91-WI-004"
+    }
+  ]
+}

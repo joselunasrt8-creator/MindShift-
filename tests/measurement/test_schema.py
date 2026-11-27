@@ -160,6 +160,59 @@ class InstrumentRunRecordTests(unittest.TestCase):
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("requires at least one observed invariant", result.stderr)
 
+
+    def test_rejects_terminal_observed_disposition_mismatch(self):
+        record = self.valid_record()
+        record["run_status"] = "RUN_COMPLETED"
+        record["execution_disposition"] = "completed"
+        record["started_at"] = "2026-11-27T05:00:00Z"
+        record["ended_at"] = "2026-11-27T05:00:01Z"
+        record["expected"]["disposition"] = "completed"
+        record["observed"]["disposition"] = "stopped"
+        record["observed"]["invariants"] = ["terminal outcome observed"]
+        record["unknowns"] = [
+            item for item in record["unknowns"]
+            if item["subject"] not in {
+                "started_at", "ended_at",
+                "expected.disposition", "observed.disposition",
+            }
+        ]
+        with tempfile.TemporaryDirectory() as temp:
+            record_path = Path(temp) / "record.json"
+            record_path.write_text(json.dumps(record), encoding="utf-8")
+            result = subprocess.run(
+                [sys.executable, str(COLLECTOR), str(record_path)],
+                capture_output=True, text=True, check=False
+            )
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("observed.disposition to match", result.stderr)
+
+    def test_rejects_invalid_timestamp(self):
+        record = self.valid_record()
+        record["started_at"] = "yesterday"
+        with tempfile.TemporaryDirectory() as temp:
+            record_path = Path(temp) / "record.json"
+            record_path.write_text(json.dumps(record), encoding="utf-8")
+            result = subprocess.run(
+                [sys.executable, str(COLLECTOR), str(record_path)],
+                capture_output=True, text=True, check=False
+            )
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("RFC 3339 timestamp", result.stderr)
+
+    def test_rejects_non_finite_number(self):
+        record = self.valid_record()
+        record["resources"]["cost"] = float("nan")
+        with tempfile.TemporaryDirectory() as temp:
+            record_path = Path(temp) / "record.json"
+            record_path.write_text(json.dumps(record), encoding="utf-8")
+            result = subprocess.run(
+                [sys.executable, str(COLLECTOR), str(record_path)],
+                capture_output=True, text=True, check=False
+            )
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("non-finite numbers", result.stderr)
+
     def test_rejects_mismatched_terminal_disposition(self):
         record = self.valid_record()
         record["run_status"] = "RUN_COMPLETED"

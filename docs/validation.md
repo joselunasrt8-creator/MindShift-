@@ -102,3 +102,11 @@ The Issue #81 manifests, protocols, source files, validators, preflight records,
 The Issue #91 test isolates its adversarial input in a temporary copy of `assessment-input/`; it does not write into the committed frozen input tree.
 
 A future correction to any manifest-bound validator or frozen experiment artifact requires a separately versioned successor and a new freeze decision. Do not update a pinned blob merely to make the current validator pass.
+
+## Audit observations retained for a successor
+
+The current Issue #91 validator selects the primary evidence record using the first entry in its filtered `matches` list (`matches[0]`). The present frozen cohort ordering makes that assumption work for the committed records, but the validator does not independently locate the primary evidence by matching the explicit `source_issue_or_artifact` identity against commit, path, and hash. Reordering or extending evidence records could expose this order dependency.
+
+This PR does not alter that validator because its SHA-256 is bound by the frozen Issue #91 manifest. A correction belongs in a separately versioned validator/protocol successor with a new manifest binding and freeze decision. The current entry point preserves and tests the existing frozen behavior rather than silently changing its semantics.
+
+The Issue #81 v1 and v2 constructors also use `assert` for protocol invariants. The aggregate entry point therefore refuses optimized Python; running those validators with assertions disabled would not be an equivalent validation.

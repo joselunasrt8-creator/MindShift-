@@ -142,6 +142,22 @@ def main() -> int:
     if record["run_status"] == "PREFLIGHT_PASS" and record["execution_disposition"] is not None:
         parser.error("preflight-only run must have null execution_disposition")
 
+    # Terminal run states must bind to the exact lifecycle disposition.
+    # This prevents operational labels from drifting away from the recorded
+    # execution outcome.
+    terminal_dispositions = {
+        "RUN_COMPLETED": "completed",
+        "RUN_STOPPED": "stopped",
+        "RUN_INCONCLUSIVE": "inconclusive",
+    }
+    expected_disposition = terminal_dispositions.get(record["run_status"])
+    if expected_disposition is not None and record["execution_disposition"] != expected_disposition:
+        parser.error(
+            f"{record['run_status']} requires execution_disposition={expected_disposition!r}"
+        )
+    if record["run_status"] not in terminal_dispositions and record["execution_disposition"] is not None:
+        parser.error("non-terminal or pre-execution status must have null execution_disposition")
+
     manifest = {
         "manifest_version": "1.0.0",
         "record_path": args.record.as_posix(),

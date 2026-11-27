@@ -100,6 +100,51 @@ class InstrumentRunRecordTests(unittest.TestCase):
             result = subprocess.run([sys.executable, str(COLLECTOR), str(record_path)], capture_output=True, text=True)
             self.assertNotEqual(result.returncode, 0)
 
+    def test_terminal_status_requires_matching_disposition(self):
+        for status, disposition in (
+            ("RUN_COMPLETED", "completed"),
+            ("RUN_STOPPED", "stopped"),
+            ("RUN_INCONCLUSIVE", "inconclusive"),
+        ):
+            with self.subTest(status=status):
+                record = self.valid_record()
+                record["run_status"] = status
+                record["execution_disposition"] = disposition
+                with tempfile.TemporaryDirectory() as temp:
+                    record_path = Path(temp) / "record.json"
+                    record_path.write_text(json.dumps(record), encoding="utf-8")
+                    result = subprocess.run(
+                        [sys.executable, str(COLLECTOR), str(record_path)],
+                        capture_output=True, text=True, check=False
+                    )
+                    self.assertNotEqual(result.returncode, 0, f"{status} accepted with missing required observations")
+
+    def test_rejects_mismatched_terminal_disposition(self):
+        record = self.valid_record()
+        record["run_status"] = "RUN_COMPLETED"
+        record["execution_disposition"] = "stopped"
+        with tempfile.TemporaryDirectory() as temp:
+            record_path = Path(temp) / "record.json"
+            record_path.write_text(json.dumps(record), encoding="utf-8")
+            result = subprocess.run(
+                [sys.executable, str(COLLECTOR), str(record_path)],
+                capture_output=True, text=True, check=False
+            )
+            self.assertNotEqual(result.returncode, 0)
+
+    def test_rejects_disposition_on_unknown_status(self):
+        record = self.valid_record()
+        record["run_status"] = "UNKNOWN"
+        record["execution_disposition"] = "completed"
+        with tempfile.TemporaryDirectory() as temp:
+            record_path = Path(temp) / "record.json"
+            record_path.write_text(json.dumps(record), encoding="utf-8")
+            result = subprocess.run(
+                [sys.executable, str(COLLECTOR), str(record_path)],
+                capture_output=True, text=True, check=False
+            )
+            self.assertNotEqual(result.returncode, 0)
+
 
 if __name__ == "__main__":
     unittest.main()

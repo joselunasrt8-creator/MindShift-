@@ -107,9 +107,30 @@ def main() -> int:
     # claim an execution disposition. This is a contract invariant beyond the
     # schema's vocabulary checks.
     unknown_subjects = {item["subject"] for item in record["unknowns"]}
-    for section, value in (("started_at", record["started_at"]), ("ended_at", record["ended_at"])):
-        if value is None and section not in unknown_subjects:
-            parser.error(f"{section} is null but has no corresponding unknown entry")
+    nullable_observations = {
+        "instrument.version": record["instrument"]["version"],
+        "started_at": record["started_at"],
+        "ended_at": record["ended_at"],
+        "inputs.repository": record["inputs"]["repository"],
+        "inputs.commit_sha": record["inputs"]["commit_sha"],
+        "inputs.manifest_sha256": record["inputs"]["manifest_sha256"],
+        "environment.python_version": record["environment"]["python_version"],
+        "environment.platform": record["environment"]["platform"],
+        "environment.provider_identity": record["environment"]["provider_identity"],
+        "environment.tool_state": record["environment"]["tool_state"],
+        "expected.disposition": record["expected"]["disposition"],
+        "observed.disposition": record["observed"]["disposition"],
+        "resources.duration_ms": record["resources"]["duration_ms"],
+        "resources.tokens": record["resources"]["tokens"],
+        "resources.bytes": record["resources"]["bytes"],
+        "resources.cost": record["resources"]["cost"],
+    }
+    for subject, value in nullable_observations.items():
+        if value is None and subject not in unknown_subjects:
+            parser.error(f"{subject} is null but has no corresponding unknown entry")
+    for item in record["unknowns"]:
+        if not item["reason"].strip():
+            parser.error(f"unknown {item['subject']} requires a non-empty reason")
     blocker_statuses = {
         "PROVIDER_IDENTITY_BLOCKED",
         "ASSESSMENT_BLOCKED",

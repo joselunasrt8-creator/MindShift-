@@ -110,14 +110,28 @@ class InstrumentRunRecordTests(unittest.TestCase):
                 record = self.valid_record()
                 record["run_status"] = status
                 record["execution_disposition"] = disposition
+                record["started_at"] = "2026-11-27T05:00:00Z"
+                record["ended_at"] = "2026-11-27T05:00:01Z"
+                record["expected"]["disposition"] = disposition
+                record["observed"]["disposition"] = disposition
+                record["unknowns"] = [
+                    item for item in record["unknowns"]
+                    if item["subject"] not in {
+                        "started_at", "ended_at",
+                        "expected.disposition", "observed.disposition",
+                    }
+                ]
                 with tempfile.TemporaryDirectory() as temp:
                     record_path = Path(temp) / "record.json"
                     record_path.write_text(json.dumps(record), encoding="utf-8")
+                    manifest_path = Path(temp) / "record.provenance.json"
                     result = subprocess.run(
-                        [sys.executable, str(COLLECTOR), str(record_path)],
+                        [sys.executable, str(COLLECTOR), str(record_path),
+                         "--manifest", str(manifest_path)],
                         capture_output=True, text=True, check=False
                     )
-                    self.assertNotEqual(result.returncode, 0, f"{status} accepted with missing required observations")
+                    self.assertEqual(result.returncode, 0, result.stderr)
+                    self.assertTrue(manifest_path.is_file())
 
     def test_rejects_mismatched_terminal_disposition(self):
         record = self.valid_record()

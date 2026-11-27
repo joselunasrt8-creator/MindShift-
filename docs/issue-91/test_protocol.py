@@ -6,9 +6,11 @@ from __future__ import annotations
 import copy
 import importlib.util
 import json
+import shutil
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 HERE = Path(__file__).resolve().parent
 SPEC = importlib.util.spec_from_file_location("issue91_validator", HERE / "validate_and_reconstruct.py")
@@ -90,13 +92,19 @@ class ProtocolTests(unittest.TestCase):
             validator.validate_manifest(manifest)
 
     def test_outcome_leakage(self):
-        leak = HERE / "assessment-input/outcomes-forbidden"
-        try:
+        # Exercise the real preflight against a disposable copy. Never mutate
+        # the manifest-bound assessment-input tree in the repository checkout.
+        with tempfile.TemporaryDirectory() as temporary:
+            isolated_input = Path(temporary) / "assessment-input"
+            shutil.copytree(validator.INPUT, isolated_input)
+            leak = isolated_input / "outcomes-forbidden"
             leak.write_text("outcomes/", encoding="utf-8")
-            with self.assertRaisesRegex(validator.ValidationError, "manifest mismatch|outcome leakage"):
-                validator.preflight()
-        finally:
-            leak.unlink(missing_ok=True)
+
+            with patch.object(validator, "INPUT", isolated_input):
+                with self.assertRaisesRegex(validator.ValidationError, "manifest mismatch|outcome leakage"):
+                    validator.preflight()
+
+        self.assertFalse((validator.INPUT / "outcomes-forbidden").exists())
 
     def test_reproducible_reconstruction(self):
         manifest = validator.load_json(HERE / "freeze-manifest.json")

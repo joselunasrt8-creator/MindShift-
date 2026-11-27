@@ -41,9 +41,19 @@ class InstrumentRunRecordTests(unittest.TestCase):
             "resources": {"duration_ms": None, "tokens": None, "bytes": None, "cost": None},
             "evidence": [],
             "unknowns": [
+                {"subject": "instrument.version", "reason": "No released instrument version was assigned"},
                 {"subject": "started_at", "reason": "Execution could not begin"},
                 {"subject": "ended_at", "reason": "Execution could not begin"},
-                {"subject": "inputs.commit_sha", "reason": "No repository checkout was available"}
+                {"subject": "inputs.repository", "reason": "No repository checkout was available"},
+                {"subject": "inputs.commit_sha", "reason": "No repository checkout was available"},
+                {"subject": "inputs.manifest_sha256", "reason": "No input manifest was available"},
+                {"subject": "environment.provider_identity", "reason": "Provider identity was not available"},
+                {"subject": "expected.disposition", "reason": "No expected disposition was declared"},
+                {"subject": "observed.disposition", "reason": "No runner disposition was returned"},
+                {"subject": "resources.duration_ms", "reason": "The run did not start"},
+                {"subject": "resources.tokens", "reason": "Token usage was not observable"},
+                {"subject": "resources.bytes", "reason": "Byte usage was not measured"},
+                {"subject": "resources.cost", "reason": "Cost was not measured"}
             ],
             "authority": None
         }
@@ -65,6 +75,16 @@ class InstrumentRunRecordTests(unittest.TestCase):
     def test_rejects_unrecognized_top_level_field(self):
         record = self.valid_record()
         record["scientific_conclusion"] = "SUPPORTED"
+        with tempfile.TemporaryDirectory() as temp:
+            record_path = Path(temp) / "record.json"
+            record_path.write_text(json.dumps(record), encoding="utf-8")
+            result = subprocess.run([sys.executable, str(COLLECTOR), str(record_path)], capture_output=True, text=True)
+            self.assertNotEqual(result.returncode, 0)
+
+    def test_rejects_null_without_structured_unknown(self):
+        record = self.valid_record()
+        record["environment"]["provider_identity"] = None
+        record["unknowns"] = [item for item in record["unknowns"] if item["subject"] != "environment.provider_identity"]
         with tempfile.TemporaryDirectory() as temp:
             record_path = Path(temp) / "record.json"
             record_path.write_text(json.dumps(record), encoding="utf-8")

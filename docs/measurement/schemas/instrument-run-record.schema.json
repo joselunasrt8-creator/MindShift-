@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/joselunasrt8-creator/MindShift-/docs/measurement/schemas/instrument-run-record.schema.json",
+  "title": "MindShift InstrumentRunRecord v1",
+  "description": "Non-authoritative evidence of instrument behavior for a prospective run. This record does not validate research claims, establish legitimacy, grant authority, or authorize execution.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_id",
+    "instrument",
+    "run_status",
+    "execution_disposition",
+    "started_at",
+    "ended_at",
+    "inputs",
+    "environment",
+    "expected",
+    "observed",
+    "blockers",
+    "friction",
+    "resources",
+    "evidence",
+    "unknowns",
+    "authority"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "record_id": { "type": "string", "pattern": "^MS-INSTRUN-[A-Za-z0-9][A-Za-z0-9._-]{0,63}$" },
+    "instrument": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version", "runner_path", "runner_commit_sha"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "version": { "type": ["string", "null"], "minLength": 1 },
+        "runner_path": { "type": "string", "minLength": 1 },
+        "runner_commit_sha": { "type": "string", "pattern": "^[0-9a-f]{40}$" }
+      }
+    },
+    "run_status": {
+      "enum": [
+        "PROVIDER_IDENTITY_BLOCKED",
+        "ASSESSMENT_BLOCKED",
+        "EXPERIMENT_INVALID",
+        "BLOCKED_BY_REPOSITORY_PERMISSIONS",
+        "PREFLIGHT_PASS",
+        "PREFLIGHT_FAIL",
+        "RUN_COMPLETED",
+        "RUN_STOPPED",
+        "RUN_INCONCLUSIVE",
+        "UNKNOWN"
+      ]
+    },
+    "execution_disposition": {
+      "type": ["string", "null"],
+      "enum": ["completed", "stopped", "inconclusive", null]
+    },
+    "started_at": { "type": ["string", "null"], "minLength": 1 },
+    "ended_at": { "type": ["string", "null"], "minLength": 1 },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "commit_sha", "manifest_sha256", "items"],
+      "properties": {
+        "repository": { "type": ["string", "null"], "minLength": 1 },
+        "commit_sha": { "type": ["string", "null"], "pattern": "^[0-9a-f]{40}$" },
+        "manifest_sha256": { "type": ["string", "null"], "pattern": "^[0-9a-f]{64}$" },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["path", "sha256"],
+            "properties": {
+              "path": { "type": "string", "minLength": 1 },
+              "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+            }
+          }
+        }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["python_version", "platform", "provider_identity", "tool_state"],
+      "properties": {
+        "python_version": { "type": ["string", "null"], "minLength": 1 },
+        "platform": { "type": ["string", "null"], "minLength": 1 },
+        "provider_identity": { "type": ["string", "null"], "minLength": 1 },
+        "tool_state": { "type": ["string", "null"], "minLength": 1 }
+      }
+    },
+    "expected": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["disposition", "invariants"],
+      "properties": {
+        "disposition": { "type": ["string", "null"], "minLength": 1 },
+        "invariants": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "observed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["disposition", "invariants", "discrepancies"],
+      "properties": {
+        "disposition": { "type": ["string", "null"], "minLength": 1 },
+        "invariants": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "discrepancies": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["code", "reason"],
+        "properties": {
+          "code": { "type": "string", "minLength": 1 },
+          "reason": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "friction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["retries", "skipped_steps", "manual_interventions", "ambiguities"],
+      "properties": {
+        "retries": { "type": "integer", "minimum": 0 },
+        "skipped_steps": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "manual_interventions": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "ambiguities": { "type": "array", "items": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["duration_ms", "tokens", "bytes", "cost"],
+      "properties": {
+        "duration_ms": { "type": ["integer", "null"], "minimum": 0 },
+        "tokens": { "type": ["integer", "null"], "minimum": 0 },
+        "bytes": { "type": ["integer", "null"], "minimum": 0 },
+        "cost": { "type": ["number", "null"], "minimum": 0 }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "sha256", "kind"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+          "kind": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "unknowns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["subject", "reason"],
+        "properties": {
+          "subject": { "type": "string", "minLength": 1 },
+          "reason": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "authority": { "const": null }
+  }
+}

@@ -155,6 +155,21 @@ def main() -> int:
         parser.error(
             f"{record['run_status']} requires execution_disposition={expected_disposition!r}"
         )
+    if expected_disposition is not None:
+        required_observations = {
+            "started_at": record["started_at"],
+            "ended_at": record["ended_at"],
+            "expected.disposition": record["expected"]["disposition"],
+            "observed.disposition": record["observed"]["disposition"],
+        }
+        missing = [name for name, value in required_observations.items() if value is None]
+        if missing:
+            parser.error(
+                f"{record['run_status']} requires non-null observations: {', '.join(missing)}"
+            )
+
+        if not record["observed"]["invariants"]:
+            parser.error(f"{record['run_status']} requires at least one observed invariant")
     if record["run_status"] not in terminal_dispositions and record["execution_disposition"] is not None:
         parser.error("non-terminal or pre-execution status must have null execution_disposition")
 

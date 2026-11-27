@@ -114,6 +114,7 @@ class InstrumentRunRecordTests(unittest.TestCase):
                 record["ended_at"] = "2026-11-27T05:00:01Z"
                 record["expected"]["disposition"] = disposition
                 record["observed"]["disposition"] = disposition
+                record["observed"]["invariants"] = ["terminal disposition observed"]
                 record["unknowns"] = [
                     item for item in record["unknowns"]
                     if item["subject"] not in {
@@ -132,6 +133,32 @@ class InstrumentRunRecordTests(unittest.TestCase):
                     )
                     self.assertEqual(result.returncode, 0, result.stderr)
                     self.assertTrue(manifest_path.is_file())
+
+    def test_rejects_terminal_record_missing_required_observations(self):
+        record = self.valid_record()
+        record["run_status"] = "RUN_COMPLETED"
+        record["execution_disposition"] = "completed"
+        record["started_at"] = "2026-11-27T05:00:00Z"
+        record["ended_at"] = "2026-11-27T05:00:01Z"
+        record["expected"]["disposition"] = "completed"
+        record["observed"]["disposition"] = "completed"
+        record["observed"]["invariants"] = []
+        record["unknowns"] = [
+            item for item in record["unknowns"]
+            if item["subject"] not in {
+                "started_at", "ended_at",
+                "expected.disposition", "observed.disposition",
+            }
+        ]
+        with tempfile.TemporaryDirectory() as temp:
+            record_path = Path(temp) / "record.json"
+            record_path.write_text(json.dumps(record), encoding="utf-8")
+            result = subprocess.run(
+                [sys.executable, str(COLLECTOR), str(record_path)],
+                capture_output=True, text=True, check=False
+            )
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("requires at least one observed invariant", result.stderr)
 
     def test_rejects_mismatched_terminal_disposition(self):
         record = self.valid_record()

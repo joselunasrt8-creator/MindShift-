@@ -214,10 +214,4 @@ The value of a research framework is measured by the evidence and engineering de
 | [`docs/reference-execution/v1.0/freeze-record.md`](docs/reference-execution/v1.0/freeze-record.md) | **Reference Execution v1.0 boundary:** immutable source manifest, version bindings, input contract, limitations, readiness, and Issue #53 handoff |
 | [`docs/reference-execution/v1.0/freeze-readiness-record.md`](docs/reference-execution/v1.0/freeze-readiness-record.md) | Superseded historical readiness assessment retained for traceability |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution guidance |
-| [`docs/validation.md`](docs/validation.md) | Exact Git-history requirements and reproducible research-validation procedure |
-| [`scripts/validate.py`](scripts/validate.py) | Single entry point for deterministic, model-free research artifact validation |
-| [`.github/workflows/research-validation.yml`](.github/workflows/research-validation.yml) | Pull-request and main-branch validation using complete Git history |
-| [`.github/pull_request_template.md`](.github/pull_request_template.md) | Pull request template |
-| [`.github/ISSUE_TEMPLATE/`](.github/ISSUE_TEMPLATE/) | Issue templates |
-| `NOTICE` | Third-party notices |
 | [`LICENSE`](LICENSE) | Apache-2.0 License |

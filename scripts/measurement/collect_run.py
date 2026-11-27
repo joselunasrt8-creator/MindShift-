@@ -9,7 +9,9 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import re
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -20,6 +22,17 @@ def canonical_bytes(value: Any) -> bytes:
 
 def sha256(payload: bytes) -> str:
     return hashlib.sha256(payload).hexdigest()
+
+
+def is_rfc3339_timestamp(value: str) -> bool:
+    pattern = r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})"
+    if re.fullmatch(pattern, value) is None:
+        return False
+    try:
+        parsed = datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    return parsed.tzinfo is not None and parsed.utcoffset() is not None
 
 
 def matches_type(value: Any, kind: str) -> bool:
@@ -84,6 +97,8 @@ def validate(instance: Any, schema: dict[str, Any], path: str = "$") -> None:
         if pattern and re.fullmatch(pattern, instance) is None:
             raise ValueError(f"{path}: pattern mismatch")
     elif isinstance(instance, (int, float)) and not isinstance(instance, bool):
+        if not math.isfinite(instance):
+            raise ValueError(f"{path}: non-finite numbers are not valid JSON values")
         if instance < schema.get("minimum", float("-inf")):
             raise ValueError(f"{path}: below minimum")
 
@@ -102,6 +117,13 @@ def main() -> int:
         validate(record, schema)
     except (OSError, UnicodeError, json.JSONDecodeError, ValueError) as exc:
         parser.error(f"record/schema validation failed: {exc}")
+
+    for timestamp_field in ("started_at", "ended_at"):
+        timestamp = record[timestamp_field]
+        if timestamp is not None and not is_rfc3339_timestamp(timestamp):
+            parser.error(
+                f"{timestamp_field} must be an RFC 3339 timestamp with timezone"
+            )
 
     # Unknown values must be justified, and blocked pre-execution runs cannot
     # claim an execution disposition. This is a contract invariant beyond the
@@ -166,6 +188,12 @@ def main() -> int:
         if missing:
             parser.error(
                 f"{record['run_status']} requires non-null observations: {', '.join(missing)}"
+            )
+
+        if record["observed"]["disposition"] != record["execution_disposition"]:
+            parser.error(
+                f"{record['run_status']} requires observed.disposition to match "
+                "execution_disposition"
             )
 
         if not record["observed"]["invariants"]:

@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
-"""Create a deterministic companion provenance manifest for an InstrumentRunRecord.
+"""Validate and seal a prospective InstrumentRunRecord with a companion manifest.
 
-This minimal collector does not execute research instruments and does not infer
-missing measurements. It hashes a completed record file and writes a separate
-manifest using MindShift's canonical JSON byte representation.
+No research instrument is executed. Unknown observations are not inferred.
+The record is never rewritten; only the separate provenance manifest is written.
 """
-
 from __future__ import annotations
 
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -23,32 +22,118 @@ def sha256(payload: bytes) -> str:
     return hashlib.sha256(payload).hexdigest()
 
 
+def matches_type(value: Any, kind: str) -> bool:
+    if kind == "object":
+        return isinstance(value, dict)
+    if kind == "array":
+        return isinstance(value, list)
+    if kind == "string":
+        return isinstance(value, str)
+    if kind == "integer":
+        return isinstance(value, int) and not isinstance(value, bool)
+    if kind == "number":
+        return isinstance(value, (int, float)) and not isinstance(value, bool)
+    if kind == "boolean":
+        return isinstance(value, bool)
+    if kind == "null":
+        return value is None
+    raise ValueError(f"unsupported schema type: {kind}")
+
+
+def validate(instance: Any, schema: dict[str, Any], path: str = "$") -> None:
+    kind = schema.get("type")
+    if isinstance(kind, list):
+        if not any(matches_type(instance, item) for item in kind):
+            raise ValueError(f"{path}: expected one of {kind}")
+    elif kind and not matches_type(instance, kind):
+        raise ValueError(f"{path}: expected {kind}")
+
+    if "const" in schema and instance != schema["const"]:
+        raise ValueError(f"{path}: const mismatch")
+    if "enum" in schema and instance not in schema["enum"]:
+        raise ValueError(f"{path}: enum mismatch")
+
+    if isinstance(instance, dict):
+        missing = sorted(set(schema.get("required", [])) - set(instance))
+        if missing:
+            raise ValueError(f"{path}: missing required properties {missing}")
+        properties = schema.get("properties", {})
+        if schema.get("additionalProperties") is False:
+            extras = sorted(set(instance) - set(properties))
+            if extras:
+                raise ValueError(f"{path}: additional properties {extras}")
+        for key, value in instance.items():
+            if key in properties:
+                validate(value, properties[key], f"{path}.{key}")
+        if "minProperties" in schema and len(instance) < schema["minProperties"]:
+            raise ValueError(f"{path}: too few properties")
+    elif isinstance(instance, list):
+        if len(instance) < schema.get("minItems", 0):
+            raise ValueError(f"{path}: too few items")
+        if schema.get("uniqueItems"):
+            encoded = [canonical_bytes(item) for item in instance]
+            if len(encoded) != len(set(encoded)):
+                raise ValueError(f"{path}: duplicate items")
+        if "items" in schema:
+            for index, value in enumerate(instance):
+                validate(value, schema["items"], f"{path}[{index}]")
+    elif isinstance(instance, str):
+        if len(instance) < schema.get("minLength", 0):
+            raise ValueError(f"{path}: string too short")
+        pattern = schema.get("pattern")
+        if pattern and re.fullmatch(pattern, instance) is None:
+            raise ValueError(f"{path}: pattern mismatch")
+    elif isinstance(instance, (int, float)) and not isinstance(instance, bool):
+        if instance < schema.get("minimum", float("-inf")):
+            raise ValueError(f"{path}: below minimum")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("record", type=Path, help="InstrumentRunRecord JSON file")
-    parser.add_argument("--manifest", type=Path, help="output provenance manifest path")
+    parser.add_argument("record", type=Path)
+    parser.add_argument("--schema", type=Path, default=Path(__file__).resolve().parents[2] / "docs/measurement/schemas/instrument-run-record.schema.json")
+    parser.add_argument("--manifest", type=Path)
     args = parser.parse_args()
 
     try:
-        record_bytes = args.record.read_bytes()
-        record = json.loads(record_bytes.decode("utf-8"))
-    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
-        parser.error(f"cannot read valid UTF-8 JSON record: {exc}")
+        raw = args.record.read_bytes()
+        record = json.loads(raw.decode("utf-8"))
+        schema = json.loads(args.schema.read_text(encoding="utf-8"))
+        validate(record, schema)
+    except (OSError, UnicodeError, json.JSONDecodeError, ValueError) as exc:
+        parser.error(f"record/schema validation failed: {exc}")
 
-    if not isinstance(record, dict):
-        parser.error("record must be a JSON object")
+    # Unknown values must be justified, and blocked pre-execution runs cannot
+    # claim an execution disposition. This is a contract invariant beyond the
+    # schema's vocabulary checks.
+    unknown_subjects = {item["subject"] for item in record["unknowns"]}
+    for section, value in (("started_at", record["started_at"]), ("ended_at", record["ended_at"])):
+        if value is None and section not in unknown_subjects:
+            parser.error(f"{section} is null but has no corresponding unknown entry")
+    blocker_statuses = {
+        "PROVIDER_IDENTITY_BLOCKED",
+        "ASSESSMENT_BLOCKED",
+        "EXPERIMENT_INVALID",
+        "BLOCKED_BY_REPOSITORY_PERMISSIONS",
+    }
+    if record["run_status"] in blocker_statuses and record["execution_disposition"] is not None:
+        parser.error("blocked run must have null execution_disposition")
+    if record["run_status"] == "PREFLIGHT_PASS" and record["execution_disposition"] is not None:
+        parser.error("preflight-only run must have null execution_disposition")
 
-    canonical_record = canonical_bytes(record)
     manifest = {
         "manifest_version": "1.0.0",
         "record_path": args.record.as_posix(),
-        "record_sha256": sha256(canonical_record),
-        "record_byte_sha256": sha256(record_bytes),
+        "record_sha256": sha256(canonical_bytes(record)),
+        "record_byte_sha256": sha256(raw),
+        "schema_path": args.schema.as_posix(),
+        "schema_sha256": sha256(args.schema.read_bytes()),
         "canonicalization": "json.dumps(sort_keys=True,separators=(',',':')) + LF",
     }
     manifest["manifest_hash"] = sha256(canonical_bytes(manifest))
-
     output = args.manifest or args.record.with_name(args.record.stem + ".provenance.json")
+    if output.resolve() == args.record.resolve():
+        parser.error("provenance manifest must not overwrite the record")
     output.write_bytes(canonical_bytes(manifest))
     print(json.dumps(manifest, indent=2, sort_keys=True))
     return 0
